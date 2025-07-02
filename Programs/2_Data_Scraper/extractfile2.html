@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta charset="utf-8"/>
+  <style data-fullcalendar="true">
+  </style>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="web-next" name="service"/>
+  <meta content="east" name="X-Location"/>
+  <meta content="b4683dc1fd77306c178e11eb500ce25abd3fdaff" name="X-Build-Version"/>
+  <link as="script" href="https://apps.rokt.com/wsdk/integrations/launcher.js" rel="preload"/>
+  <link href="https://secure.meetupstatic.com/next/images/general/favicon.ico" rel="icon" sizes="any" type="image/x-icon"/>
+  <link href="https://secure.meetupstatic.com/next/images/general/favicon.ico" rel="shortcut icon"/>
+  <link href="https://secure.meetupstatic.com/next/images/general/m_swarm_120x120.png" rel="apple-touch-icon" sizes="120x120"/>
+  <link href="https://secure.meetupstatic.com/next/images/general/m_swarm_152x152.png" rel="apple-touch-icon" sizes="152x152"/>
+  <link href="https://secure.meetupstatic.com/next/images/general/m_swarm_167x167.png" rel="apple-touch-icon" sizes="167x167"/>
+  <link href="https://secure.meetupstatic.com/next/images/general/m_swarm_128x128.png" rel="shortcut icon" sizes="128x128"/>
+  <link href="https://secure.meetupstatic.com/next/images/general/m_swarm_196x196.png" rel="shortcut icon" sizes="196x196"/>
+  <link as="font" crossorigin="true" href="/_next/static/media/Graphik-Regular.7c14ed95.woff2" rel="preload" type="font/woff2"/>
+  <link as="font" crossorigin="true" href="/_next/static/media/Graphik-Bold.9ca67fd8.woff2" rel="preload" type="font/woff2"/>
+  <link as="font" crossorigin="true" href="/_next/static/media/Graphik-Semibold.0c4bd776.woff2" rel="preload" type="font/woff2"/>
+  <link as="font" crossorigin="true" href="/_next/static/media/Graphik-Medium.4251d5ac.woff2" rel="preload" type="font/woff2"/>
+  <script async="" src="//script.crazyegg.com/pages/scripts/0118/4627.js" type="text/javascript">
+  </script>
+  <script type="application/ld+json">
+   {"@type":"Organization","@context":"https://schema.org","url":"https://www.meetup.com/find/","name":"Meetup","logo":"https://secure.meetupstatic.com/next/images/general/m_swarm_630x630.png","sameAs":["https://www.facebook.com/meetup/","https://twitter.com/Meetup/","https://www.youtube.com/meetup","https://www.instagram.com/meetup/"]}
+  </script>
+  <title>
+   Find Events &amp; Groups | Meetup
+  </title>
+  <meta content="Find Meetup events and groups so you can do more of what matters to you and meet people near you who share your interests." name="description"/>
+  <meta content="2403839689" property="fb:app_id"/>
+  <meta content="Meetup" property="og:site_name"/>
+  <meta content="article" property="og:type"/>
+  <meta content="Find Events &amp; Groups | Meetup" property="og:title"/>
+  <meta content="Find Meetup events and groups so you can do more of what matters to you and meet people near you who share your interests." property="og:description"/>
+  <meta content="https://www.meetup.com/find/" property="og:url"/>
+  <meta content="https://secure.meetupstatic.com/next/images/shared/meetup-logo.jpg" property="og:image"/>
+  <meta content="Meetup" property="al:android:app_name"/>
+  <meta content="com.meetup" property="al:android:package"/>
+  <meta content="375990038" property="al:ios:app_store_id"/>
+  <meta content="Meetup" property="al:ios:app_name"/>
+  <meta content="true" property="al:web:should_fallback"/>
+  <meta content="meetup://" property="al:android:url"/>
+  <meta content="meetup://" property="al:ios:url"/>
+  <meta content="https://www.meetup.com/" property="al:web:url"/>
+  <meta content="summary_large_image" property="twitter:card"/>
+  <meta content="@meetup" property="twitter:site"/>
+  <meta content="https://secure.meetupstatic.com/next/images/shared/meetup-logo.jpg" property="twitter:image"/>
+  <meta content="Find Meetup events and groups so you can do more of what matters to you and meet people near you who share your interests." property="twitter:description"/>
+  <meta content="375990038" property="twitter:app:id:iphone"/>
+  <meta content="Meetup" property="twitter:app:name:iphone"/>
+  <meta content="375990038" property="twitter:app:id:ipad"/>
+  <meta content="Meetup" property="twitter:app:name:ipad"/>
+  <meta content="com.meetup" property="twitter:app:id:googleplay"/>
+  <meta content="Meetup" property="twitter:app:name:googleplay"/>
+  <meta content="noindex, follow" name="robots"/>
+  <link href="https://www.meetup.com/find/" rel="canonical"/>
+  <link href="https://secure.meetupstatic.com" rel="preconnect"/>
+  <link href="https://secure.meetupstatic.com" rel="dns-prefetch"/>
+  <link href="https://secure-content.meetupstatic.com" rel="preconnect"/>
+  <link href="https://secure-content.meetupstatic.com" rel="dns-prefetch"/>
+  <link href="https://www.googletagmanager.com" rel="preconnect"/>
+  <link href="https://www.googletagmanager.com" rel="dns-prefetch"/>
+  <meta content="56" name="next-head-count"/>
+  <meta content="38f951a6-006c-4415-905c-538bd5aa9f41" name="next_csrf"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link data-href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&amp;display=swap" rel="stylesheet"/>
+  <link crossorigin="anonymous" data-next-font="" href="/" rel="preconnect"/>
+  <link as="style" href="/_next/static/css/bc983ab3cebd17b2.css" rel="preload"/>
+  <link data-n-g="" href="/_next/static/css/bc983ab3cebd17b2.css" rel="stylesheet"/>
+  <link as="style" href="/_next/static/css/d46008013b180603.css" rel="preload"/>
+  <link data-n-p="" href="/_next/static/css/d46008013b180603.css" rel="stylesheet"/>
+  <noscript data-n-css="">
+  </noscript>
+  <script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/webpack-aca8f6152dc6b289.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/framework-243c948fed889246.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/main-68a9369f6fe06c93.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/pages/_app-874cd7c1d6c68ded.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/87720-10e63a0b3cdb52bd.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/18230-b2355612043b9845.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/55423-18a26cb260364631.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/92249-bd4506b266fe9395.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/16391-8f519a1f0494b8e0.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/42530-18c43450eec1ae41.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/54817-c8e6fc3d22294034.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/18027-5457a08cb63597d2.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/67736-a1b1c6b7324d2e0b.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/73546-aef2e2bcd1149caf.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/33764-50a369d421c2c51c.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/54523-902bbd849542ed33.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/47350-719218642f231331.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/93672-0ed4e3688e0b0bb7.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/61376-6107bac0f625f8a3.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/1792-235a4caf3f99e5c0.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/70743-890bb7aa7429bfd1.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/73701-e35ef2455a279ed0.js">
+  </script>
+  <script defer="" src="/_next/static/chunks/pages/find-9c8f130fc4386425.js">
+  </script>
+  <script defer="" src="/_next/static/b4683dc1fd77306c178e11eb500ce25abd3fdaff/_buildManifest.js">
+  </script>
+  <script defer="" src="/_next/static/b4683dc1fd77306c178e11eb500ce25abd3fdaff/_ssgManifest.js">
+  </script>
+  <style id="__jsx-810853614">
+   .filter-dropdown button,.filter-dropdown [role='option']{text-align:left !important;padding-left:16px !important;}.no-scrollbar::-webkit-scrollbar{display:none;}.no-scrollbar{-ms-overflow-style:none;-webkit-scrollbar-width:none;-moz-scrollbar-width:none;-ms-scrollbar-width:none;scrollbar-width:none;}@media (max-width:640px){.filter-container-scroll{-webkit-overflow-scrolling:touch;-webkit-scroll-snap-type:x mandatory;-moz-scroll-snap-type:x mandatory;-ms-scroll-snap-type:x mandatory;scroll-snap-type:x mandatory;}.filter-item{-webkit-scroll-snap-align:start;-moz-scroll-snap-align:start;-ms-scroll-snap-align:start;scroll-snap-align:start;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;}}
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="font-body">
+  <script>
+   0
+  </script>
+  <div id="__next">
+   <noscript id="google-tag-manager">
+    <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-T2LNGD" style="display:none;visibility:hidden" title="gtm" width="0">
+    </iframe>
+   </noscript>
+   <!-- -->
+   <div aria-live="polite" class="sr-only" role="status">
+   </div>
+   <div class="">
+    <a class="text-viridian focus:p-2 bg-white c1r8us06" href="#main">
+     Skip to content
+    </a>
+    <div id="a11y-announcement">
+    </div>
+    <div class="flex min-h-screen flex-col" data-event-category="Find - Group Search" id="page">
+     <header class="top-0 z-50 bg-white sticky mb-10 xs:mb-0" data-event-label="Header">
+      <div class="border-b border-solid border-gray2 h-[120px] gl:h-[64px] flex flex-col px-4">
+       <div class="transition-all ease-linear duration-300 d3hxo23 overflow-hidden sm:overflow-visible">
+        <div class="flex items-center justify-between db42u26">
+         <div class="w-[28px] sm:hidden">
+          <div class="block sm:hidden xmedia">
+          </div>
+         </div>
+         <div class="flex items-center space-x-10">
+          <a aria-label="Meetup logo" class="lg:pl-6" data-event-label="Meetup logo" href="https://www.meetup.com/" id="homepage-link">
+           <svg height="34px" viewbox="0 0 111 40" xmlns="http://www.w3.org/2000/svg">
+            <path d="M110.994 23.367a1.687 1.687 0 00-.11-.458c-.37-.962-2.054-.065-2.629.176-1.035.434-2.219 1.006-3.365.678-.317-.091-.224-.361 0-.499.112-.068 3.055-1.733 3.921-5.423 1.386-5.903-2.867-7.545-4.545-7.744-1.706-.202-3.609.061-4.411.384-2.273.913-2.866 2.943-3.023 4.159-.215 1.672-.24 4.59-.447 5.903-.136.865-.78 2.178-2.048 2.053-2.447-.241-3.571-1.18-3.493-2.722.054-1.084.039-1.3.38-3.704.293-2.06.478-2.551.478-3.022 0-1.349-1.813-1.621-2.419-1.014-.468.469-.585 1.426-.702 3.042-.11 1.519-.343 3.495-.644 4.7-.468 1.877-.656 2.014-1.083 2.551-.887 1.116-2.526.77-3.326.009-.47-.448-.534-.845-.443-2.16.091-1.315.306-3.606.608-5.995.263-2.09.082-2.404-.56-2.99-.597-.546-2.884-.465-3.943-.465-1.639 0-1.541.78-1.649 3.44-.047 1.161-.101 2.923-.217 4.287-.188 2.22-4.425 3.89-6.373 3.79-2.019-.104-2.213-3.873-2.34-4.75-.129-.876-.18-8.44.038-8.697.155-.18 1.37-.318 2.755-.589 3.067-.6 3.508-.994 3.512-1.954.002-.471-.028-1.13-.55-1.307-.306-.104-1.1-.222-2.153-.346-3.037-.358-3.465-.248-3.482-.633-.029-.674.035-1.971-.019-2.482C68.58.329 67.108-.093 65.45.017c-.327.021-.78.127-.816.565-.036.439-.033.777-.086 1.52-.117 1.651-.15 1.83-.79 1.827-.57-.003-5.312-.422-6.223-.13-.912.292-.875.913-.948 1.224-.073.31.09 2.173.182 2.977.091.803.267 1.896.376 2.06.11.165.452.631 1.404.512 3.234-.405 5.391-.894 5.829-1.003.437-.11.487-.165.492.182.002.197.084 4.146.098 5.319.023 2.006.362 7.817-5.044 8.718-2.249.375-4.357-.28-5.316-1.337-.544-.6-.277-.678-.037-1.068.364-.593 3.402-4.162.856-7.864-1.501-2.184-5.101-2.357-6.408-1.79-1.013.439-1.832 1.8-1.99 3.46-.488 5.12 2.442 8.287 2.556 8.482.136.234-.376.988-2.166 1.25-2.4.352-6.085-2.543-5.99-2.92.047-.18 1.679-2.853 1.718-5.436.013-.879-.277-2.036-.878-3.205-.602-1.169-2.496-2.973-4.546-2.577-4.824.93-4.274 5.696-3.94 6.997.694 2.69 2.319 5.064 2.584 5.539.361.645-10.207 4.839-10.616.913-.407-3.892 5.371-12.284 4.916-15.54-.41-2.933-2.382-3.547-4.097-3.577-1.667-.03-2.107.236-2.671.564-.325.189-.792.563-1.44-.055-.431-.411-.716-.699-1.172-1.064-.231-.185-.601-.42-1.221-.511-.62-.091-1.422 0-1.932.219-.51.22-.912.603-1.331.968-.42.365-1.483 1.559-2.474 1.119-.43-.191-1.887-.92-2.937-1.375-2.029-.88-4.955.545-6.008 2.421C3.815 10.193.72 21.161.252 22.607c-1.052 3.248 1.33 5.896 4.545 5.744 1.358-.065 2.263-.562 3.121-2.126.496-.903 5.156-13.097 5.502-13.681.252-.425 1.09-.984 1.8-.62.712.366.853 1.128.748 1.845-.17 1.16-3.456 8.6-3.582 9.441-.215 1.432.464 2.228 1.947 2.306 1.016.053 2.029-.313 2.833-1.832.45-.849 5.631-11.248 6.09-11.942.504-.762.91-1.013 1.422-.986.399.02 1.036.123.876 1.319-.156 1.172-4.322 8.803-4.76 10.671-.663 2.834 1.151 6.646 6.01 6.821 2.414.088 8.002-.966 11.15-3.357 1.143-.868.841-.943 1.553-.311 1.025.909 2.927 2.189 4.8 2.189 4.253 0 7.359-2.66 7.5-2.756a.111.111 0 01.145.017c.258.28 2.895 1.751 4.743 1.812 4.399.145 7.004-2.3 7.988-3.451a22.03 22.03 0 001.512-1.987.157.157 0 01.246-.018c.263.29 2.247 3.942 6.188 3.438 2.198-.281 5.467-2.139 5.696-2.39a.1.1 0 01.17.035c.115.318.618 2.11 2.633 3.535 1.652 1.169 4.832 1.403 6.243.626 1.17-.644 1.639-1.056 2.458-1.876.352-.353.888-.71 1.854-.505 1.08.229 3.934.735 4.116.822.205.097.237.47.176.86-.098.614-.33 2.766-.566 4.775-.237 2.009-.994 8.712.8 8.96 1.084.15 2.025-.878 2.274-1.881.624-2.517.738-5.35 1.148-7.78.49-2.893.684-3.704.86-4.027.146-.268.146-.205 2.167-.033 1.4.12 2.536.315 4.223.079 1.398-.196 4.267-1.256 4.113-2.976m-69.897-6.502c-.067.947-.31 1.547-.811 2.419-.313.544-.637.137-.825-.132-.27-.386-1.65-3.744-.596-4.437.297-.195.886-.307 1.312-.068.426.238.683.585.8.972.12.393.164.613.12 1.246m13.092.488c-.123 1.09-.585 1.707-.755 1.936-.301.404-.422.563-.71.27-.234-.238-1.109-2.02-1.235-3.195-.069-.632.106-1.535.636-1.747.558-.223 1.123-.122 1.52.397.623.817.632 1.564.544 2.339M101.7 22.13c-.657.27-.943.105-.905-.982.008-.234 1.063-5.687 3.08-6.675.572-.28 1.152-.268 1.554.18.76.847.56 2.152-.012 3.342-.828 1.727-2.814 3.764-3.717 4.135" fill="#F64060" fill-rule="evenodd">
+            </path>
+           </svg>
+          </a>
+          <div class="hidden gl:block xmedia">
+          </div>
+         </div>
+         <div class="block sm:hidden xmedia">
+         </div>
+         <div class="sm:ml-4 hidden sm:block xmedia">
+         </div>
+        </div>
+        <div class="mb-2 mt-1 pointer-events-none block gl:hidden xmedia">
+        </div>
+       </div>
+      </div>
+     </header>
+     <div class="flex flex-grow flex-col">
+      <main class="mx-4 flex flex-col" id="main">
+       <div class="mb-16 w-full">
+        <div class="jsx-810853614 pb-0 z-10 pt-1 bg-white pt-1" style="top:0;overflow:visible">
+         <div class="jsx-810853614 mx-auto max-w-[1456px]">
+          <div class="jsx-810853614 bg-white px-4">
+           <div class="flex w-full flex-nowrap">
+            <div class="flex-shrink-0">
+             <button aria-label="Search for events" aria-pressed="false" class="font-graphik group relative mr-6 whitespace-nowrap py-2 text-base font-medium transition-colors duration-200 text-[#696B6F] hover:text-[#121213]" data-element-name="searchTab-events" data-testid="EVENTS" id="find-events-tab" style="font-family:Graphik, sans-serif;font-size:16px;font-weight:500">
+              Events
+              <div class="absolute bottom-0 transition-all duration-200 h-[3px] bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="left:-5%;right:-5%">
+              </div>
+             </button>
+            </div>
+            <div class="flex-shrink-0">
+             <button aria-label="Search for groups" aria-pressed="true" class="font-graphik group relative mr-6 whitespace-nowrap py-2 text-base font-medium transition-colors duration-200 text-[#121213]" data-element-name="searchTab-groups" data-testid="GROUPSActiveTab" id="find-groups-tab" style="font-family:Graphik, sans-serif;font-size:16px;font-weight:500">
+              Groups
+              <div class="absolute bottom-0 transition-all duration-200 h-[3px] bg-ds-neutral900" style="left:-5%;right:-5%">
+              </div>
+             </button>
+            </div>
+           </div>
+          </div>
+          <div class="jsx-810853614 bg-white px-4 pt-5 sm:pb-3 sm:pt-6">
+           <div class="jsx-810853614 flex flex-col md:flex-row md:items-center md:justify-between">
+            <h1 class="jsx-810853614 mb-4 flex-shrink-0 bg-white text-xl font-semibold md:mb-0" style="font-family:Graphik, sans-serif;font-weight:600;font-size:clamp(20px, 4vw, 26px);line-height:1.25">
+             Education groups near Karachi, PK
+            </h1>
+            <div class="jsx-810853614 md:self-center" id="filter-container" style="overflow:visible">
+             <div class="jsx-810853614 flex overflow-x-auto no-scrollbar filter-container-scroll sm:overflow-x-visible" style="overflow:visible;white-space:nowrap">
+              <div class="jsx-810853614 relative mr-4 inline-block whitespace-normal filter-item">
+               <div class="relative inline-block">
+                <div class="relative relative" data-testid="AdaptiveFilterButton">
+                 <div class="relative">
+                  <button class="flex items-center gap-1 rounded-lg px-4 py-2.5 text-sm font-medium bg-ds-neutral50 hover:bg-ds-neutral100" data-testid="RevampedFilterButtonDistance">
+                   <img alt="" class="mr-1" data-nimg="1" decoding="async" height="16" loading="lazy" src="/images/event/distance.svg" style="color:transparent" width="16"/>
+                   <span class="truncate">
+                    Within 18 miles
+                   </span>
+                   <svg class="flex-shrink-0" fill="none" height="6" viewbox="0 0 10 6" width="10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                    </path>
+                   </svg>
+                  </button>
+                 </div>
+                 <div class="hidden sm:block xmedia">
+                 </div>
+                 <div class="block sm:hidden xmedia">
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="jsx-810853614 relative border-b border-gray3 bg-white pb-0 pt-2">
+           <div class="jsx-810853614 flex overflow-x-auto no-scrollbar hide-scrollbar">
+            <div class="jsx-810853614 flex space-x-5 md:space-x-6">
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-all">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <span class="jsx-810853614 text-2xl text-black">
+                ✦
+               </span>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Any category
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-black" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category--999">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div class="jsx-810853614 category-icon-wrapper">
+                <img alt="New Groups" class="object-contain" data-nimg="1" decoding="async" height="24" loading="lazy" src="/images/event/new-group.svg" style="color:transparent;filter:invert(46%) sepia(0%) saturate(1%) hue-rotate(46deg) brightness(94%) contrast(91%);max-width:100%;height:auto" width="24"/>
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                New Groups
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-652">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Social Activities
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-571">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Hobbies &amp; Passions
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-482">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Sports &amp; Fitness
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-684">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Travel &amp; Outdoor
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-405">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Career &amp; Business
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-546">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Technology
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-604">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Community &amp; Environment
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-622">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Identity &amp; Language
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-535">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Games
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-612">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Dancing
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-449">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div class="jsx-810853614 category-icon-wrapper">
+                <img alt="Support &amp; Coaching" class="object-contain" data-nimg="1" decoding="async" height="24" loading="lazy" src="/images/event/support.svg" style="color:transparent;filter:invert(46%) sepia(0%) saturate(1%) hue-rotate(46deg) brightness(94%) contrast(91%);max-width:100%;height:auto" width="24"/>
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Support &amp; Coaching
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-395">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Music
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-511">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Health &amp; Wellbeing
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-521">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Art &amp; Culture
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-436">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Science &amp; Education
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-701">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Pets &amp; Animals
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-593">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Religion &amp; Spirituality
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-467">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Writing
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-673">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Parents &amp; Family
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+             <div class="jsx-810853614 group relative flex h-[70px] min-w-[68px] cursor-pointer flex-col items-center justify-center category-item" data-testid="category-642">
+              <div class="jsx-810853614 mb-1 flex size-[28px] items-center justify-center">
+               <div style="width:28px;height:28px">
+               </div>
+              </div>
+              <div class="jsx-810853614 flex h-[24px] w-full flex-col items-center justify-center">
+               <span class="jsx-810853614 flex items-center justify-center whitespace-nowrap px-3 text-center text-xs font-medium text-[#757575] group-hover:text-black" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:Graphik, system-ui, sans-serif">
+                Movements &amp; Politics
+               </span>
+               <div class="jsx-810853614 absolute bottom-0 left-0 h-[3px] w-full transition-all duration-200 bg-ds-neutral200 opacity-0 group-hover:opacity-100" style="z-index:10">
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="flex w-full md:gap-9">
+         <div class="w-full">
+          <div class="flex flex-col space-y-4">
+           <div class="mx-auto w-full max-w-[1456px] px-4 sm:px-6">
+            <div class="pt-3">
+            </div>
+           </div>
+           <div class="mx-auto w-full max-w-[1650px]">
+            <div class="w-full">
+             <div class="mx-auto w-full max-w-[1456px]">
+              <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:pt-0 md:grid-cols-2 xl:px-6">
+              </div>
+             </div>
+             <div class="w-full mb-8 mt-4">
+              <div class="mx-auto w-full max-w-[1456px]">
+               <div class="grid grid-cols-1 justify-items-center gap-4 pt-8 sm:grid-cols-2 sm:gap-8">
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="mb-0 flex-shrink-0 overflow-hidden rounded-xl sm:mb-4" data-testid="revamped-group-card-loading">
+                 <div class="block h-[255px] w-[358px] sm:hidden">
+                  <div class="h-[180px] w-full overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="h-[75px] rounded-b-xl bg-white px-0 py-2">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-4 w-24" role="presentation">
+                   </div>
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mt-1.5 h-5 w-4/5" role="presentation">
+                   </div>
+                   <div class="mt-2 flex items-center">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="hidden sm:flex sm:h-[180px] sm:w-[594px]">
+                  <div class="flex h-full w-[48%] flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#f5f5f5]">
+                   <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-full" role="presentation">
+                   </div>
+                  </div>
+                  <div class="flex flex-1 flex-col justify-between overflow-hidden rounded-r-xl bg-white">
+                   <div class="px-2">
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx my-2 h-4 w-24" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mb-1 h-5 w-full" role="presentation">
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-5 w-4/5" role="presentation">
+                    </div>
+                   </div>
+                   <div class="mt-auto flex items-center px-2 pb-2">
+                    <div class="mr-2 flex">
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx mr-[-4px] size-6 rounded-full" role="presentation">
+                     </div>
+                     <div aria-hidden="true" class="Shimmer_shimmer__hHuAx size-6 rounded-full" role="presentation">
+                     </div>
+                    </div>
+                    <div aria-hidden="true" class="Shimmer_shimmer__hHuAx h-[13px] w-20" role="presentation">
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </main>
+     </div>
+    </div>
+    ;
+   </div>
+   <div id="modal">
+   </div>
+   <!-- -->
+  </div>
+  <script id="__NEXT_DATA__" type="application/json">
+   {"props":{"pageProps":{"isMobile":false,"showMobileBanner":true,"memberLocale":"en-US","localeMessages":{"a11y.skipToContent":"Skip to content","desktopSearch.searchAnything":"Search for anything","desktopHeader.meetupLogo":"Meetup logo","a11y.loadingComplete":"Content has been loaded","findPage.resultHeadering.keywordsGroupsNear":"{keywordOrCategory} groups near {userLocation}","findPage.filter.category.anyCategory":"Any category","findPage.filter.category.newGroups":"New Groups","findPage.filter.category.socialActivities":"Social Activities","findPage.filter.category.hobbiesAndPassion":"Hobbies \u0026 Passions","findPage.filter.category.sportsAndFitness":"Sports \u0026 Fitness","findPage.filter.category.travelAndOutdoor":"Travel \u0026 Outdoor","findPage.filter.category.careerAndBusiness":"Career \u0026 Business","findPage.filter.category.technology":"Technology","findPage.filter.category.communityAndEnvironment":"Community \u0026 Environment","findPage.filter.category.identityAndLanguage":"Identity \u0026 Language","findPage.filter.category.games":"Games","findPage.filter.category.dancing":"Dancing","findPage.filter.category.supportAndCoaching":"Support \u0026 Coaching","findPage.filter.category.music":"Music","findPage.filter.category.healthAndWellbeing":"Health \u0026 Wellbeing","findPage.filter.category.artAndCulture":"Art \u0026 Culture","findPage.filter.category.scienceAndEducation":"Science \u0026 Education","findPage.filter.category.petsAndAnimals":"Pets \u0026 Animals","findPage.filter.category.religionAndSpirituality":"Religion \u0026 Spirituality","findPage.filter.category.writing":"Writing","findPage.filter.category.parentsAndFamily":"Parents \u0026 Family","findPage.filter.category.movementsAndPolitics":"Movements \u0026 Politics","findPage.areaLabelForEvents":"Search for events","findPage.areaLabelForGroups":"Search for groups","findPage.events":"Events","findPage.groups":"Groups","findPage.distance.filterOptions.miles":"{value} miles","findPage.filter.distance.title":"Filter by Distance","findPage.distance.ariaLabel":"Filter by Distance"},"user":null,"isIndexed":false,"filters":{"keywords":"education","distance":"anyDistance","source":"GROUPS"},"location":"pk--Karachi","ssrQueryParams":{},"userLocation":{"__typename":"LocationSearch","city":"Karachi","country":"pk","lat":24.860000610351562,"lon":67.01000213623047,"name":"Karachi, Pakistan","state":"","timeZone":"","borough":"","localizedCountryName":"pk","neighborhood":"","zip":"meetup1"},"isLoggedInSsr":false,"__APOLLO_STATE__":{"ROOT_QUERY":{"__typename":"Query","self":null,"locationSearch({\"query\":\"Karachi pk\"})":[{"__typename":"LocationSearch","city":"Karachi","country":"pk","lat":24.860000610351562,"lon":67.01000213623047,"name":"Karachi, Pakistan","state":"","timeZone":"","borough":"","localizedCountryName":"pk","neighborhood":"","zip":"meetup1"},{"__typename":"LocationSearch","city":"Lahore","country":"pk","lat":31.559999465942383,"lon":74.3499984741211,"name":"Lahore, Pakistan","state":"","timeZone":"","borough":"","localizedCountryName":"pk","neighborhood":"","zip":"meetup2"},{"__typename":"LocationSearch","city":"Islamabad","country":"pk","lat":33.720001220703125,"lon":73.05999755859375,"name":"Islamabad, Pakistan","state":"","timeZone":"","borough":"","localizedCountryName":"pk","neighborhood":"","zip":"meetup10"},{"__typename":"LocationSearch","city":"Multan","country":"pk","lat":30.200000762939453,"lon":71.44999694824219,"name":"Multan, Pakistan","state":"","timeZone":"","borough":"","localizedCountryName":"pk","neighborhood":"","zip":"meetup6"},{"__typename":"LocationSearch","city":"Faisalabad","country":"pk","lat":31.40999984741211,"lon":73.11000061035156,"name":"Faisalabad, Pakistan","state":"","timeZone":"","borough":"","localizedCountryName":"pk","neighborhood":"","zip":"meetup3"}],"groupSearch:{\"filter\":{\"city\":\"Karachi\",\"country\":\"pk\",\"lat\":24.860000610351562,\"lon\":67.01000213623047,\"query\":\"education\",\"zip\":\"meetup1\"}}":{"__typename":"GroupSearchConnection","totalCount":15,"pageInfo":{"__typename":"PageInfo","hasNextPage":true,"endCursor":"MTU="},"edges":[{"__typename":"GroupSearchEdge","node":{"__ref":"Group:37982473"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}},{"__typename":"GroupSearchEdge","node":{"__ref":"Group:36971448"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}},{"__typename":"GroupSearchEdge","node":{"__ref":"Group:38034768"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}},{"__typename":"GroupSearchEdge","node":{"__ref":"Group:37313584"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}},{"__typename":"GroupSearchEdge","node":{"__ref":"Group:35712999"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}},{"__typename":"GroupSearchEdge","node":{"__ref":"Group:27731037"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}},{"__typename":"GroupSearchEdge","node":{"__ref":"Group:36900151"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}},{"__typename":"GroupSearchEdge","node":{"__ref":"Group:35421857"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}},{"__typename":"GroupSearchEdge","node":{"__ref":"Group:32124698"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}},{"__typename":"GroupSearchEdge","node":{"__ref":"Group:34230300"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}},{"__typename":"GroupSearchEdge","node":{"__ref":"Group:35366727"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}},{"__typename":"GroupSearchEdge","node":{"__ref":"Group:19472551"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}},{"__typename":"GroupSearchEdge","node":{"__ref":"Group:31214326"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}},{"__typename":"GroupSearchEdge","node":{"__ref":"Group:37259439"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}},{"__typename":"GroupSearchEdge","node":{"__ref":"Group:16657642"},"metadata":{"__typename":"SearchMetadata","recId":"0e0e1662-d4e2-41a5-8d7a-7fd5dbce371e","recSource":"chapter-search"}}]}},"PhotoInfo:527465547":{"__typename":"PhotoInfo","id":"527465547","baseUrl":"https://secure-content.meetupstatic.com/images/classic-events/"},"PhotoInfo:250706490":{"__typename":"PhotoInfo","id":"250706490","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:194383222":{"__typename":"Member","id":"194383222","name":"Write the Docs","memberPhoto":{"__ref":"PhotoInfo:250706490"}},"PhotoInfo:322819718":{"__typename":"PhotoInfo","id":"322819718","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:228570223":{"__typename":"Member","id":"228570223","name":"Nouman Wali","memberPhoto":{"__ref":"PhotoInfo:322819718"}},"Member:470389683":{"__typename":"Member","id":"470389683","name":"Fahad","memberPhoto":null},"Member:470393235":{"__typename":"Member","id":"470393235","name":"Ali Zaib","memberPhoto":null},"PhotoInfo:322601289":{"__typename":"PhotoInfo","id":"322601289","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:470399160":{"__typename":"Member","id":"470399160","name":"Muhammad Shahzad","memberPhoto":{"__ref":"PhotoInfo:322601289"}},"Member:470442969":{"__typename":"Member","id":"470442969","name":"shahbazelahi022","memberPhoto":null},"Member:437767637":{"__typename":"Member","id":"437767637","name":"Ghulam Hasnain Otho","memberPhoto":null},"Member:470493457":{"__typename":"Member","id":"470493457","name":"haider","memberPhoto":null},"Member:470508626":{"__typename":"Member","id":"470508626","name":"syyyadiscomplicated23","memberPhoto":null},"Member:470518440":{"__typename":"Member","id":"470518440","name":"Free body massage","memberPhoto":null},"Group:37982473":{"__typename":"Group","id":"37982473","name":"Pakistan Write the Docs","link":"https://www.meetup.com/pakistan-write-the-docs","description":"Write the Docs is a global community of people who care about documentation.\n\nWe consider everyone who cares about communication, documentation, and their users to be a member of our community. This can be programmers, tech writers, developer advocates, customer support, marketers, and anyone else who wants people to have great experiences with software.","city":"Islamabad","state":"","country":"pk","isPrivate":false,"isNewGroup":false,"groupPhoto":{"__ref":"PhotoInfo:527465547"},"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":67},"eventRatings":{"__typename":"GroupStatsEventRatings","average":0,"totalRatings":0}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:194383222"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:228570223"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:470389683"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:470393235"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:470399160"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:470442969"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:437767637"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:470493457"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:470508626"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:470518440"}}]}},"PhotoInfo:314723868":{"__typename":"PhotoInfo","id":"314723868","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:301216138":{"__typename":"Member","id":"301216138","name":"Awaish Maheshwari","memberPhoto":{"__ref":"PhotoInfo:314723868"}},"Member:388678466":{"__typename":"Member","id":"388678466","name":"Saad Rehman","memberPhoto":null},"PhotoInfo:309297869":{"__typename":"PhotoInfo","id":"309297869","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:355055966":{"__typename":"Member","id":"355055966","name":"khalil uRehman","memberPhoto":{"__ref":"PhotoInfo:309297869"}},"PhotoInfo:317206674":{"__typename":"PhotoInfo","id":"317206674","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:288279227":{"__typename":"Member","id":"288279227","name":"Uzair Aslam","memberPhoto":{"__ref":"PhotoInfo:317206674"}},"PhotoInfo:311969423":{"__typename":"PhotoInfo","id":"311969423","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:368448908":{"__typename":"Member","id":"368448908","name":"Salman Malik","memberPhoto":{"__ref":"PhotoInfo:311969423"}},"PhotoInfo:298839435":{"__typename":"PhotoInfo","id":"298839435","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:306247999":{"__typename":"Member","id":"306247999","name":"Hussain","memberPhoto":{"__ref":"PhotoInfo:298839435"}},"PhotoInfo:314736008":{"__typename":"PhotoInfo","id":"314736008","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:388490881":{"__typename":"Member","id":"388490881","name":"M Usama Akram","memberPhoto":{"__ref":"PhotoInfo:314736008"}},"Member:389074006":{"__typename":"Member","id":"389074006","name":"Noman Aslam","memberPhoto":null},"Member:389146676":{"__typename":"Member","id":"389146676","name":"Erum","memberPhoto":null},"PhotoInfo:314835035":{"__typename":"PhotoInfo","id":"314835035","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:389425246":{"__typename":"Member","id":"389425246","name":"Usama Hussain","memberPhoto":{"__ref":"PhotoInfo:314835035"}},"Group:36971448":{"__typename":"Group","id":"36971448","name":"PyData Karachi","link":"https://www.meetup.com/pydata-karachi","description":"PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the\nUnited States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R.\n\nThe PyData Code of Conduct governs this meetup. (http://pydata.org/code-of-conduct.html) To discuss any issues or concerns relating to the code of conduct or the behavior of anyone at a PyData meetup, please contact NumFOCUS Executive Director Leah Silen (+1 512-222-5449; leah@numfocus.org) or the group organizer.","city":"Karachi","state":"","country":"pk","isPrivate":false,"isNewGroup":false,"groupPhoto":null,"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":214},"eventRatings":{"__typename":"GroupStatsEventRatings","average":0,"totalRatings":0}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:301216138"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:388678466"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:355055966"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:288279227"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:368448908"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:306247999"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:388490881"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:389074006"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:389146676"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:389425246"}}]}},"PhotoInfo:527985627":{"__typename":"PhotoInfo","id":"527985627","baseUrl":"https://secure-content.meetupstatic.com/images/classic-events/"},"PhotoInfo:318821558":{"__typename":"PhotoInfo","id":"318821558","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:385655257":{"__typename":"Member","id":"385655257","name":"AWS Cloud Clubs","memberPhoto":{"__ref":"PhotoInfo:318821558"}},"PhotoInfo:320677062":{"__typename":"PhotoInfo","id":"320677062","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:427817405":{"__typename":"Member","id":"427817405","name":"Haider Ullah","memberPhoto":{"__ref":"PhotoInfo:320677062"}},"Member:429586133":{"__typename":"Member","id":"429586133","name":"Affan Ahmed","memberPhoto":null},"PhotoInfo:321657241":{"__typename":"PhotoInfo","id":"321657241","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:436494369":{"__typename":"Member","id":"436494369","name":"Muhammad Daniyal ","memberPhoto":{"__ref":"PhotoInfo:321657241"}},"Member:468444780":{"__typename":"Member","id":"468444780","name":"Muhammad Hilal Aziz","memberPhoto":null},"Member:472560473":{"__typename":"Member","id":"472560473","name":"Smarty","memberPhoto":null},"Member:472567187":{"__typename":"Member","id":"472567187","name":"Attaullah Burki","memberPhoto":null},"Member:472569101":{"__typename":"Member","id":"472569101","name":"alibhellar","memberPhoto":null},"Member:472571343":{"__typename":"Member","id":"472571343","name":"Nabira Khan","memberPhoto":null},"PhotoInfo:322785524":{"__typename":"PhotoInfo","id":"322785524","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:417468069":{"__typename":"Member","id":"417468069","name":"Rayyan Shaheer","memberPhoto":{"__ref":"PhotoInfo:322785524"}},"Group:38034768":{"__typename":"Group","id":"38034768","name":"AWS Cloud Club at NUCES - FAST Karachi","link":"https://www.meetup.com/aws-cloud-club-at-nuces-fast-karachi","description":"AWS Cloud Club at National University of Computer \u0026 Emerging Sciences - FAST Karachi is a student-led, student-driven user group focused on learning about the Cloud via AWS technologies.\nThe goal of this club is to teach students about the AWS Cloud and its various use cases, including those related to security, AI, business analytics, business transformation, etc. We will teach students about the benefits of the cloud and how it accelerates business.\nFurthermore, this AWS Cloud Club will give students hands-on experience through projects in the AWS cloud, allowing students to develop both technical and business expertise in the cloud. This club will provide students with industry skills currently in high demand.\nBy registering for events, you certify that you have read and agree to the AWS Event Terms and Conditions.","city":"Karachi","state":"","country":"pk","isPrivate":false,"isNewGroup":true,"groupPhoto":{"__ref":"PhotoInfo:527985627"},"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":58},"eventRatings":{"__typename":"GroupStatsEventRatings","average":0,"totalRatings":0}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:385655257"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:427817405"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:429586133"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:436494369"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:468444780"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:472560473"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:472567187"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:472569101"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:472571343"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:417468069"}}]}},"PhotoInfo:516911923":{"__typename":"PhotoInfo","id":"516911923","baseUrl":"https://secure-content.meetupstatic.com/images/classic-events/"},"Member:405071224":{"__typename":"Member","id":"405071224","name":"Ariyan Thourani","memberPhoto":null},"Member:405092825":{"__typename":"Member","id":"405092825","name":"Mohsin Muhammad ","memberPhoto":null},"PhotoInfo:317250513":{"__typename":"PhotoInfo","id":"317250513","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:405097244":{"__typename":"Member","id":"405097244","name":"Ali murad","memberPhoto":{"__ref":"PhotoInfo:317250513"}},"Member:405119616":{"__typename":"Member","id":"405119616","name":"David Rao","memberPhoto":null},"Member:405221683":{"__typename":"Member","id":"405221683","name":"Muhammad Bilal","memberPhoto":null},"PhotoInfo:322431718":{"__typename":"PhotoInfo","id":"322431718","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:338122830":{"__typename":"Member","id":"338122830","name":" Jehangeer Menghwar","memberPhoto":{"__ref":"PhotoInfo:322431718"}},"Member:405340482":{"__typename":"Member","id":"405340482","name":"Muhammad Hamza","memberPhoto":null},"Member:405511884":{"__typename":"Member","id":"405511884","name":"Rida","memberPhoto":null},"Member:405528934":{"__typename":"Member","id":"405528934","name":"Urooj Saad","memberPhoto":null},"Group:37313584":{"__typename":"Group","id":"37313584","name":"Karachi R User Group","link":"https://www.meetup.com/karachi-r-user-group","description":"Hello and a warm welcome to the Karachi R User Group!\n\nR is an open-source programming language for statistical computing and data science - from data mining, cleaning, wrangling, exploration, machine learning, and communication.\n\nR is commonly used in both academia, in fields like computational biology and applied statistics, and in commercial areas such as healthcare, quantitative finance, geospatial applications, and business intelligence.\n\nWe're thrilled to have you here with us. Our mission is to foster a vibrant and inclusive community of R programming enthusiasts. Whether you're a seasoned R pro or just starting, you will learn from this community.\n\nKarachi R User Group is a non-profit platform. We're all about sharing knowledge, networking, and supporting each other on our R journey. We regularly organize R programming training sessions, meetups, and workshops to help you enhance your skills and stay connected with like-minded individuals.\n\nAs our group grows, you can look forward to a variety of engaging talks. We'll have sessions for R beginners looking to get a solid start, and professionals sharing their personal growth stories. Topics will span from Data Analysis, Data Visualization, and Shiny Application Development, to Statistical and Data Science Programming, and so much more!\n\nIf you're eager to share your own R journey or expertise, we'd love to hear from you. Please reach out to Uzair Aslam at m.uzair@statdevs.com. Your unique story and insights can inspire and enrich our community.\n\nYou can also join our WhatsApp Group to stay connected with R User Karachi Community: https://chat.whatsapp.com/Fls9OuTBQqn4ihJ16VZa3Y\n\nThank you for joining us, and let's embark on this R adventure together!","city":"Karachi","state":"","country":"pk","isPrivate":false,"isNewGroup":false,"groupPhoto":{"__ref":"PhotoInfo:516911923"},"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":520},"eventRatings":{"__typename":"GroupStatsEventRatings","average":4.71,"totalRatings":7}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:288279227"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:405071224"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:405092825"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:405097244"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:405119616"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:405221683"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:338122830"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:405340482"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:405511884"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:405528934"}}]}},"PhotoInfo:306425657":{"__typename":"PhotoInfo","id":"306425657","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:337856870":{"__typename":"Member","id":"337856870","name":"Imran Haider","memberPhoto":{"__ref":"PhotoInfo:306425657"}},"PhotoInfo:306520328":{"__typename":"PhotoInfo","id":"306520328","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:338242809":{"__typename":"Member","id":"338242809","name":"Jawwad Ahmed","memberPhoto":{"__ref":"PhotoInfo:306520328"}},"Member:319721297":{"__typename":"Member","id":"319721297","name":"Haider Jawaid","memberPhoto":null},"Member:338499509":{"__typename":"Member","id":"338499509","name":"Aamir","memberPhoto":null},"PhotoInfo:299698338":{"__typename":"PhotoInfo","id":"299698338","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:311561817":{"__typename":"Member","id":"311561817","name":"Amjad Safvi MD","memberPhoto":{"__ref":"PhotoInfo:299698338"}},"Member:338754312":{"__typename":"Member","id":"338754312","name":"Muhammad Ahsan Munawar","memberPhoto":null},"PhotoInfo:306648376":{"__typename":"PhotoInfo","id":"306648376","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:338761918":{"__typename":"Member","id":"338761918","name":"Kumail Khandwala","memberPhoto":{"__ref":"PhotoInfo:306648376"}},"Member:339038623":{"__typename":"Member","id":"339038623","name":"Ashraf Amir Ali","memberPhoto":null},"Member:339051914":{"__typename":"Member","id":"339051914","name":"UbaidRaja","memberPhoto":null},"PhotoInfo:306746158":{"__typename":"PhotoInfo","id":"306746158","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:339156780":{"__typename":"Member","id":"339156780","name":"junaid","memberPhoto":{"__ref":"PhotoInfo:306746158"}},"Group:35712999":{"__typename":"Group","id":"35712999","name":"Pakistan Radiology and Medical Imaging","link":"https://www.meetup.com/pakistan-radiology-and-medical-imaging","description":"\u003cp\u003eThe purpose of this group is to bring together both physicians and professionals working in the field of radiology and medical imaging who are interested in learning about the latest advances in radiology with a friendly group of like-minded people. The group will hold panel discussions and presentations on subjects such as teleradiology, radiology workflow, Ai, machine learning, and medical image processing.\u003c/p\u003e\u003cp\u003e\u003cbr /\u003e\u003c/p\u003e\u003cp\u003eJoin the group to be invited to our next event!\u003c/p\u003e","city":"Karachi","state":"","country":"pk","isPrivate":false,"isNewGroup":false,"groupPhoto":null,"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":279},"eventRatings":{"__typename":"GroupStatsEventRatings","average":0,"totalRatings":0}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:337856870"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:338242809"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:319721297"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:338499509"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:311561817"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:338754312"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:338761918"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:339038623"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:339051914"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:339156780"}}]}},"PhotoInfo:494199529":{"__typename":"PhotoInfo","id":"494199529","baseUrl":"https://secure-content.meetupstatic.com/images/classic-events/"},"PhotoInfo:268914966":{"__typename":"PhotoInfo","id":"268914966","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:232107265":{"__typename":"Member","id":"232107265","name":"Muhammad Faizan Batra","memberPhoto":{"__ref":"PhotoInfo:268914966"}},"Member:249577850":{"__typename":"Member","id":"249577850","name":"Muhammad Ali","memberPhoto":null},"PhotoInfo:292766200":{"__typename":"PhotoInfo","id":"292766200","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:236990946":{"__typename":"Member","id":"236990946","name":"Qamar un Nisa","memberPhoto":{"__ref":"PhotoInfo:292766200"}},"PhotoInfo:275278258":{"__typename":"PhotoInfo","id":"275278258","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:249578975":{"__typename":"Member","id":"249578975","name":"Mike A. Cedric","memberPhoto":{"__ref":"PhotoInfo:275278258"}},"PhotoInfo:274151213":{"__typename":"PhotoInfo","id":"274151213","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:246803872":{"__typename":"Member","id":"246803872","name":"Nihal Yanmaz","memberPhoto":{"__ref":"PhotoInfo:274151213"}},"PhotoInfo:274578553":{"__typename":"PhotoInfo","id":"274578553","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:247851572":{"__typename":"Member","id":"247851572","name":"M Fahad Minhas","memberPhoto":{"__ref":"PhotoInfo:274578553"}},"PhotoInfo:261041142":{"__typename":"PhotoInfo","id":"261041142","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:214987265":{"__typename":"Member","id":"214987265","name":"Ruman Khan","memberPhoto":{"__ref":"PhotoInfo:261041142"}},"PhotoInfo:274413176":{"__typename":"PhotoInfo","id":"274413176","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:247445705":{"__typename":"Member","id":"247445705","name":"Zayn Ul Abdin","memberPhoto":{"__ref":"PhotoInfo:274413176"}},"PhotoInfo:263389598":{"__typename":"PhotoInfo","id":"263389598","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:187139957":{"__typename":"Member","id":"187139957","name":"Durlabh","memberPhoto":{"__ref":"PhotoInfo:263389598"}},"Member:198503303":{"__typename":"Member","id":"198503303","name":"Zaheer Ahmed","memberPhoto":null},"Group:27731037":{"__typename":"Group","id":"27731037","name":"IBM Developer Karachi","link":"https://www.meetup.com/IBMKarachi","description":"\u003cp\u003eThis is a meetup group for developers, architects, and technology enthusiasts. We conduct activities for all the hot-technologies in the market like Data Science, IoT, Containers, Kubernetes Microservices \u0026 Blockchain. Our meetups are free.\u003c/p\u003e\n\u003cp\u003eIf you need help with any project or other work, please feel free to contact our team and request sessions too for your group or enterprise. IBM is happy to help and grow the developer community in Pakistan, let us know if you want to co-host any event with us! :D \u003cbr\u003e\u003c/p\u003e\n\u003cp\u003eWould you like to watch recordings of our past webinars? please find our recorded videos here: https://ibm.biz/webinar-rec\u003cbr\u003e\u003c/p\u003e\n\u003cp\u003e\u003cbr\u003e\u003c/p\u003e\n\u003cp\u003e\u003cbr\u003e\u003c/p\u003e","city":"Karachi","state":"","country":"pk","isPrivate":false,"isNewGroup":false,"groupPhoto":{"__ref":"PhotoInfo:494199529"},"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":3255},"eventRatings":{"__typename":"GroupStatsEventRatings","average":4.83,"totalRatings":230}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:232107265"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:249577850"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:236990946"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:249578975"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:246803872"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:247851572"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:214987265"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:247445705"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:187139957"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:198503303"}}]}},"PhotoInfo:510905731":{"__typename":"PhotoInfo","id":"510905731","baseUrl":"https://secure-content.meetupstatic.com/images/classic-events/"},"PhotoInfo:316489296":{"__typename":"PhotoInfo","id":"316489296","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:384503217":{"__typename":"Member","id":"384503217","name":"Raheel Siddiqui","memberPhoto":{"__ref":"PhotoInfo:316489296"}},"PhotoInfo:294753498":{"__typename":"PhotoInfo","id":"294753498","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:296895011":{"__typename":"Member","id":"296895011","name":"Rizwan Sadiq","memberPhoto":{"__ref":"PhotoInfo:294753498"}},"Member:385918702":{"__typename":"Member","id":"385918702","name":"Nimra Saeed","memberPhoto":null},"PhotoInfo:242391187":{"__typename":"PhotoInfo","id":"242391187","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:14276060":{"__typename":"Member","id":"14276060","name":"Yousuf Tafhim","memberPhoto":{"__ref":"PhotoInfo:242391187"}},"PhotoInfo:321691402":{"__typename":"PhotoInfo","id":"321691402","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:233432206":{"__typename":"Member","id":"233432206","name":"sumama zaeem","memberPhoto":{"__ref":"PhotoInfo:321691402"}},"Member:386232669":{"__typename":"Member","id":"386232669","name":"Hassan SISPN","memberPhoto":null},"PhotoInfo:314424655":{"__typename":"PhotoInfo","id":"314424655","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:386288338":{"__typename":"Member","id":"386288338","name":"Ali Malik","memberPhoto":{"__ref":"PhotoInfo:314424655"}},"PhotoInfo:314452903":{"__typename":"PhotoInfo","id":"314452903","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:386535733":{"__typename":"Member","id":"386535733","name":"Raza J.","memberPhoto":{"__ref":"PhotoInfo:314452903"}},"Member:386582806":{"__typename":"Member","id":"386582806","name":"Affan Gull","memberPhoto":null},"Member:386639719":{"__typename":"Member","id":"386639719","name":"Sarfraz","memberPhoto":null},"Group:36900151":{"__typename":"Group","id":"36900151","name":"AWS UG Karachi","link":"https://www.meetup.com/aws-ug-karachi","description":"The AWS User Group in Karachi has a strong agenda centered around providing a supportive community for AWS users in the city. Members can share their experiences and discuss best practices for using AWS services such as EC2, S3, Lambda, and more. The group can also invite expert speakers to present on topics such as cloud security, cost optimization, and containerization. Networking opportunities are available for members to build professional relationships with other AWS users in the local community. Members can stay up to date with the latest developments in AWS services and the cloud computing industry, including updates on new features, services, and best practices. Finally, the group provides a platform for members to collaborate and troubleshoot issues with AWS services and provide guidance on how to solve problems, as well as discuss common challenges faced by local users.","city":"Karachi","state":"","country":"pk","isPrivate":false,"isNewGroup":false,"groupPhoto":{"__ref":"PhotoInfo:510905731"},"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":1307},"eventRatings":{"__typename":"GroupStatsEventRatings","average":4.8,"totalRatings":35}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:384503217"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:296895011"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:385918702"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:14276060"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:233432206"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:386232669"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:386288338"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:386535733"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:386582806"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:386639719"}}]}},"PhotoInfo:497170741":{"__typename":"PhotoInfo","id":"497170741","baseUrl":"https://secure-content.meetupstatic.com/images/classic-events/"},"PhotoInfo:314595759":{"__typename":"PhotoInfo","id":"314595759","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:333638422":{"__typename":"Member","id":"333638422","name":"Yousuf Asghar","memberPhoto":{"__ref":"PhotoInfo:314595759"}},"PhotoInfo:300439361":{"__typename":"PhotoInfo","id":"300439361","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:301146617":{"__typename":"Member","id":"301146617","name":"Ana Manfredonia","memberPhoto":{"__ref":"PhotoInfo:300439361"}},"PhotoInfo:304038965":{"__typename":"PhotoInfo","id":"304038965","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:327726783":{"__typename":"Member","id":"327726783","name":"Davit Yurmuzyan","memberPhoto":{"__ref":"PhotoInfo:304038965"}},"PhotoInfo:301635353":{"__typename":"PhotoInfo","id":"301635353","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:313044863":{"__typename":"Member","id":"313044863","name":"Dan Wagner","memberPhoto":{"__ref":"PhotoInfo:301635353"}},"Member:334626802":{"__typename":"Member","id":"334626802","name":"zain ulabiden","memberPhoto":null},"Member:334638635":{"__typename":"Member","id":"334638635","name":"Kais Ali","memberPhoto":null},"PhotoInfo:305568635":{"__typename":"PhotoInfo","id":"305568635","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:334638571":{"__typename":"Member","id":"334638571","name":"Zeeshan Hyder Mirani","memberPhoto":{"__ref":"PhotoInfo:305568635"}},"Member:334749862":{"__typename":"Member","id":"334749862","name":"Mughal","memberPhoto":null},"Member:335459823":{"__typename":"Member","id":"335459823","name":"Aasia Abbas","memberPhoto":null},"Member:335776840":{"__typename":"Member","id":"335776840","name":"Affan Ahmed","memberPhoto":null},"Group:35421857":{"__typename":"Group","id":"35421857","name":"Karachi SolidWorks User Group","link":"https://www.meetup.com/karachi-solidworks-user-group","description":"Welcome SolidWorks lovers far and wide! This is an official SolidWorks User Group (SWUG) of Karachi, Pakistan. We’re a part of the SolidWorks User Group Network (SWUGN) which consists of 200+ groups and thousands of users across 25 countries.\n\n**Our Mission?**\n\nThe SOLIDWORKS User Group Network (SWUGN) is run for our users, by our users. Its mission is to empower real people who use SOLIDWORKS products to collaborate with, learn from, and teach others. Easily connect and meet up with one another anytime, anywhere, on any device for in-depth technical conversations and face-to-face networking!\n**When you attend a user group meeting you will:**\n• Learn more about SOLIDWORKS and related products\n• Hear technical presentations that will provide you and your organization with valuable, real-world SOLIDWORKS tips, tricks, techniques and more\n• Network with your peers\n• Get SOLIDWORKS giveaways and enjoy food and refreshments with like-minded individuals.\n\nThe Karachi SOLIDWORKS User Group (KSWUG) meets quarterly to learn and network. Our meeting consists of SOLIDWORKS-related presentations, swag giveaways and of course free food and refreshments.\n\nOur meetings are always free to attend and your experience level doesn't matter in any way. Users of all skill and interest level are welcome to attend our FREE events. Whether you are new to the 3D CAD world, or you are looking to get your SolidWorks Associate/ Professional/ Expert Certification, or you have been using SolidWorks for a decade, we guarantee you will learn something new.\n\nYou can join us in person if possible or on one of our live streams. Look out for our virtual happy hours and other networking events. We're eager to meet with you! Happy designing!","city":"Karachi","state":"","country":"pk","isPrivate":false,"isNewGroup":false,"groupPhoto":{"__ref":"PhotoInfo:497170741"},"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":528},"eventRatings":{"__typename":"GroupStatsEventRatings","average":0,"totalRatings":0}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:333638422"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:301146617"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:327726783"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:313044863"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:334626802"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:334638635"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:334638571"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:334749862"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:335459823"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:335776840"}}]}},"PhotoInfo:523610130":{"__typename":"PhotoInfo","id":"523610130","baseUrl":"https://secure-content.meetupstatic.com/images/classic-events/"},"PhotoInfo:322109447":{"__typename":"PhotoInfo","id":"322109447","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:208556900":{"__typename":"Member","id":"208556900","name":"LF Decentralized Trust","memberPhoto":{"__ref":"PhotoInfo:322109447"}},"PhotoInfo:276817646":{"__typename":"PhotoInfo","id":"276817646","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:184543338":{"__typename":"Member","id":"184543338","name":"Zeeshan Arif","memberPhoto":{"__ref":"PhotoInfo:276817646"}},"PhotoInfo:285331584":{"__typename":"PhotoInfo","id":"285331584","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:274991583":{"__typename":"Member","id":"274991583","name":"Abdul Sami Haroon","memberPhoto":{"__ref":"PhotoInfo:285331584"}},"PhotoInfo:303785551":{"__typename":"PhotoInfo","id":"303785551","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:224666206":{"__typename":"Member","id":"224666206","name":"kumail raza","memberPhoto":{"__ref":"PhotoInfo:303785551"}},"PhotoInfo:244477647":{"__typename":"PhotoInfo","id":"244477647","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:185174558":{"__typename":"Member","id":"185174558","name":"Ahsan Tariq","memberPhoto":{"__ref":"PhotoInfo:244477647"}},"PhotoInfo:282462174":{"__typename":"PhotoInfo","id":"282462174","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:267907376":{"__typename":"Member","id":"267907376","name":"Adeel Ahmed Khatri","memberPhoto":{"__ref":"PhotoInfo:282462174"}},"PhotoInfo:280736496":{"__typename":"PhotoInfo","id":"280736496","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:263501476":{"__typename":"Member","id":"263501476","name":"Salman, Khwaja","memberPhoto":{"__ref":"PhotoInfo:280736496"}},"PhotoInfo:281450507":{"__typename":"PhotoInfo","id":"281450507","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:211721128":{"__typename":"Member","id":"211721128","name":"طارق  taariqq","memberPhoto":{"__ref":"PhotoInfo:281450507"}},"PhotoInfo:289126789":{"__typename":"PhotoInfo","id":"289126789","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:282862328":{"__typename":"Member","id":"282862328","name":"Muhammad Ozair","memberPhoto":{"__ref":"PhotoInfo:289126789"}},"PhotoInfo:289127300":{"__typename":"PhotoInfo","id":"289127300","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:282863351":{"__typename":"Member","id":"282863351","name":"Rockedmej Rock","memberPhoto":{"__ref":"PhotoInfo:289127300"}},"Group:32124698":{"__typename":"Group","id":"32124698","name":"LFDT Pakistan","link":"https://www.meetup.com/lfdt-pakistan","description":"LFDT Meetup groups have an informal relationship with LF Decentralized Trust and make up a key part of the LFDT ecosystem. Participation in a LFDT Meetup group is open to anyone--employees of a LFDT member company, LFDT contributors and developers, and people just passionate about distributed trust technology.\n\nFor more information about LFDT, please visit:\n[http://lfdecentralizedtrust.org/](http://lfdecentralizedtrust.org/)\n\nFor LFDT Meetup Guidelines, please visit:\n[http://meetups.lfdecentralizedtrust.org](http://meetups.lfdecentralizedtrust.org)\n\nTo stay in touch with the latest LFDT news, sign up to our weekly newsletter:\n[https://www.lfdecentralizedtrust.org/newsletter-archive](https://www.lfdecentralizedtrust.org/newsletter-archive)","city":"Karachi","state":"","country":"pk","isPrivate":false,"isNewGroup":false,"groupPhoto":{"__ref":"PhotoInfo:523610130"},"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":1411},"eventRatings":{"__typename":"GroupStatsEventRatings","average":4.61,"totalRatings":18}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:208556900"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:184543338"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:274991583"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:224666206"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:185174558"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:267907376"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:263501476"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:211721128"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:282862328"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:282863351"}}]}},"PhotoInfo:516526615":{"__typename":"PhotoInfo","id":"516526615","baseUrl":"https://secure-content.meetupstatic.com/images/classic-events/"},"PhotoInfo:311948603":{"__typename":"PhotoInfo","id":"311948603","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:266389142":{"__typename":"Member","id":"266389142","name":"Faisal Fareed","memberPhoto":{"__ref":"PhotoInfo:311948603"}},"PhotoInfo:319757604":{"__typename":"PhotoInfo","id":"319757604","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:80845552":{"__typename":"Member","id":"80845552","name":"Aleem","memberPhoto":{"__ref":"PhotoInfo:319757604"}},"Member:316529669":{"__typename":"Member","id":"316529669","name":"Muhammad Afsar Khan","memberPhoto":null},"Member:316536419":{"__typename":"Member","id":"316536419","name":"Umair Iqbal","memberPhoto":null},"Member:314250152":{"__typename":"Member","id":"314250152","name":"Yasir Ammar Mehmood ","memberPhoto":null},"Member:316560067":{"__typename":"Member","id":"316560067","name":"Muhammad Hussain","memberPhoto":null},"PhotoInfo:301703114":{"__typename":"PhotoInfo","id":"301703114","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:316285928":{"__typename":"Member","id":"316285928","name":"Necdet Saritas","memberPhoto":{"__ref":"PhotoInfo:301703114"}},"PhotoInfo:295173375":{"__typename":"PhotoInfo","id":"295173375","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:297786750":{"__typename":"Member","id":"297786750","name":"Malik Naeem Azam","memberPhoto":{"__ref":"PhotoInfo:295173375"}},"PhotoInfo:252911613":{"__typename":"PhotoInfo","id":"252911613","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:198107593":{"__typename":"Member","id":"198107593","name":"Junaid Mansoor","memberPhoto":{"__ref":"PhotoInfo:252911613"}},"PhotoInfo:265259760":{"__typename":"PhotoInfo","id":"265259760","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:121652732":{"__typename":"Member","id":"121652732","name":"Fahad Sheikh","memberPhoto":{"__ref":"PhotoInfo:265259760"}},"Group:34230300":{"__typename":"Group","id":"34230300","name":"Pakistan User Group- Microsoft Dynamics 365 \u0026 Power Platform","link":"https://www.meetup.com/pakistanug","description":"Pakistan User Group is a community created with the intention to provide pivotal platform for country’s IT professionals, entrepreneurs, business application users and students to collaborate on up-skilling, effective networking and other areas of common interest adding value for a growth-centric skilled industry.\n\nWe are proud to have engaged the industry’s experienced professionals locally and Internationally, well versed with Microsoft Products \u0026 Platforms, who will be there to take members through this growth journey.","city":"Karachi","state":"","country":"pk","isPrivate":false,"isNewGroup":false,"groupPhoto":{"__ref":"PhotoInfo:516526615"},"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":2078},"eventRatings":{"__typename":"GroupStatsEventRatings","average":4.63,"totalRatings":59}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:266389142"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:80845552"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:316529669"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:316536419"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:314250152"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:316560067"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:316285928"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:297786750"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:198107593"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:121652732"}}]}},"PhotoInfo:511559077":{"__typename":"PhotoInfo","id":"511559077","baseUrl":"https://secure-content.meetupstatic.com/images/classic-events/"},"PhotoInfo:305384672":{"__typename":"PhotoInfo","id":"305384672","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:333891539":{"__typename":"Member","id":"333891539","name":"Miki","memberPhoto":{"__ref":"PhotoInfo:305384672"}},"PhotoInfo:315094225":{"__typename":"PhotoInfo","id":"315094225","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:243481496":{"__typename":"Member","id":"243481496","name":"Yasuyuki Ohnishi","memberPhoto":{"__ref":"PhotoInfo:315094225"}},"PhotoInfo:301031508":{"__typename":"PhotoInfo","id":"301031508","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:314873058":{"__typename":"Member","id":"314873058","name":"Kay","memberPhoto":{"__ref":"PhotoInfo:301031508"}},"PhotoInfo:281664757":{"__typename":"PhotoInfo","id":"281664757","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:261339955":{"__typename":"Member","id":"261339955","name":"YU","memberPhoto":{"__ref":"PhotoInfo:281664757"}},"PhotoInfo:300562889":{"__typename":"PhotoInfo","id":"300562889","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:313510088":{"__typename":"Member","id":"313510088","name":"Mie","memberPhoto":{"__ref":"PhotoInfo:300562889"}},"PhotoInfo:301695164":{"__typename":"PhotoInfo","id":"301695164","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:317759442":{"__typename":"Member","id":"317759442","name":"Aki","memberPhoto":{"__ref":"PhotoInfo:301695164"}},"PhotoInfo:302399307":{"__typename":"PhotoInfo","id":"302399307","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:320846523":{"__typename":"Member","id":"320846523","name":"YUKI","memberPhoto":{"__ref":"PhotoInfo:302399307"}},"Member:333966863":{"__typename":"Member","id":"333966863","name":"Zeeshu Ji","memberPhoto":null},"PhotoInfo:305406888":{"__typename":"PhotoInfo","id":"305406888","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:333979100":{"__typename":"Member","id":"333979100","name":"MUHAMMAD ZAIN","memberPhoto":{"__ref":"PhotoInfo:305406888"}},"Member:318032087":{"__typename":"Member","id":"318032087","name":"Pm","memberPhoto":null},"Group:35366727":{"__typename":"Group","id":"35366727","name":"Enjoy Japanese!  Karachi　～日本語だけの国際交流会～","link":"https://www.meetup.com/online-enjoy-nihongo-karachi-other-10-countries","description":"This is international exchange group in only Japanese language☆【ONLINE】\nThe event is held in １５ countries, ２４ groups at the same time.\n(Vietnam,UK, US, Japan, Thailand,China, Taiwan, Philippines, Indonesia, Singapore, Malaysia, Pakistan, Korea, Australia, India)\nThe style is conversational, so enjoy meeting people from other countries and studying Japanese language♫\nThere are many people who join by one person, so you don't need to feel nervous^^\nThis concept is Japanese language, so please speak Japanese only！\nOf course Japanese people can join and please enjoy～◎\n\n日本語のみで国際交流していくグループとなります☆【オンライン】\nイベントは同時に１５か国、２４都市で開催されています。\n(ベトナム、アメリカ、日本、イギリス、タイ、中国、台湾、フィリピン、インドネシア、シンガポール、マレーシア、オーストラリア、パキスタン、韓国、インド)\n会話ベースで進めていきますが、他国の方同士で交流を深めたり、日本語を勉強してください♬\nお一人で参加される方も多いので緊張なさらずに参加して頂ければと思います^^\nルールは一つでどれだけ外国人の方が増えても日本語だけでお話しください！\n日本人の方ももちろん参加OKです。日本語教師、日本語に興味のある方も歓迎です◎","city":"Karachi","state":"","country":"pk","isPrivate":false,"isNewGroup":false,"groupPhoto":{"__ref":"PhotoInfo:511559077"},"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":1848},"eventRatings":{"__typename":"GroupStatsEventRatings","average":4.6,"totalRatings":10}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:333891539"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:243481496"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:314873058"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:261339955"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:313510088"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:317759442"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:320846523"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:333966863"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:333979100"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:318032087"}}]}},"PhotoInfo:255736021":{"__typename":"PhotoInfo","id":"255736021","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:198915385":{"__typename":"Member","id":"198915385","name":"Rob","memberPhoto":{"__ref":"PhotoInfo:255736021"}},"PhotoInfo:259123700":{"__typename":"PhotoInfo","id":"259123700","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:102581832":{"__typename":"Member","id":"102581832","name":"Wajahat Karim","memberPhoto":{"__ref":"PhotoInfo:259123700"}},"PhotoInfo:285196455":{"__typename":"PhotoInfo","id":"285196455","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:45047712":{"__typename":"Member","id":"45047712","name":"Abdul Samad","memberPhoto":{"__ref":"PhotoInfo:285196455"}},"PhotoInfo:252954839":{"__typename":"PhotoInfo","id":"252954839","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:198173387":{"__typename":"Member","id":"198173387","name":"Mudasir Nazar","memberPhoto":{"__ref":"PhotoInfo:252954839"}},"PhotoInfo:242091321":{"__typename":"PhotoInfo","id":"242091321","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:31959872":{"__typename":"Member","id":"31959872","name":"M Kashif Qamar","memberPhoto":{"__ref":"PhotoInfo:242091321"}},"PhotoInfo:254789635":{"__typename":"PhotoInfo","id":"254789635","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:185294008":{"__typename":"Member","id":"185294008","name":"Ayaz Shah","memberPhoto":{"__ref":"PhotoInfo:254789635"}},"PhotoInfo:306483854":{"__typename":"PhotoInfo","id":"306483854","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:39322242":{"__typename":"Member","id":"39322242","name":"Muneer Siddiqui","memberPhoto":{"__ref":"PhotoInfo:306483854"}},"PhotoInfo:253672417":{"__typename":"PhotoInfo","id":"253672417","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:198467371":{"__typename":"Member","id":"198467371","name":"m.raheel","memberPhoto":{"__ref":"PhotoInfo:253672417"}},"PhotoInfo:258806820":{"__typename":"PhotoInfo","id":"258806820","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:199177847":{"__typename":"Member","id":"199177847","name":"Ali Jafri","memberPhoto":{"__ref":"PhotoInfo:258806820"}},"PhotoInfo:252202626":{"__typename":"PhotoInfo","id":"252202626","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:197002305":{"__typename":"Member","id":"197002305","name":"H.M.Najam Saeed","memberPhoto":{"__ref":"PhotoInfo:252202626"}},"Group:19472551":{"__typename":"Group","id":"19472551","name":"Karachi Startup: Idea to IPO","link":"https://www.meetup.com/Karachi-Startup-Idea-to-IPO","description":"\u003cp\u003eEntrepreneurship permeates the culture of Silicon Valley - the innovation capital of the world. \u003c/p\u003e\n\u003cp\u003eThe advent of the Digital Age has democratized innovation and entrepreneurship. \u003c/p\u003e\n\u003cp\u003eNever before has it been more possible for anyone from anywhere, with a great idea and a burning desire to succeed, to make it big, and in the process, change the world in a relatively short period of time. \u003c/p\u003e\n\u003cp\u003eHP, Intel, Apple, Microsoft, Cisco, Oracle, Yahoo, eBay, Amazon, Google, Facebook and many, many, many other iconic companies all started with just an idea. Taking a startup from idea to IPO has taken on mythical proportions in Silicon Valley and beyond. Many dream the dream, with hopes of launching the \"next big thing\". \u003c/p\u003e\n\u003cp\u003eWe are a community of entrepreneurs, technologists, engineers, venture capitalists, angel investors, educators, financial professionals, corporate executives, attorneys, academics, bloggers, writers, content creators, and social activists. Our mission is to provide entrepreneurs with the knowledge, guidance, tools, and connections they need to succeed. Our goal is to build a strong, vibrant, collaborative entrepreneurial community with deep, lasting business and social relationships from Silicon Valley to Karachi and beyond.\u003c/p\u003e","city":"Karachi","state":"","country":"pk","isPrivate":false,"isNewGroup":false,"groupPhoto":null,"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":4903},"eventRatings":{"__typename":"GroupStatsEventRatings","average":3.83,"totalRatings":23}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:198915385"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:102581832"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:45047712"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:198173387"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:31959872"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:185294008"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:39322242"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:198467371"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:199177847"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:197002305"}}]}},"PhotoInfo:479063533":{"__typename":"PhotoInfo","id":"479063533","baseUrl":"https://secure-content.meetupstatic.com/images/classic-events/"},"PhotoInfo:274509781":{"__typename":"PhotoInfo","id":"274509781","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:119214532":{"__typename":"Member","id":"119214532","name":"Raja Iqbal","memberPhoto":{"__ref":"PhotoInfo:274509781"}},"PhotoInfo:286726130":{"__typename":"PhotoInfo","id":"286726130","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:214251277":{"__typename":"Member","id":"214251277","name":"Blair","memberPhoto":{"__ref":"PhotoInfo:286726130"}},"PhotoInfo:285284758":{"__typename":"PhotoInfo","id":"285284758","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:274887658":{"__typename":"Member","id":"274887658","name":"Rahim Rasool","memberPhoto":{"__ref":"PhotoInfo:285284758"}},"PhotoInfo:265518602":{"__typename":"PhotoInfo","id":"265518602","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:224545017":{"__typename":"Member","id":"224545017","name":"Ahsan Khan","memberPhoto":{"__ref":"PhotoInfo:265518602"}},"PhotoInfo:284468228":{"__typename":"PhotoInfo","id":"284468228","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:245486840":{"__typename":"Member","id":"245486840","name":"Kumail Raza","memberPhoto":{"__ref":"PhotoInfo:284468228"}},"PhotoInfo:285316266":{"__typename":"PhotoInfo","id":"285316266","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:274956147":{"__typename":"Member","id":"274956147","name":"Prem Nijar","memberPhoto":{"__ref":"PhotoInfo:285316266"}},"PhotoInfo:289626280":{"__typename":"PhotoInfo","id":"289626280","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:270036635":{"__typename":"Member","id":"270036635","name":"Waqas","memberPhoto":{"__ref":"PhotoInfo:289626280"}},"PhotoInfo:282347196":{"__typename":"PhotoInfo","id":"282347196","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:267620344":{"__typename":"Member","id":"267620344","name":"Moid Iqbal","memberPhoto":{"__ref":"PhotoInfo:282347196"}},"PhotoInfo:285212110":{"__typename":"PhotoInfo","id":"285212110","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:274734738":{"__typename":"Member","id":"274734738","name":"muhammad saad","memberPhoto":{"__ref":"PhotoInfo:285212110"}},"Group:31214326":{"__typename":"Group","id":"31214326","name":"Data Science Dojo Karachi","link":"https://www.meetup.com/Data-Science-Dojo-Karachi","description":"\u003cp\u003eWelcome to Data Science Dojo's Meetup group. Our goal is to help connect other like-minded business professionals who are interested in teaching, learning, and sharing their knowledge and understanding of data science to a larger community.\u0026nbsp;\u003c/p\u003e\n\u003cp\u003eWe encourage all members of this group to be pro-active in leading discussions on topics related to data science like machine learning, artificial intelligence, predictive analytics, big data, and IoT, as well as programming languages such as R, Hadoop, and Python.\u003c/p\u003e\n\u003cp\u003eStay tuned to our Meetup calendar for future community events and be sure to follow us on Twitter at @DataScienceDojo. Also, be sure to visit our\u0026nbsp;\u003ca href=\"https://datasciencedojo.com/data-science-bootcamp/\"\u003edata science bootcamp\u003c/a\u003e\u0026nbsp;for more information about our training.\u003c/p\u003e","city":"Karachi","state":"","country":"pk","isPrivate":false,"isNewGroup":false,"groupPhoto":{"__ref":"PhotoInfo:479063533"},"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":4010},"eventRatings":{"__typename":"GroupStatsEventRatings","average":4.33,"totalRatings":66}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:119214532"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:214251277"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:274887658"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:224545017"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:245486840"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:274956147"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:270036635"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:274991583"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:267620344"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:274734738"}}]}},"PhotoInfo:323080780":{"__typename":"PhotoInfo","id":"323080780","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:401048780":{"__typename":"Member","id":"401048780","name":"Huzaifa Ali","memberPhoto":{"__ref":"PhotoInfo:323080780"}},"PhotoInfo:316324430":{"__typename":"PhotoInfo","id":"316324430","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:399699830":{"__typename":"Member","id":"399699830","name":"Muhammad Taha Arif","memberPhoto":{"__ref":"PhotoInfo:316324430"}},"PhotoInfo:312607477":{"__typename":"PhotoInfo","id":"312607477","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:371519438":{"__typename":"Member","id":"371519438","name":"Abdur Rafay","memberPhoto":{"__ref":"PhotoInfo:312607477"}},"PhotoInfo:295479865":{"__typename":"PhotoInfo","id":"295479865","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:206223264":{"__typename":"Member","id":"206223264","name":"Zilay Huda","memberPhoto":{"__ref":"PhotoInfo:295479865"}},"Member:401463419":{"__typename":"Member","id":"401463419","name":"Kitty makes","memberPhoto":null},"PhotoInfo:316647218":{"__typename":"PhotoInfo","id":"316647218","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:401511964":{"__typename":"Member","id":"401511964","name":"Asif Aliii (Asif)","memberPhoto":{"__ref":"PhotoInfo:316647218"}},"PhotoInfo:316432110":{"__typename":"PhotoInfo","id":"316432110","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:211260212":{"__typename":"Member","id":"211260212","name":"Sumaiya Qureshi","memberPhoto":{"__ref":"PhotoInfo:316432110"}},"Member:401542368":{"__typename":"Member","id":"401542368","name":"Ahmed Sheikh","memberPhoto":null},"Group:37259439":{"__typename":"Group","id":"37259439","name":"Python Karachi","link":"https://www.meetup.com/python-karachi","description":"This is python karachi user groups, Helps to gather python enthusiasts and discuss about python.","city":"Karachi","state":"","country":"pk","isPrivate":false,"isNewGroup":false,"groupPhoto":null,"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":211},"eventRatings":{"__typename":"GroupStatsEventRatings","average":0,"totalRatings":0}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:384503217"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:401048780"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:399699830"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:371519438"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:206223264"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:401463419"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:14276060"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:401511964"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:211260212"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:401542368"}}]}},"PhotoInfo:468475996":{"__typename":"PhotoInfo","id":"468475996","baseUrl":"https://secure-content.meetupstatic.com/images/classic-events/"},"PhotoInfo:315283697":{"__typename":"PhotoInfo","id":"315283697","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:11314237":{"__typename":"Member","id":"11314237","name":"Jonathan Greechan","memberPhoto":{"__ref":"PhotoInfo:315283697"}},"PhotoInfo:322786938":{"__typename":"PhotoInfo","id":"322786938","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:93794402":{"__typename":"Member","id":"93794402","name":"Imran","memberPhoto":{"__ref":"PhotoInfo:322786938"}},"PhotoInfo:157598942":{"__typename":"PhotoInfo","id":"157598942","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:119154672":{"__typename":"Member","id":"119154672","name":"Haseeb Kodvavi","memberPhoto":{"__ref":"PhotoInfo:157598942"}},"PhotoInfo:259901643":{"__typename":"PhotoInfo","id":"259901643","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:159411702":{"__typename":"Member","id":"159411702","name":"Adnan","memberPhoto":{"__ref":"PhotoInfo:259901643"}},"PhotoInfo:177553922":{"__typename":"PhotoInfo","id":"177553922","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:133227712":{"__typename":"Member","id":"133227712","name":"Saad Rana","memberPhoto":{"__ref":"PhotoInfo:177553922"}},"PhotoInfo:204763822":{"__typename":"PhotoInfo","id":"204763822","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:151752262":{"__typename":"Member","id":"151752262","name":"moon777","memberPhoto":{"__ref":"PhotoInfo:204763822"}},"PhotoInfo:129131212":{"__typename":"PhotoInfo","id":"129131212","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:99864312":{"__typename":"Member","id":"99864312","name":"ᴡᴡᴡ.Sheikh-Naveed.sdhlq.ru","memberPhoto":{"__ref":"PhotoInfo:129131212"}},"PhotoInfo:191657682":{"__typename":"PhotoInfo","id":"191657682","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:142623022":{"__typename":"Member","id":"142623022","name":"Rahyl Ahmed Khan","memberPhoto":{"__ref":"PhotoInfo:191657682"}},"PhotoInfo:223448452":{"__typename":"PhotoInfo","id":"223448452","baseUrl":"https://secure-content.meetupstatic.com/images/classic-member/"},"Member:165715002":{"__typename":"Member","id":"165715002","name":"Jamil Ahmad Khan","memberPhoto":{"__ref":"PhotoInfo:223448452"}},"Member:124924022":{"__typename":"Member","id":"124924022","name":"Hasnain Khan","memberPhoto":null},"Group:16657642":{"__typename":"Group","id":"16657642","name":"Karachi Startup Founder 101","link":"https://www.meetup.com/karachi-startup-founder-101","description":"Startup Founder 101 brings together aspiring and experienced tech entrepreneurs to discuss, meet, and collaborate to build great new startups, and to push the local startup ecosystem forward.\\\n\n\\\n\nThis group hosts numerous free events throughout the year where you can learn the best practices of starting a company from people who have been there and done that. You’ll have the opportunity to meet local founders and investors, exchange ideas with experts, get feedback on your idea, participate in startup workshops, and more.\\\n\n\\\n\nTypical startup event topics include:\\\n\n• Coming up with a strong startup idea\\\n\n• Startup legal basics\\\n\n• How to pitch your startup\\\n\n• Starting a company without quitting your day job\\\n\n• How to raise funding for your startup\\\n\n• And much more!\\\n\n\\\n\nJoin the group to be invited to our next event!","city":"Karachi","state":"","country":"pk","isPrivate":false,"isNewGroup":false,"groupPhoto":{"__ref":"PhotoInfo:468475996"},"stats":{"__typename":"GroupStats","memberCounts":{"__typename":"GroupMemberCounts","all":5668},"eventRatings":{"__typename":"GroupStatsEventRatings","average":4.69,"totalRatings":48}},"memberships({\"filter\":{\"status\":[\"ACTIVE\",\"LEADER\"]},\"first\":10})":{"__typename":"GroupMemberConnection","edges":[{"__typename":"GroupMemberEdge","node":{"__ref":"Member:11314237"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:93794402"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:119154672"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:159411702"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:133227712"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:151752262"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:99864312"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:142623022"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:165715002"}},{"__typename":"GroupMemberEdge","node":{"__ref":"Member:124924022"}}]}}},"_sentryTraceData":"39708aaad15d49318c221d874bc62026-1185ddfee67a8157-0","_sentryBaggage":"sentry-environment=production,sentry-release=b4683dc1fd77306c178e11eb500ce25abd3fdaff,sentry-public_key=5d12cd2317664353456ab4c40d079af2,sentry-trace_id=39708aaad15d49318c221d874bc62026,sentry-sampled=false"},"__N_SSP":true},"page":"/find","query":{"location":"pk--Karachi","source":"GROUPS","distance":"anyDistance","keywords":"education"},"buildId":"b4683dc1fd77306c178e11eb500ce25abd3fdaff","isFallback":false,"isExperimentalCompile":false,"gssp":true,"locale":"en-US","locales":["en-US","en-AU","de","de-DE","es","es-ES","fr","fr-FR","it","it-IT","ja","ja-JP","ko","ko-KR","nl","nl-NL","pl","pl-PL","pt","pt-BR","ru","ru-RU","tr","tr-TR","th-TH"],"defaultLocale":"en-US","scriptLoader":[]}
+  </script>
+ </body>
+</html>
