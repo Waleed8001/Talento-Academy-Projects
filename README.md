@@ -13,4 +13,4 @@ I’m a **Python Developer** currently working at **Talento Academy** as part of
 - **Django** for scalable web applications 
 
 📫 **Let’s connect:**  
-[**LinkedIn**](www.linkedin.com/in/muhammad-waleed-kamal-3910422b3) | [**Portfolio**](https://waleed8001.github.io/) | [**Email**](mailto:waleedkamal801@gmail.com)
+[**LinkedIn**](https://www.linkedin.com/in/muhammad-waleed-kamal-3910422b3) | [**Portfolio**](https://waleed8001.github.io/) | [**Email**](mailto:waleedkamal801@gmail.com)
