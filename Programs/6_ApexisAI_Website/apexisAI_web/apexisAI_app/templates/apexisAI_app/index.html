@@ -1,0 +1,272 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApexisAI</title>
+    <link rel="icon" type="image/x-icon" href="{% static "images/apexis_ico.ico" %}">
+    <link rel="stylesheet" href="{% static "css/landing_page.css" %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 overflow-x-hidden">
+
+    <div id="hero-section" class="relative min-h-screen overflow-hidden">
+        <div id="bg-slider" class="slider-container">
+
+            {% for image in all_image %}
+            <div class="slider-item" style="background-image: url('{{ image.name.url }}');"></div>
+            {% endfor %}
+        </div>
+        <div id="hero-content-wrapper" class="relative z-20 flex flex-col justify-between h-full">
+            <nav class="flex items-center justify-between p-6 container mx-auto text-white md:px-12">
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="{% static 'images/apexis_ai_logo.png' %}" alt="Logo" class="h-14 bg-white rounded-full">
+                    
+                </a>
+                <ul class="hidden md:flex space-x-8 text-lg font-semibold">
+                    <li><a href="{% url "platform" %}" class="hover:text-blue-400 transition-colors">Platform</a></li>
+                    <li><a href="{% url "aboutus" %}" class="hover:text-blue-400 transition-colors">About Us</a></li>
+                    <li><a href="{% url "contactus" %}" class="hover:text-blue-400 transition-colors">Contact Us</a></li>
+                    <li><a href="#insights" class="hover:text-blue-400 transition-colors">Insights</a></li>
+                    <li><a href="#marketplace" class="hover:text-blue-400 transition-colors">Marketplace</a></li>
+                </ul>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </nav>
+            <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-gray-800 bg-opacity-90 z-40 text-white">
+                <ul class="flex flex-col items-center py-4 space-y-4 text-lg font-semibold">
+                    <li><a href="{% url "platform" %}" class="hover:text-blue-400 transition-colors">Platform</a></li>
+                    <li><a href="{% url "aboutus" %}" class="hover:text-blue-400 transition-colors">About Us</a></li>
+                    <li><a href="{% url "contactus" %}" class="hover:text-blue-400 transition-colors">Contact Us</a></li>
+                    <li><a href="#insights" class="hover:text-blue-400 transition-colors">Insights</a></li>
+                    <li><a href="#marketplace" class="hover:text-blue-400 transition-colors">Marketplace</a></li>
+                </ul>
+            </div>
+            <div class="flex-grow flex items-center justify-center text-center text-white">
+                <div class="max-w-4xl mx-auto p-4 md:p-8">
+                    {% if all_head_desc.hero_heading %}
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight drop-shadow-lg">
+                        {{ all_head_desc.hero_heading }}
+                    </h1>
+                    {% else %}
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight drop-shadow-lg">
+                        No heading
+                    </h1>
+                    {% endif %}
+
+                    {% if all_head_desc.hero_desc %}
+                    <p class="mt-4 sm:mt-6 text-lg sm:text-xl lg:text-2xl text-gray-300 font-light drop-shadow-md">
+                        {{ all_head_desc.hero_desc }}
+                    </p>
+                    {% else %}
+                    <p class="mt-4 sm:mt-6 text-lg sm:text-xl lg:text-2xl text-gray-300 font-light drop-shadow-md">
+                        No Description
+                    </p>
+                    {% endif %}
+
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#transvocal" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-colors">
+                            Explore More
+                        </a>
+                        <a href="{% url "contactus" %}#contact" class="px-8 py-3 bg-transparent text-white font-semibold rounded-full border-2 border-white hover:bg-white hover:text-gray-900 transition-colors">
+                            Let's Talk
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white bg-opacity-20 rounded-full hover:bg-opacity-40 transition-colors z-30">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white bg-opacity-20 rounded-full hover:bg-opacity-40 transition-colors z-30">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-10 md:mb-16">Our Suite</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#transvocal" class="px-8 py-3 bg-white text-gray-800 font-semibold rounded-full border border-gray-400 shadow-md hover:bg-gray-100 transition-colors">
+                    TransVocal
+                </a>
+                <a href="#" class="px-8 py-3 bg-white text-gray-800 font-semibold rounded-full border border-gray-400 shadow-md hover:bg-gray-100 transition-colors">
+                    Interview AI
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="transvocal" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            {% if all_head_desc.transvocal_heading %}
+                <h2 class="text-3xl font-semibold text-gray-800 mb-6" id="transvocal-heading">{{ all_head_desc.transvocal_heading }}</h2>
+            {% else %}
+                <h2 class="text-3xl font-semibold text-gray-800 mb-6" id="transvocal-heading">No Heading</h2>
+            {% endif %}
+
+            {% if all_head_desc.transvocal_desc %}
+                <p class="text-lg text-gray-600 mb-8" id="transvocal-description">{{ all_head_desc.transvocal_desc }}</p>
+            {% else %}
+                <p class="text-lg text-gray-600 mb-8" id="transvocal-description">No Description</p>
+            {% endif %}
+                <a href="#" class="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-8 rounded-full transition-colors shadow-md">
+                Learn More
+            </a>
+        </div>
+        
+        <div id="dashboard-slider-wrapper" class="mt-10 max-w-4xl mx-auto rounded-lg shadow-xl overflow-hidden">
+            <div id="dashboard-slider" class="flex">
+                {% for dash in all_dashboard %}
+                <img src="{{ dash.name.url }}" alt="Dashboard 1" class="dashboard-slide w-full h-96 object-fit">
+                {% endfor %}
+            </div>
+            <button id="dashboard-prev-btn" class="dashboard-navigation-button">&lt;</button>
+            <button id="dashboard-next-btn" class="dashboard-navigation-button">&gt;</button>
+        </div>
+    </section>
+
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            {% if all_head_desc.status_heading %}
+                <h2 class="text-4xl font-bold mb-4 md:mb-6 leading-tight" id="stats-heading">{{ all_head_desc.status_heading }}</h2>
+            {% else %}
+                <h2 class="text-4xl font-bold mb-4 md:mb-6 leading-tight" id="stats-heading">No Heading</h2>
+            {% endif %}
+
+            {% if all_head_desc.status_desc %}
+                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto" id="stats-description">
+                    {{ status_desc }}
+                </p>
+            {% else %}
+                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto" id="stats-description">
+                    No Description
+                </p>
+            {% endif %}
+
+            <div class="mt-10 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+                {% for stats in all_status %}
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900" id="stat1-number">{{ stats.status }}</span>
+                    <span class="text-sm sm:text-base text-gray-600 mt-2" id="stat1-label">{{ stats.desc }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="marketplace" class="bg-slate-900 text-white py-20">
+        <div class="container mx-auto px-4">
+            <span class="px-4 py-1 text-sm font-semibold rounded-full border border-teal-500 text-teal-300">
+                Marketplace
+            </span>
+
+            {% if all_head_desc.marketplace_heading %}
+                <h2 class="text-4xl lg:text-5xl font-bold mt-4" id="apex-marketplace-heading">
+                    {{ all_head_desc.marketplace_heading }}
+                </h2>
+            {% else %}
+                <h2 class="text-4xl lg:text-5xl font-bold mt-4" id="apex-marketplace-heading">
+                    No Heading
+                </h2>
+            {% endif %}
+            
+            {% if all_head_desc.marketplace_sub_heading %}
+                <h3 class="text-xl lg:text-2xl font-light italic text-teal-300 mt-2" id="discover-more-heading">
+                    {{ all_head_desc.marketplace_sub_heading }}
+                </h3>
+            {% else %}
+                <h3 class="text-xl lg:text-2xl font-light italic text-teal-300 mt-2" id="discover-more-heading">
+                    No Sub Heading
+                </h3>
+            {% endif %}
+
+            {% if all_head_desc.marketplace_desc %}
+                <p class="mt-4 max-w-2xl text-lg text-gray-300" id="marketplace-description">
+                    {{ all_head_desc.marketplace_desc }}
+                </p>
+            {% else %}
+                <p class="mt-4 max-w-2xl text-lg text-gray-300" id="marketplace-description">
+                    No Description
+                </p>
+            {% endif %}
+
+            <a href="#" class="inline-block mt-8 px-8 py-3 bg-teal-500 text-white font-semibold rounded-full hover:bg-teal-600 transition-colors">
+                Learn More
+            </a>
+        </div>
+    </section>
+
+    <section class="bg-white py-16 relative">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-10 md:mb-16">Testimonials</h2>
+        </div>
+
+        <div id="testimonial-slider-wrapper" class="relative max-w-6xl mx-auto overflow-hidden">
+            <div id="testimonial-slider" class="flex w-full">
+                {% for testimon in all_testimonial %}
+                <div class="testimonial-slide flex-none w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 md:px-10">
+                    <div class="text-left">
+                        <p class="text-lg md:text-xl text-gray-800 font-light italic" id="testimonial-quote">
+                            "{{ testimon.test }}"
+                        </p>
+                        <p class="mt-4 text-gray-700" id="testimonial-author">
+                            — {{ testimon.name }},
+                            <span class="font-semibold text-gray-900" id="testimonial-designation">{{ testimon.person_designation }}</span>
+                        </p>
+                    </div>
+                    <img src="{{ testimon.image.url }}" alt="Testimonial author Ali Raza" class="hidden md:block rounded-lg w-72 h-80 object-fit mx-auto">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <button id="testimonial-prev-btn" class="testimonial-navigation-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+        <button id="testimonial-next-btn" class="testimonial-navigation-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </section>
+
+    <section id="insights" class="bg-white py-16 flex justify-end">
+        <div class="container mx-auto px-4 flex justify-end">
+            <div class="text-left max-w-lg">
+                <span class="px-4 py-1 text-sm font-semibold rounded-full border border-gray-800 bg-slate-900 text-white">
+                    Expert Views
+                </span>
+                {% if all_head_desc.insights_heading %}
+                    <h2 class="text-4xl font-bold mt-4" id="insights-heading">{{ all_head_desc.insights_heading }}</h2>
+                {% else %}
+                    <h2 class="text-4xl font-bold mt-4" id="insights-heading">No Heading</h>
+                {% endif %}
+
+                {% if all_head_desc.insights_desc %}
+                    <p class="mt-4 text-lg text-gray-600" id="insights-description">
+                    {{ all_head_desc.insights_desc }}
+                    </p>
+                {% else %}
+                    <p class="mt-4 text-lg text-gray-600" id="insights-description">
+                    No Description
+                    </p>
+                {% endif %}
+                <a href="#" class="inline-block mt-8 px-8 py-3 bg-teal-500 text-white font-semibold rounded-full hover:bg-teal-600 transition-colors">
+                    Discover Insight
+                </a>
+            </div>
+        </div>
+    </section>
+
+{% include "apexisAI_app/footer.html" %}

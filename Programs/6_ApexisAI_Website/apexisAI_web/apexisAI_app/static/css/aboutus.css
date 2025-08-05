@@ -1,0 +1,14 @@
+/*
+         * This style is for the hero section background overlay.
+         * You can adjust the opacity to make the text more readable.
+         */
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0); /* Dark overlay */
+            z-index: 1;
+        }

@@ -1,0 +1,823 @@
+Index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .slider-container {
+            display: flex;
+            transition: transform 1s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .slider-item {
+            flex-shrink: 0;
+            width: 100vw;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        #hero-content-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 10;
+        }
+        /* Dashboard Slider Styles */
+        #dashboard-slider-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+        #dashboard-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .dashboard-slide {
+            flex-shrink: 0;
+            width: 100%;
+        }
+        .dashboard-navigation-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .dashboard-navigation-button:hover:not(:disabled) {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        #dashboard-prev-btn {
+            left: 10px;
+        }
+        #dashboard-next-btn {
+            right: 10px;
+        }
+
+        /* Testimonial Slider Styles */
+        #testimonial-slider-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+        #testimonial-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .testimonial-slide {
+            flex-shrink: 0;
+            width: 100%;
+        }
+        .testimonial-navigation-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            cursor: pointer;
+            padding: 1rem;
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 9999px;
+            transition: opacity 0.3s;
+        }
+        .testimonial-navigation-button:hover:not(:disabled) {
+            background-color: rgba(255,255,255,1);
+        }
+        .testimonial-navigation-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        #testimonial-prev-btn {
+            left: 1rem;
+        }
+        #testimonial-next-btn {
+            right: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 overflow-x-hidden">
+
+    <div id="hero-section" class="relative min-h-screen overflow-hidden">
+        <div id="bg-slider" class="slider-container">
+            <div class="slider-item" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/057/333/084/small/abstract-depiction-of-digital-data-with-binary-code-and-interconnected-lines-symbolizing-technology-information-and-digital-transformation-free-photo.jpg');"></div>
+            <div class="slider-item" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/057/333/058/small/abstract-tunnel-of-blue-light-streams-cascading-down-into-the-deep-dark-digital-rain-virtual-reality-tech-concept-beautiful-data-background-free-photo.jpg');"></div>
+            <div class="slider-item" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/027/760/306/small/dark-blue-digital-cyberspace-tunnel-3d-rendering-photo.jpg');"></div>
+        </div>
+        <div id="hero-content-wrapper" class="relative z-20 flex flex-col justify-between h-full">
+            <nav class="flex items-center justify-between p-6 container mx-auto text-white">
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="https://via.placeholder.com/40/ffffff" alt="Logo" class="h-10">
+                    <span class="text-xl font-bold">BRAND</span>
+                </a>
+                <ul class="hidden md:flex space-x-8 text-lg font-semibold">
+                    <li><a href="https://www.google.com" class="hover:text-blue-400 transition-colors">Platform</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">About Us</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Insights</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Marketplace</a></li>
+                </ul>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </nav>
+            <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-gray-800 bg-opacity-90 z-40 text-white">
+                <ul class="flex flex-col items-center py-4 space-y-4 text-lg font-semibold">
+                    <li><a href="https://www.google.com" class="hover:text-blue-400 transition-colors">Platform</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">About Us</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Insights</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Marketplace</a></li>
+                </ul>
+            </div>
+            <div class="flex-grow flex items-center justify-center text-center text-white">
+                <div class="max-w-4xl mx-auto p-4 md:p-8">
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight drop-shadow-lg">
+                        Redefining Possibilities Through Digital Innovation
+                    </h1>
+                    <p class="mt-4 sm:mt-6 text-lg sm:text-xl lg:text-2xl text-gray-300 font-light drop-shadow-md">
+                        From intelligent tools to scalable cloud solutions – we build the future
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-colors">
+                            Explore More
+                        </a>
+                        <a href="#" class="px-8 py-3 bg-transparent text-white font-semibold rounded-full border-2 border-white hover:bg-white hover:text-gray-900 transition-colors">
+                            Let's Talk
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white bg-opacity-20 rounded-full hover:bg-opacity-40 transition-colors z-30">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white bg-opacity-20 rounded-full hover:bg-opacity-40 transition-colors z-30">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-10 md:mb-16">Our Suite</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="px-8 py-3 bg-white text-gray-800 font-semibold rounded-full border border-gray-400 shadow-md hover:bg-gray-100 transition-colors">
+                    TransVocal
+                </a>
+                <a href="#" class="px-8 py-3 bg-white text-gray-800 font-semibold rounded-full border border-gray-400 shadow-md hover:bg-gray-100 transition-colors">
+                    Interview AI
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6" id="transvocal-heading">TransVocal</h2>
+            <p class="text-lg text-gray-600 mb-8" id="transvocal-description">AI-powered tool that turns meetings into clear, structured minutes — instantly.</p>
+            <a href="#" class="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-8 rounded-full transition-colors shadow-md">
+                Learn More
+            </a>
+        </div>
+        
+        <div id="dashboard-slider-wrapper" class="mt-10 max-w-4xl mx-auto rounded-lg shadow-xl overflow-hidden">
+            <div id="dashboard-slider" class="flex">
+                <img src="https://www.opendatasoft.com/wp-content/uploads/2023/03/Blog-thumbnail-1.png" alt="Dashboard 1" class="dashboard-slide w-full h-96 object-fit">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/1*SvtF4kmd8mKZdQ6hLLMh8w.jpeg" alt="Dashboard 2" class="dashboard-slide w-full h-96 object-fit">
+                <img src="https://marketingpordados.com/wp-content/uploads/2021/07/O-que-e-dashboard.jpg" alt="Dashboard 3" class="dashboard-slide w-full h-96 object-fit">
+            </div>
+            <button id="dashboard-prev-btn" class="dashboard-navigation-button">&lt;</button>
+            <button id="dashboard-next-btn" class="dashboard-navigation-button">&gt;</button>
+        </div>
+    </section>
+
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4 md:mb-6 leading-tight" id="stats-heading">Trusted. Tested. Transforming Workplaces.</h2>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto" id="stats-description">
+                We’re proud to be empowering teams worldwide with intelligent tools and measurable impact.
+            </p>
+            <div class="mt-10 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900" id="stat1-number">200+</span>
+                    <span class="text-sm sm:text-base text-gray-600 mt-2" id="stat1-label">Users Onboard</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900" id="stat2-number">15+</span>
+                    <span class="text-sm sm:text-base text-gray-600 mt-2" id="stat2-label">Successful implementation</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900" id="stat3-number">95%</span>
+                    <span class="text-sm sm:text-base text-gray-600 mt-2" id="stat3-label">Positive Feedback</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900" id="stat4-number">2+</span>
+                    <span class="text-sm sm:text-base text-gray-600 mt-2" id="stat4-label">Live Tools</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-900 text-white py-20">
+        <div class="container mx-auto px-4">
+            <span class="px-4 py-1 text-sm font-semibold rounded-full border border-teal-500 text-teal-300">
+                Marketplace
+            </span>
+            <h2 class="text-4xl lg:text-5xl font-bold mt-4" id="apex-marketplace-heading">
+                Apex Marketplace
+            </h2>
+            <h3 class="text-xl lg:text-2xl font-light italic text-teal-300 mt-2" id="discover-more-heading">
+                Discover More. Do More.
+            </h3>
+            <p class="mt-4 max-w-2xl text-lg text-gray-300" id="marketplace-description">
+                Browse our growing marketplace of AI tools, integrations, and services — built to power productivity across every industry.
+            </p>
+            <a href="#" class="inline-block mt-8 px-8 py-3 bg-teal-500 text-white font-semibold rounded-full hover:bg-teal-600 transition-colors">
+                Learn More
+            </a>
+        </div>
+    </section>
+
+    <section class="bg-white py-16 relative">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-10 md:mb-16">Testimonials</h2>
+        </div>
+
+        <div id="testimonial-slider-wrapper" class="relative max-w-6xl mx-auto overflow-hidden">
+            <div id="testimonial-slider" class="flex w-full">
+                <div class="testimonial-slide flex-none w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 md:px-10">
+                    <div class="text-left">
+                        <p class="text-lg md:text-xl text-gray-800 font-light italic" id="testimonial-quote">
+                            "ApexAI's TransVocal completely changed how we handle meetings. What used to take hours now takes minutes — it's like having an assistant that never misses a detail."
+                        </p>
+                        <p class="mt-4 text-gray-700" id="testimonial-author">
+                            — Ali Raza,
+                            <span class="font-semibold text-gray-900" id="testimonial-designation">Product Manager at CoreTech</span>
+                        </p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop" alt="Testimonial author Ali Raza" class="hidden md:block rounded-lg w-72 h-80 object-cover mx-auto">
+                </div>
+
+                <div class="testimonial-slide flex-none w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 md:px-10">
+                    <div class="text-left">
+                        <p class="text-lg md:text-xl text-gray-800 font-light italic">
+                            "The platform's efficiency has been a game-changer for our team. It's intuitive, powerful, and has significantly boosted our productivity across the board."
+                        </p>
+                        <p class="mt-4 text-gray-700">
+                            — Jane Doe,
+                            <span class="font-semibold text-gray-900">CEO at Innovate Corp</span>
+                        </p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b80?q=80&w=2832&auto=format&fit=crop" alt="Testimonial author Jane Doe" class="hidden md:block rounded-lg w-72 h-80 object-cover mx-auto">
+                </div>
+            </div>
+        </div>
+
+        <button id="testimonial-prev-btn" class="testimonial-navigation-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+        <button id="testimonial-next-btn" class="testimonial-navigation-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </section>
+
+    <section class="bg-white py-16 flex justify-end">
+        <div class="container mx-auto px-4 flex justify-end">
+            <div class="text-left max-w-lg">
+                <span class="px-4 py-1 text-sm font-semibold rounded-full border border-gray-800 bg-slate-900 text-white">
+                    Expert Views
+                </span>
+                <h2 class="text-4xl font-bold mt-4" id="insights-heading">Insights</h2>
+                <p class="mt-4 text-lg text-gray-600" id="insights-description">
+                    Stay informed with the latest trends, tips, and tech from the world of AI innovation.
+                </p>
+                <a href="#" class="inline-block mt-8 px-8 py-3 bg-teal-500 text-white font-semibold rounded-full hover:bg-teal-600 transition-colors">
+                    Discover Insight
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-800 text-gray-400 py-16 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24">
+                <div>
+                    <div class="flex items-center space-x-2">
+                        <img src="https://via.placeholder.com/40/ffffff" alt="ApexAI Logo" class="h-10">
+                        <span class="text-xl font-bold text-white">ApexAI</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mt-8 mb-4">Why ApexAI?</h3>
+                    <p class="text-sm">
+                        Because we build intelligent, reliable tools that simplify work, speed up decisions, and help you stay ahead in an AI-driven world.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.505 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.901 1.144C19.996 1.144 21.054 1.57 21.849 2.366C22.645 3.161 23.07 4.218 23.07 5.314V18.686C23.07 19.782 22.645 20.84 21.849 21.635C21.054 22.43 19.996 22.856 18.901 22.856H5.099C4.004 22.856 2.946 22.43 2.151 21.635C1.355 20.84 0.93 19.782 0.93 18.686V5.314C0.93 4.218 1.355 3.161 2.151 2.366C2.946 1.57 4.004 1.144 5.099 1.144H18.901ZM18.901 2.955H5.099C4.549 2.955 4.025 3.178 3.639 3.565C3.252 3.951 3.03 4.475 3.03 5.025V18.975C3.03 19.525 3.252 20.049 3.639 20.435C4.025 20.822 4.549 21.045 5.099 21.045H18.901C19.451 21.045 19.975 20.822 20.361 20.435C20.748 20.049 20.97 19.525 20.97 18.975V5.025C20.97 4.475 20.748 3.951 20.361 3.565C19.975 3.178 19.451 2.955 18.901 2.955ZM12.016 12.016L17.75 6.282H15.938L11.026 11.194L7.146 6.282H6.282L11.026 11.194L6.282 17.75H8.094L12.914 12.83H17.75L12.914 17.75H14.726L19.55 12.016H18.901L14.726 16.191H11.026L12.016 12.016ZM12.016 12.016L12.016 12.016L12.016 12.016ZM12.016 12.016L12.016 12.016L12.016 12.016Z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.768s.784-1.767 1.75-1.767 1.75.79 1.75 1.767c0 .978-.784 1.768-1.75 1.768zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.765 7 2.476v6.759z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12.9 22.3l-2.4-2.4h-5.5v-5.5l-2.4-2.4v-5.5h5.5l2.4-2.4h5.5v5.5l2.4 2.4v5.5h-5.5zm-5.4-8.8l-1.3 1.3 2.1 2.1 1.3-1.3-2.1-2.1zm8.8 8.8l-1.3-1.3 2.1-2.1 1.3 1.3-2.1 2.1zm-8.8-17.7l-1.3-1.3-2.1 2.1-1.3 1.3 2.1 2.1zm8.8-8.8l1.3 1.3-2.1 2.1-1.3-1.3 2.1-2.1zm-5.5 13.2h-5.5v-5.5h5.5v5.5zm8.8-8.8h-5.5v-5.5h5.5v5.5zm0-8.8h-5.5v-5.5h5.5v5.5z" />
+                                <path d="M12 11c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm0 2c1.104 0 2 .896 2 2s-.896 2-2 2-2-.896-2-2 .896-2 2-2z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Suite</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-white transition-colors">TransVocal</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Interview AI</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-white mb-4">Pages</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Insight</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Marketplace</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Insight</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-white transition-colors">Case Study</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Blogs</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-white mb-4">Contact Info</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span>Karachi, Pakistan</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <span>example@yourmail.com</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span>+92 000 000 000</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<div class="bg-slate-900 pt-5 pb-5 border-t border-gray-700 text-center text-sm text-gray-500">
+    <div class="container mx-auto">
+        &copy; 2025 ApexAI Technologies. All Rights Reserved.
+    </div>
+</div>
+    <script>
+        // Hero Section Slider Functionality
+        const bgSlider = document.getElementById('bg-slider');
+        const bgImages = bgSlider.querySelectorAll('.slider-item');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        let currentIndex = 0;
+        let intervalId;
+
+        function showSlide(index) {
+            const slideWidth = window.innerWidth;
+            const transformValue = -index * slideWidth;
+            bgSlider.style.transform = `translateX(${transformValue}px)`;
+        }
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % bgImages.length;
+            showSlide(currentIndex);
+        }
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + bgImages.length) % bgImages.length;
+            showSlide(currentIndex);
+        }
+        function startAutoSlide() {
+            clearInterval(intervalId);
+            intervalId = setInterval(nextSlide, 5000);
+        }
+        prevBtn.addEventListener('click', () => {
+            clearInterval(intervalId);
+            prevSlide();
+            startAutoSlide();
+        });
+        nextBtn.addEventListener('click', () => {
+            clearInterval(intervalId);
+            nextSlide();
+            startAutoSlide();
+        });
+        window.addEventListener('resize', () => {
+            showSlide(currentIndex);
+        });
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Dashboard Slider Functionality
+        const dashboardSliderWrapper = document.getElementById('dashboard-slider-wrapper');
+        const dashboardSlider = document.getElementById('dashboard-slider');
+        const dashboardSlides = dashboardSlider.querySelectorAll('.dashboard-slide');
+        const dashboardPrevBtn = document.getElementById('dashboard-prev-btn');
+        const dashboardNextBtn = document.getElementById('dashboard-next-btn');
+        let dashboardCurrentIndex = 0;
+
+        function showDashboardSlide(index) {
+            const slideWidth = dashboardSlides[0] ? dashboardSlides[0].offsetWidth : 0;
+            const transformValue = -index * slideWidth;
+            if (dashboardSlider) {
+                dashboardSlider.style.transform = `translateX(${transformValue}px)`;
+            }
+        }
+        function nextDashboardSlide() {
+            if (dashboardSlides.length > 0) {
+                dashboardCurrentIndex = (dashboardCurrentIndex + 1) % dashboardSlides.length;
+                showDashboardSlide(dashboardCurrentIndex);
+            }
+        }
+        function prevDashboardSlide() {
+            if (dashboardSlides.length > 0) {
+                dashboardCurrentIndex = (dashboardCurrentIndex - 1 + dashboardSlides.length) % dashboardSlides.length;
+                showDashboardSlide(dashboardCurrentIndex);
+            }
+        }
+        function updateDashboardSlideWidth() {
+            if (dashboardSlides.length > 0) {
+                showDashboardSlide(dashboardCurrentIndex);
+            }
+        }
+        dashboardNextBtn.addEventListener('click', nextDashboardSlide);
+        dashboardPrevBtn.addEventListener('click', prevDashboardSlide);
+        window.addEventListener('resize', updateDashboardSlideWidth);
+
+        // Testimonial Slider Functionality
+        const testimonialSlider = document.getElementById('testimonial-slider');
+        const testimonialSlides = testimonialSlider.querySelectorAll('.testimonial-slide');
+        const testimonialPrevBtn = document.getElementById('testimonial-prev-btn');
+        const testimonialNextBtn = document.getElementById('testimonial-next-btn');
+        let testimonialCurrentIndex = 0;
+
+        function showTestimonialSlide(index) {
+            const slideWidth = testimonialSlides[0] ? testimonialSlides[0].offsetWidth : 0;
+            const transformValue = -index * slideWidth;
+            if (testimonialSlider) {
+                testimonialSlider.style.transform = `translateX(${transformValue}px)`;
+            }
+
+            // Disable/Enable buttons based on the current index
+            if (index === 0) {
+                testimonialPrevBtn.disabled = true;
+                testimonialPrevBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            } else {
+                testimonialPrevBtn.disabled = false;
+                testimonialPrevBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+
+            if (index === testimonialSlides.length - 1) {
+                testimonialNextBtn.disabled = true;
+                testimonialNextBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            } else {
+                testimonialNextBtn.disabled = false;
+                testimonialNextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        }
+        function nextTestimonialSlide() {
+            if (testimonialCurrentIndex < testimonialSlides.length - 1) {
+                testimonialCurrentIndex++;
+                showTestimonialSlide(testimonialCurrentIndex);
+            }
+        }
+        function prevTestimonialSlide() {
+            if (testimonialCurrentIndex > 0) {
+                testimonialCurrentIndex--;
+                showTestimonialSlide(testimonialCurrentIndex);
+            }
+        }
+        function updateTestimonialSlideWidth() {
+             if (testimonialSlides.length > 0) {
+                showTestimonialSlide(testimonialCurrentIndex);
+            }
+        }
+        testimonialNextBtn.addEventListener('click', nextTestimonialSlide);
+        testimonialPrevBtn.addEventListener('click', prevTestimonialSlide);
+        window.addEventListener('resize', updateTestimonialSlideWidth);
+
+
+        // Run on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(0);
+            startAutoSlide();
+            updateDashboardSlideWidth();
+            updateTestimonialSlideWidth(); // Initialize the testimonial slider
+        });
+    </script>
+</body>
+</html>
+
+
+Aboutus.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /*
+         * This CSS is for a static hero section with a single background image.
+         */
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2940&auto=format&fit=crop'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /*
+         * This style is for the hero section background overlay.
+         * You can adjust the opacity to make the text more readable.
+         */
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="hero-bg relative h-screen overflow-hidden">
+        <div class="relative z-20 flex flex-col justify-between h-full">
+            <nav class="flex items-center justify-between p-6 container mx-auto">
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="https://via.placeholder.com/40" alt="Logo" class="h-10">
+                    <span class="text-xl font-bold">ApexAI</span>
+                </a>
+                <ul class="hidden md:flex space-x-8 text-lg font-semibold">
+                    <li><a href="#" class="text-white hover:text-blue-400 transition-colors">Platform</a></li>
+                    <li><a href="#" class="text-white hover:text-blue-400 transition-colors">About Us</a></li>
+                    <li><a href="#" class="text-white hover:text-blue-400 transition-colors">Contact Us</a></li>
+                    <li><a href="#" class="text-white hover:text-blue-400 transition-colors">Insights</a></li>
+                    <li><a href="#" class="text-white hover:text-blue-400 transition-colors">Marketplace</a></li>
+                </ul>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </nav>
+            <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-gray-800 bg-opacity-90 z-30">
+                <ul class="flex flex-col items-center py-4 space-y-4 text-lg font-semibold">
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Platform</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">About Us</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Insights</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Marketplace</a></li>
+                </ul>
+            </div>
+            <div class="flex-grow flex items-center">
+                <div class="container mx-auto px-6 md:px-12">
+                    <div class="text-left max-w-4xl text-white">
+                        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight drop-shadow-lg">
+                            About Us - Apex AI
+                        </h1>
+                        <p class="mt-4 sm:mt-6 text-lg sm:text-xl lg:text-2xl text-gray-300 font-light drop-shadow-md">
+                            At Apex AI, we specialize in building cutting-edge digital solutions powered by Artificial Intelligence. From AI-integrated websites and business automation tools to smart data-driven solutions, we help businesses grow, innovate, and stay ahead in the digital revolution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="bg-white py-16 flex justify-center">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="mb-12 max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-left ml-10">Our Mission</h2>
+                <p class="text-lg text-gray-700 leading-relaxed text-left">
+                    Our mission is to empower businesses with AI-powered solutions that simplify processes, enhance customer experiences, and drive measurable growth. We are committed to delivering high-quality digital products that help companies transform and compete in today’s fast-paced digital landscape.
+                </p>
+            </div>
+            <div class="mb-12 max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-left ml-10">Our Vision</h2>
+                <p class="text-lg text-gray-700 leading-relaxed text-left">
+                    Our vision is to become a trusted global AI solutions partner for businesses of all sizes, leading the way in innovation and building future-ready digital ecosystems that shape the businesses of tomorrow.
+                </p>
+            </div>
+            <div class="mb-12 max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-left ml-10">What We Do</h2>
+                <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
+                    <li>AI-Powered Websites: Smart, responsive, and fully optimized websites with AI integration.</li>
+                    <li>Business Automation: Tools and workflows that save time and increase efficiency.</li>
+                    <li>AI-Based Digital Solutions: Intelligent chatbots, recommendation systems, and custom AI solutions.</li>
+                    <li>Creative Digital Projects: Unique branding and tech-focused digital products tailored to business needs.</li>
+                </ul>
+            </div>
+            <div class="mb-12 max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-left ml-10">Why Choose Apex AI?</h2>
+                <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
+                    <li>Custom Solutions: Every business is unique, so we craft solutions that fit your goals.</li>
+                    <li>AI-Driven Approach: We combine modern AI tools with creativity to deliver next-gen results.</li>
+                    <li>End-to-End Service: From idea to execution, we handle everything.</li>
+                </ul>
+            </div>
+
+            <div class="mb-12 max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-left ml-10">Meet Our Team</h2>
+                <p class="text-lg text-gray-700 leading-relaxed text-left mb-10">
+                    Our team is a group of creative thinkers, AI enthusiasts, and tech innovators passionate about building solutions that make a difference.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center">
+                        <img class="w-full h-64 object-cover rounded-lg mb-4 bg-gray-200" src="https://via.placeholder.com/300x400" alt="Team member photo">
+                        <h3 class="text-xl font-bold mb-1">Name</h3>
+                        <p class="text-gray-600">Profession</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img class="w-full h-64 object-cover rounded-lg mb-4 bg-gray-200" src="https://via.placeholder.com/300x400" alt="Team member photo">
+                        <h3 class="text-xl font-bold mb-1">Name</h3>
+                        <p class="text-gray-600">Profession</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img class="w-full h-64 object-cover rounded-lg mb-4 bg-gray-200" src="https://via.placeholder.com/300x400" alt="Team member photo">
+                        <h3 class="text-xl font-bold mb-1">Name</h3>
+                        <p class="text-gray-600">Profession</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-800 text-gray-400 py-16 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24">
+                <div>
+                    <div class="flex items-center space-x-2">
+                        <img src="https://via.placeholder.com/40/ffffff" alt="ApexAI Logo" class="h-10">
+                        <span class="text-xl font-bold text-white">ApexAI</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mt-8 mb-4">Why ApexAI?</h3>
+                    <p class="text-sm">
+                        Because we build intelligent, reliable tools that simplify work, speed up decisions, and help you stay ahead in an AI-driven world.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.505 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.901 1.144C19.996 1.144 21.054 1.57 21.849 2.366C22.645 3.161 23.07 4.218 23.07 5.314V18.686C23.07 19.782 22.645 20.84 21.849 21.635C21.054 22.43 19.996 22.856 18.901 22.856H5.099C4.004 22.856 2.946 22.43 2.151 21.635C1.355 20.84 0.93 19.782 0.93 18.686V5.314C0.93 4.218 1.355 3.161 2.151 2.366C2.946 1.57 4.004 1.144 5.099 1.144H18.901ZM18.901 2.955H5.099C4.549 2.955 4.025 3.178 3.639 3.565C3.252 3.951 3.03 4.475 3.03 5.025V18.975C3.03 19.525 3.252 20.049 3.639 20.435C4.025 20.822 4.549 21.045 5.099 21.045H18.901C19.451 21.045 19.975 20.822 20.361 20.435C20.748 20.049 20.97 19.525 20.97 18.975V5.025C20.97 4.475 20.748 3.951 20.361 3.565C19.975 3.178 19.451 2.955 18.901 2.955ZM12.016 12.016L17.75 6.282H15.938L11.026 11.194L7.146 6.282H6.282L11.026 11.194L6.282 17.75H8.094L12.914 12.83H17.75L12.914 17.75H14.726L19.55 12.016H18.901L14.726 16.191H11.026L12.016 12.016ZM12.016 12.016L12.016 12.016L12.016 12.016ZM12.016 12.016L12.016 12.016L12.016 12.016Z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.768s.784-1.767 1.75-1.767 1.75.79 1.75 1.767c0 .978-.784 1.768-1.75 1.768zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.765 7 2.476v6.759z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12.9 22.3l-2.4-2.4h-5.5v-5.5l-2.4-2.4v-5.5h5.5l2.4-2.4h5.5v5.5l2.4 2.4v5.5h-5.5zm-5.4-8.8l-1.3 1.3 2.1 2.1 1.3-1.3-2.1-2.1zm8.8 8.8l-1.3-1.3 2.1-2.1 1.3 1.3-2.1 2.1zm-8.8-17.7l-1.3-1.3-2.1 2.1-1.3 1.3 2.1 2.1zm8.8-8.8l1.3 1.3-2.1 2.1-1.3-1.3 2.1-2.1zm-5.5 13.2h-5.5v-5.5h5.5v5.5zm8.8-8.8h-5.5v-5.5h5.5v5.5zm0-8.8h-5.5v-5.5h5.5v5.5z" />
+                                <path d="M12 11c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm0 2c1.104 0 2 .896 2 2s-.896 2-2 2-2-.896-2-2 .896-2 2-2z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Suite</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-white transition-colors">TransVocal</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Interview AI</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-white mb-4">Pages</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Insight</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Marketplace</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Insight</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-white transition-colors">Case Study</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Blogs</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-white mb-4">Contact Info</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span>Karachi, Pakistan</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <span>example@yourmail.com</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span>+92 000 000 000</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="bg-slate-900 pt-5 pb-5 border-t border-gray-700 text-center text-sm text-gray-500">
+        <div class="container mx-auto">
+            &copy; 2025 ApexAI Technologies. All Rights Reserved.
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+
+
