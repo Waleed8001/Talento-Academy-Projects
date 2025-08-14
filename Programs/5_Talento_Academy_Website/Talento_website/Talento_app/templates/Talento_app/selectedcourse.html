@@ -1,0 +1,33 @@
+{% include "Talento_app/header.html" %}
+
+{% load static %}
+
+        <!-- Place this style block inside your <head> tag, or merge with existing styles -->
+
+
+    <!-- Paste the content below inside your <body> tag -->
+    <section class="course-details-section">
+        <h2 class="featuredcourse">Featured Course</h2>
+        <h1>Deep Dive into</h1>
+        <h3 class="course-name-main">{{ course.title }}</h3>
+
+        <div class="course-content-wrapper">
+            <div class="course-image-big">
+                <img src="{{ course.image.url }}" alt="{{ course.title }}">
+            </div>
+            <div class="course-details-right">
+                <h2 class="desc">Description</h2>
+                <p class="course-description">
+                    {{ course.desc }}
+                </p>
+                <div class="course-meta">
+                    <span class="instructor">Instructor: {{ course.teacher }}</span>
+                    <span class="students">{{ course.students }} Students Enrolled</span>
+                    <span class="status">Status: {{ course.status }} (Rs  {{ course.price }})</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% include "Talento_app/footer.html" %}

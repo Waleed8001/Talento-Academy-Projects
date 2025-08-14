@@ -1,0 +1,143 @@
+/* Hero Section (image_01bfbb.jpg) */
+        .hero-bg {
+            background-color:rgb(0, 102, 79); /* Dark green */
+            height: 510px;
+        }
+
+        .mysat{
+            position: absolute;
+            top: 200px;
+            z-index: 2;
+        }
+
+        .hero-search-bar {
+            display: flex; /* Corresponds to 'flex' */
+    align-items: center; /* Corresponds to 'items-center' */
+    margin-bottom: 2rem; /* Corresponds to 'mb-8' (1 unit = 0.25rem, so 8 units = 2rem) */
+
+            height: 75px;
+            width: 550px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50px;
+            padding: 0px 25px;
+        }
+
+        .mycourse{
+            width: 400px;
+            text-align: left;
+        }
+        
+        .mychoose{
+            text-align: left;
+            font-size: 12px;
+            width: 400px;
+        }
+        
+        .hero-search-input {
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            top: 20px;
+            font-size: 15px;
+            border: none;
+            outline: none;
+            width: 400px;
+            color: rgb(0, 0, 0)
+        }
+
+        .hero-search-button {
+            position: relative;
+            bottom: 10px;
+            left: 360px;
+            background-color:rgb(173, 255, 47); /* Lime green */
+            font-size: 11px;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-weight: bold;
+        }
+
+        .fourimage{
+            background-color: rgb(0, 102, 79);
+            height: 400px;
+            width: 440px;
+            position: relative;
+            bottom: 385px;
+            left: 440px;
+            z-index: -1;
+        }
+
+        .image1{
+            position: relative;
+            height: 180px;
+            width: 180px;
+            top: 10px;
+            left: 50px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 100% 0% 0% 100%;
+        }
+
+        .image2{
+            position: relative;
+            height: 180px;
+            width: 180px;
+            bottom: 170px;
+            left: 250px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 15% 15% 15% 15%;
+        }
+
+        .image3{
+            position: absolute;
+            height: 180px;
+            width: 180px;
+            top: 200px;
+            left: 50px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 15% 15% 15% 15%;
+        }
+
+        .image4{
+            position: absolute;
+            height: 180px;
+            width: 180px;
+            top: 200px;
+            left: 250px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 0% 100% 100% 0%;
+        }
+
+        .hero-stats-card {
+            width: 800px;
+            background-color: rgba(232, 250, 252, 1);
+            position: relative;
+            top: 410px; 
+            left: 30px;
+            border-radius: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+        }
+            
+        .card.show {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+      
+        .card-section {
+          flex: 1;
+          min-width: 200px;
+          margin-bottom: 20px;
+        }
+    
+        .big-number {
+          font-size: 48px;
+          font-weight: bold;
+          color: #1d2b45;
+        }
+    
+        .small-text {
+          font-size: 18px;
+          color: #4a5a75;
+        }

@@ -1,0 +1,361 @@
+{% include "Talento_app/header.html" %}
+{% load static %}
+{% load custom_filters %}
+
+    <!-- Hero Section: Replicating image_01bfbb.jpg -->
+    <section class="hero-bg">
+        <div class="container flex flex-col lg:flex-row items-center justify-between">
+            <!-- Left Content -->
+            <div class="mysat lg:w-1/2 text-white mb-10 lg:mb-0">
+                <p class="satisfaction text-green-400 font-medium mb-2" style="font-family: Lucida Handwriting, Cursive;">✨100% Satisfaction Guarantee</p>
+                <h1 class="mycourse text-5xl font-bold leading-tight mb-4">
+                    {{ pics.title }}
+                </h1>
+                <p class="mychoose text-gray-200 mb-8">
+                    {{ pics.text }}
+                </p>
+                <!-- Search Bar -->
+                <div class="hero-search-bar flex items-center mb-8">
+                    <svg class="searchicon w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                    <form action="{% url "courses" %}" method='get'>
+                        <input name="course" type="search" placeholder="Search your Course" class="hero-search-input" required>
+                        <button class="hero-search-button text-gray-800">SEARCH</button>
+                    </form>
+
+                </div>
+                <div class="fourimage">
+                    {% if pics.image1 %}
+                    <div class="image1">
+                        <img style="border-radius: 100% 0% 0% 100%; height: 180px;" src="{{ pics.image1.url }}" alt="pic1" class="w-full h-auto rounded-lg">
+                    </div>
+                    {% endif %}
+    
+                    {% if pics.image2 %}
+                    <div class="image2">
+                        <img style="border-radius: 15% 15% 15% 15%; height: 180px;" src="{{ pics.image2.url }}" alt="pic2" class="w-full h-auto rounded-lg">
+                    </div>
+                    {% endif %}
+    
+                    {% if pics.image3 %}
+                    <div class="image3">
+                        <img style="border-radius: 15% 15% 15% 15%; height: 180px;" src="{{ pics.image3.url }}" alt="pic3" class="w-full h-auto rounded-lg">
+                    </div>
+                    {% endif %}
+    
+                    {% if pics.image4 %}
+                    <div class="image4">
+                        <img style="border-radius: 0% 100% 100% 0%; height: 180px;" src="{{ pics.image4.url }}" alt="pic4" class="w-full h-auto rounded-lg">
+                    </div>
+                    {% endif %}
+                    
+                </div>
+            </div>
+            <!-- Right Image Grid -->
+
+        </div>
+
+        <!-- Stats Card below Hero -->
+        <div class="container mt-16">
+            <div class="hero-stats-card p-8 flex flex-col md:flex-row items-center justify-around text-center md:text-left">
+                <div class="card show">
+                    {% if stats %}
+                        {% for stat in stats %}
+                        <div class="card-section">
+                          <div class="big-number">{{ stat.value }}</div>
+                          <div class="small-text" style="width: 150px;">{{ stat.text|linebreaksbr }}</div>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Replicating image_02303c.png (Existing content, now below hero) -->
+    <section class="section-one-bg py-16">
+        <div class="container flex flex-col lg:flex-row items-center justify-between">
+            <div class="relative rounded-image-container mb-10 lg:mb-0">
+                <img src="{{ certificate.simage1.url }}" alt="Student studying" class="img-main">
+                <img src="{{ certificate.simage2.url }}" alt="Student smiling" class="img-secondary">
+                <div class="certified-badge">
+                </div>
+                <div class="arrow-line"></div>
+            </div>
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <p class="text-green-600 font-medium mb-2 flex items-center justify-center lg:justify-start">
+                    <span class="text-xl mr-2">+</span> Guaranteed & Certified
+                </p>
+                <h1 class="text-4xl font-bold text-gray-800 leading-tight mb-4">
+                    {{ certificate.title }}
+                </h1>
+                <p class="text-gray-600 mb-8">
+                    {{ certificate.text }}
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-8 mb-8">
+                    <div class="flex items-center">
+                        <div class="fbrimage">
+                            <img src="{{ certificate.fbrimage.url }}" alt="FBR">
+                        </div>
+                        <div>
+                            <a class="certiname" href="{{ certificate.fbrlink }}" style="text-decoration: none;">{{ certificate.fbrtitle }}</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="fbrimage">
+                            <img src="{{ certificate.secpimage.url }}" alt="SCEP">
+                        </div>
+                        <div class="secpimage">
+                            <a href="{{ certificate.secplink }}">{{ certificate.secptitle }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Replicating image_023017.png (Existing content) -->
+    <section class="py-16 bg-white">
+        <div class="container text-center">
+            <p class="text-green-600 font-medium mb-2 flex items-center justify-center">
+                <span class="text-xl mr-2">+</span> A Broad Selection Of Courses
+            </p>
+            <h2 class="text-4xl font-bold text-gray-800 mb-12">
+                Explore Inspiring <br> Online Courses
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course Card 1 -->
+                {% if courses %}
+                    {% for course in courses %}
+                    <div class="course-card">
+                        <img src="{{ course.image.url }}" alt="{{ course.title }}" class="course-image">
+                        <div class="p-6">
+                            <a href="{% url "selectedcourse" course.id %}"><h3 class="text-xl font-semibold text-gray-800 mb-2">{{ course.title }}</h3></a>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zm-6 9A6 6 0 006 13a6 6 0 00-6 6v1a1 1 0 001 1h18a1 1 0 001-1v-1a6 6 0 00-6-6 6 6 0 00-1 0z"></path></svg>
+                                    <p>{{ course.students }} Students Enrolled</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                No Courses
+
+                {% endif %}
+            </div>
+            <p class="text-green-600 font-medium mt-12">
+                <a href="#" class="none">Explore All Courses &rarr;</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container text-center">
+            <p class="text-green-600 font-medium mb-2 flex items-center justify-center">
+                <span class="text-xl mr-2">+</span> Our Recent Blogs
+            </p>
+            <h2 class="text-4xl font-bold text-gray-800 mb-12">
+                Popular Workshop & Webinars
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Card 1 -->
+                {% if webinars %}
+                {% for web in webinars %}
+                <div class="blog-card">
+                    <img src="{{ web.image.url }}" alt="{{ web.name }}" class="blog-image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ web.name }}</h3>
+                        <p class="text-gray-600 text-sm" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                            {{ web.text }}
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                No webinars
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Replicating image_022fdc.png (Existing content) -->
+    
+<section class="testimonial-bg">
+    <div class="container">
+        <div class="cheezain">
+            <div class="teencheezain">
+                <b><p class="first py-2 text-yellow-500 text-xs">+ Executive Education</p></b>
+                <b><p class="second py-2 text-white text-xs">+ Certification</p></b>
+                <b><p class="third py-2 text-white text-xs">+ Hand's On Experience</p></b>
+            </div>
+        </div>
+
+        <div class="satimage">
+            <img class="satisfiedimage" src="{% static "images/Satisfied Student.png" %}" alt="njdc">
+        </div>
+
+        <div class="satheading text-yellow-500" style="font-family: Lucida Handwriting, Cursive; position: relative; bottom: 460px;">
+            <h6 style="font-family: Lucida Handwriting, Cursive;">✨Satisfied Students</h6>
+        </div>
+        {% if testimonial %}
+        <div class="allstutest">
+            <div class="allstutest2" style="display: flex; align-items: center; justify-content: center;">
+                <button id="scroll-left-btn" style="
+                background-color: rgba(255, 255, 255, 0.2);
+                color: white;
+                    border: none;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 1.5em;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 15px;
+                    flex-shrink: 0;
+                    z-index: 10;
+                    user-select: none;
+                    transition: background-color 0.3s ease;
+                    " onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.4)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.2)'">&#9664;</button> <div id="testimonial-scroll-container" style="
+                    overflow-x: auto;
+                    -webkit-overflow-scrolling: touch;
+                    scroll-snap-type: x mandatory;
+                    padding-bottom: 20px; /* Space for scrollbar */
+                    flex-grow: 1;
+                    margin: 0 auto;
+                    max-width: calc(100% - 130px); /* Adjusts width considering buttons and margins */
+                    scrollbar-width: none; /* Firefox */
+                    -ms-overflow-style: none;  /* IE and Edge */
+                ">
+                <div class="scrollable-testimonials" style="display: flex; gap: 20px; justify-content: flex-start; margin: 0 auto;">
+
+                    {% for test in testimonial %}
+                    <div class="testclass" style="flex-shrink: 0; background-color: #216f63; padding: 15px; border-radius: 10px; height: 230px; color: white; box-shadow: 0 4px 8px rgba(0,0,0,0.2); scroll-snap-align: start;">
+                        <div style="display: flex; align-items: center;">
+                            <div style="width: 60px; height: 60px; background-color: #2fb47f; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 20px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 14.1c-2.82 0-5.61-1.31-7.07-3.48l-.01-.01c1.3-1.6 3.16-2.55 5.08-2.55h.01c1.92 0 3.78.95 5.08 2.55l-.01.01c-1.46 2.17-4.25 3.48-7.08 3.48z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div style="margin: 0 auto; font-size: 1.2em; font-weight: bold; font-family: sans-serif; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                    {{ test.name }}
+                                </div>
+                                <div style="font-size: 0.8em; opacity: 0.8; font-family: sans-serif; margin: 0 auto;">{{ test.course }}</div>
+                                <div style="color: #ffc107; font-size: 1.2em; letter-spacing: 2px; margin-top: 5px; margin: 0 auto;">
+                                    {% for i in test.rating|times %}
+                                    <span>&#9733;</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div style=" margin: 0 auto;font-size: 13px; line-height: 1.6; font-family: 'Segoe UI', Arial, sans-serif; padding: 0px 20px; display: -webkit-box;
+                            -webkit-line-clamp: 5;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;">{{ test.testimon }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <button id="scroll-right-btn" style="
+            background-color: rgba(255, 255, 255, 0.2);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                font-size: 1.5em;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 15px;
+                flex-shrink: 0;
+                z-index: 10;
+                user-select: none;
+                transition: background-color 0.3s ease;
+                " onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.4)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.2)'">&#9654;</button> </div>
+            </div>
+            {% else %}
+            <div class="notest">
+                <p style="position: relative; left: 650px; margin: 0 auto;">No testimonial</p>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+
+
+<!-- Section 4: Replicating image_022f83.png (Existing content) -->
+
+    <section id="contactus">
+        <div class="container">
+            <div class="left-section">
+                <div class="apply-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.272 1.272L3 12l5.813 1.912a2 2 0 0 1 1.272 1.272L12 21l1.912-5.813a2 2 0 0 1 1.272-1.272L21 12l-5.813-1.912a2 2 0 0 1-1.272-1.272L12 3Z"/></svg>
+                    Conctact Us
+                </div>
+                <h1 class="main-heading">Have a <br> Question ?  </h1>
+                <div class="generation-tech">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    Generation Technology
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Call us anytime <br> +92 331 1395034
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        Email Us Anytime <br> talentoacademy.info@gmail.com
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <form action="{% url "contactus" %}" method="post">
+                    {% csrf_token %}
+                    <input type="text" name="name" placeholder="Name" class="input-field mb-5" required>
+                    <input type="email" name="email" placeholder="Email Address" class="input-field mb-5" required>
+                    <input type="tel" name="phone" placeholder="Phone No (with country code)" class="input-field mb-5" pattern="[+]{1}[0-9]{11,20}" required>
+                    <textarea placeholder="Comments" name="comments" class="textarea-field mb-5" style="resize:none;" required></textarea>
+                    <button class="submit-button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section: Replicating image_01b7dd.png -->
+    <section id="faq-section">
+        <div class="container">
+
+            <div class="faq-left-column" style="width: 600px;">
+                <p class="title-small">Frequently Asked Questions</p>
+                <h2>Have Any Question? Find Answer Here</h2>
+                <p>We don't just work with concrete and steel. We work with People we are Approachable. with even or highest work</p>
+            </div>
+            
+            {% if faqs %}
+            {% for faq in faqs %}
+            <div class="faq-right-column">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        {{ faq.question }}
+                        <span class="arrow-icon">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>{{ faq.answer }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+
+    {% include "Talento_app/footer.html" %}
+    

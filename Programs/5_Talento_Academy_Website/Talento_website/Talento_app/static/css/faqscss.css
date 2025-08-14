@@ -1,0 +1,158 @@
+/* Basic Reset & Font */
+        /* Basic Reset & Font */
+#faq-section {
+    font-family: 'Inter', sans-serif;
+    background-color:rgb(0, 102, 79); /* Dark green background */
+    color: #ffffff;
+    /* Remove display: flex; flex-wrap; justify-content; gap from here */
+    box-sizing: border-box;
+    padding: 40px 170px;
+}
+
+#faq-section .container { /* Add this to style the container as a flex box */
+    display: flex; /* Make the container a flex container */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center items horizontally */
+    gap: 30px; /* Space between columns */
+    max-width: 920px; /* Keep your container max-width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Keep container padding */
+}
+
+#faq-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+#faq-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#faq-section p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Left Column Styling */
+.faq-left-column {
+    background-color:rgb(0, 102, 79);
+    flex: 1; /* Allow it to grow, but give it a base */
+    min-width: 430px; /* Minimum width for the left column */
+    max-width: 700px; /* Max width to control its size */
+    box-sizing: border-box;
+}
+
+.faq-left-column .title-small {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.faq-left-column .title-small::before {
+    content: '+';
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* Right Column Styling */
+.faq-right-column {
+    padding-top: 20px;
+    flex: 2; /* Allow it to grow more than the left column */
+    min-width: 300px; /* Minimum width for the right column */
+    max-width: 450px; /* Max width to control its size */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+/* FAQ Item Styling */
+.faq-item {
+    width: 100%; /* Make FAQ item take full width of its parent (.faq-right-column) */
+    background-color: #28a745; /* Lighter green for FAQ items */
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: #28a745;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+.faq-question:hover {
+    background-color: #22923b;
+}
+
+.faq-question .arrow-icon {
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    background-color: #28a745;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.faq-answer p {
+    padding-bottom: 15px;
+    margin-top: 0;
+}
+
+.faq-answer.show {
+    max-height: 200px;
+    padding-top: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #faq-section .container { /* Apply flex-direction here */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
+        gap: 20px; /* Adjust gap for mobile if needed */
+    }
+
+    .faq-left-column,
+    .faq-right-column {
+        min-width: unset;
+        max-width: 100%;
+        width: 100%; /* Ensure they take full width in mobile */
+        padding: 15px;
+    }
+
+    #faq-section h2 {
+        font-size: 2em;
+    }
+
+    #faq-section h3 {
+        font-size: 1.3em;
+    }
+
+    .faq-question {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+}

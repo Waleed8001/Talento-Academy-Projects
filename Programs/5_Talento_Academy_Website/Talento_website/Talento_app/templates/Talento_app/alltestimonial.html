@@ -1,0 +1,27 @@
+{% include "Talento_app/header.html" %}
+{% load static %}
+{% load custom_filters %}
+
+    <section class="testimonials-section">
+        <h1 class="testhead">What Our Students Say</h1>
+        {% if testimonial %}
+            <div class="testimonial-grid">
+                <!-- Example Testimonial 1 (from Django Model) -->
+                {% for test in testimonial %}
+                <div class="testimonial-card">
+                    <img src="{% static "images/students icon.jpeg" %}" alt="Students" class="student-photo">
+                    <h3>{{ test.name }}</h3>
+                    <div class="student-rating">
+                        {% for i in test.rating|times %}
+                            <span>&#9733;</span>
+                        {% endfor %}
+                    </div>
+                    <p class="student-info">{{ test.course }}</p>
+                    <p class="testimonial-text">{{ test.testimon }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </section>
+    
+{% include "Talento_app/footer.html" %}

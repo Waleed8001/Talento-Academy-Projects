@@ -1,0 +1,47 @@
+{% include "Talento_app/header.html" %}
+{% load static %}
+
+    <!-- Paste the content below inside your <body> tag -->
+    <div class="container">
+        <!-- About Us Section -->
+        <section class="about-us-section">
+            <h2>Services</h2>
+            <h1><b>About Us</b></h1>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </section>
+
+        <!-- Our Team Section -->
+        <section class="team-section">
+            <h2>Our Team</h2>
+            <h1><b>Featured Instructor</b></h1>
+            <div class="team-grid">
+                {% if teachers %}
+                {% for teach in teachers %}
+                <div class="teacher-card">
+                    <img src="{{ teach.teacher_image.url }}" alt="Daniyal Asim">
+                    <div class="teacher-info">
+                        <h3 style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">{{ teach.name }}</h3>
+                        <p>{{ teach.course }}</p>
+                        <div class="teacher-contact">
+                            <div>{{ teach.phone }}</div>
+                            <div>{{ teach.lesson }} Lessons</div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                No Teachers
+                {% endif %}
+            </div>
+        </section>
+    </div>
+
+{% include "Talento_app/footer.html" %}

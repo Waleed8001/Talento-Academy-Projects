@@ -1,0 +1,1328 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Website Design</title>
+    <link rel="stylesheet" href="{% static "css/aboutuscss.css" %}">
+    <link rel="stylesheet" href="{% static "css/selectedcoursecss.css" %}">
+    <link rel="stylesheet" href="{% static "css/faqscss.css" %}">
+    <link rel="stylesheet" href="{% static "css/contactuscss.css" %}">
+    <link rel="stylesheet" href="{% static "css/testimonialcss.css" %}">
+    <link rel="stylesheet" href="{% static "css/navbarcss.css" %}">
+    <link rel="stylesheet" href="{% static "css/herosectioncss.css" %}">
+    <link rel="stylesheet" href="{% static "css/responsivecss.css" %}">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: rgb(255, 255, 255);
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 20px;
+        }        
+
+        
+        /* Hero Section (image_01bfbb.jpg) */
+        .hero-bg {
+            background-color:rgb(0, 102, 79); /* Dark green */
+            height: 510px;
+        }
+
+        .mysat{
+            position: absolute;
+            top: 200px;
+            z-index: 2;
+        }
+
+        .hero-search-bar {
+            height: 75px;
+            width: 550px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50px;
+            padding: 0px 25px;
+        }
+
+        .mycourse{
+            width: 400px;
+        }
+
+        .mychoose{
+            font-size: 12px;
+            width: 400px;
+        }
+        
+        .hero-search-input {
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            top: 20px;
+            font-size: 15px;
+            border: none;
+            outline: none;
+            width: 400px;
+            color: rgb(0, 0, 0)
+        }
+
+        .hero-search-button {
+            position: relative;
+            bottom: 10px;
+            left: 360px;
+            background-color:rgb(173, 255, 47); /* Lime green */
+            font-size: 11px;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-weight: bold;
+        }
+
+        .fourimage{
+            background-color: rgb(0, 102, 79);
+            height: 400px;
+            width: 440px;
+            position: relative;
+            bottom: 385px;
+            left: 440px;
+            z-index: -1;
+        }
+
+        .image1{
+            position: relative;
+            height: 180px;
+            width: 180px;
+            top: 10px;
+            left: 50px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 100% 0% 0% 100%;
+        }
+
+        .image2{
+            position: relative;
+            height: 180px;
+            width: 180px;
+            bottom: 170px;
+            left: 250px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 15% 15% 15% 15%;
+        }
+
+        .image3{
+            position: absolute;
+            height: 180px;
+            width: 180px;
+            top: 200px;
+            left: 50px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 15% 15% 15% 15%;
+        }
+
+        .image4{
+            position: absolute;
+            height: 180px;
+            width: 180px;
+            top: 200px;
+            left: 250px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 0% 100% 100% 0%;
+        }
+
+        .hero-stats-card {
+            width: 800px;
+            background-color: rgba(232, 250, 252, 1);
+            position: relative;
+            top: 410px; 
+            left: 30px;
+            border-radius: 50px;
+        
+        }
+            
+        .card.show {
+            display: flex;
+        }
+      
+        .card-section {
+          flex: 1;
+          min-width: 200px;
+          margin-bottom: 20px;
+        }
+    
+        .big-number {
+          font-size: 48px;
+          font-weight: bold;
+          color: #1d2b45;
+        }
+    
+        .small-text {
+          font-size: 18px;
+          color: #4a5a75;
+        }
+
+        /* Section 1: image_02303c.png styles (existing) */
+        .section-one-bg {
+            position: relative;
+            top: 200px;
+            padding: 10px 0px 200px 0px;
+        }
+        .rounded-image-container {
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            width: 500px; /* Container for images */
+            height: 350px;
+        }
+        .rounded-image-container img {
+            position: absolute;
+            border-radius: 30px; /* More rounded corners */
+        }
+        .img-main {
+            width: 300px;
+            height: 220px;
+            object-fit: cover;
+            top: 0;
+            right: 13px;
+            z-index: 20;
+        }
+        .img-secondary {
+            width: 300px;
+            height: 220px;
+            object-fit: cover;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+        }
+        .certified-badge {
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 30;
+            transform: rotate(0deg); /* Rotate the badge itself */
+            {% if certificate.cerimage %}
+            background-image: url({{ certificate.cerimage.url }});
+            {% endif %}
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        .arrow-line {
+            position: absolute;
+            width: 150px;
+            height: 80px;
+            border: 2px dashed #ccc;
+            border-right: none;
+            border-top: none;
+            border-bottom-left-radius: 50px;
+            bottom: 50px;
+            left: 300px;
+            transform: rotate(10deg);
+            z-index: 5;
+        }
+        .arrow-line::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-top: 2px dashed #ccc;
+            border-right: 2px dashed #ccc;
+            transform: rotate(45deg);
+            top: 60px;
+            left: 140px;
+        }
+
+        .fbrimage{
+            background-color: transparent;
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        
+        /* Section 2: image_023017.png styles (existing) */
+        .course-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        .course-image {
+            background-color: rgb(0, 102, 79);
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .star-rating span {
+            color: #FFD700; /* Gold color for stars */
+        }
+        .star-rating .empty-star {
+            color: #e0e0e0; /* Light grey for empty stars */
+        }
+
+        /* Section 3: image_022f83.png styles (existing) */
+        .blog-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        .blog-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            position: relative;
+            bottom: 15px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .blog-icon {
+            width: 20px;
+            height: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            font-size: 12px;
+        }
+        
+        /* Section 4: image_022fdc.png styles (existing) */
+        .testimonial-bg {
+            background-color: rgb(0, 102, 79); /* Dark green background */
+            width: 100%;
+            height: 400px;
+            margin: auto;
+        }
+
+        .teencheezain{
+            width: 150px;
+            background-color: rgb(0, 102, 79);
+            position: relative;
+            top: 120px;
+            left: -125px;
+        }
+
+        .satimage{
+            position: relative;
+            bottom: 141px;
+            left: 20px;
+            height: 425px;
+            width: 310px;
+            background-color: transparent; 
+        }
+
+        .satisfiedimage{
+            background-color: transparent;
+            height: 425px;
+            width: 310px;
+        }
+
+        .satheading{
+            width: 200px;
+            background-color: rgb(0, 102, 79);
+            position: relative;
+            bottom: 480px;
+            left: 450px;
+        }
+
+        .allstutest{
+            background-color: rgb(0, 102, 79);
+            position: relative; 
+            bottom: 440px;
+            left: 335px;
+            width: 720px;
+        }
+
+        .testclass{
+            width: 380px;
+        }
+        
+        /* Section 5: image_022fdc.png styles (existing) */
+
+        #contactus{
+            background: rgb(255, 255, 255);
+            height: 750px;
+            width: 100%;
+
+        }
+        .left-section {
+            margin: 100px 0px 0px 0px;
+            position: relative;
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .right-section {
+            position: relative;
+            bottom: 400px;
+            left: 370px;
+            height: 500px;
+            width: 500px;
+            flex: 1;
+            background: linear-gradient(135deg, #004d40, #00796b); /* Dark green gradient */
+            padding: 40px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .apply-text {
+            color: #00796b; /* Green color */
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .apply-text svg {
+            margin-right: 8px;
+        }
+        .main-heading {
+            font-size: 40px;
+            font-weight: 700;
+            color: #333;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .sub-text {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 450px;
+        }
+        .generation-tech {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .generation-tech svg {
+            margin-right: 8px;
+            color: #00796b;
+        }
+        .contact-info {
+            display: grid;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .contact-item svg {
+            margin-right: 10px;
+            color: #00796b;
+        }
+        .input-group {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            background-color: rgba(255, 255, 255, 0.15); /* Slightly transparent white */
+            border: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            width: 100%;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+        .input-field::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .input-field:focus {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+        .textarea-field {
+            background-color: rgba(255, 255, 255, 0.15); /* Slightly transparent white */
+            border: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            width: 100%;
+            outline: none;
+            transition: background-color 0.3s ease;
+            min-height: 100px; /* Adjust height for comments */
+            resize: vertical; /* Allow vertical resizing */
+        }
+        .textarea-field::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .textarea-field:focus {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+        .submit-button {
+            background-color: #333; /* Dark gray */
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            max-width: 420px;
+            margin-top: 20px;
+        }
+        .submit-button:hover {
+            background-color: #555;
+        }
+
+
+        /* Footer Section (image_01b7b9.png) */
+        .footer-bg {
+            background-color: rgb(0, 102, 79); /* Dark green */
+            color: white;
+        }
+
+        .headingfooter {
+            color: rgb(255, 255, 255);
+        }
+
+        .footer-social-icon {
+            background-color: #ADFF2F; /* Lime green */
+            color: #006400; /* Dark green text */
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer-link-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .footer-link-item svg {
+            margin-right: 8px;
+            color: #ADFF2F; /* Lime green dot */
+        }
+
+{% comment %} ======================================================================================================= {% endcomment %}
+        @media (min-width: 1024px) and (max-width: 1240px) {
+            .allstutest {
+                background-color: rgb(0, 102, 79);
+                position: relative; 
+                bottom: 440px;
+                left: 430px;
+                width: 510px;
+            }
+            .satimage{
+            background-color: rgb(0, 102, 79);
+            position: relative;
+            bottom: 140px;
+            left: 110px;
+            height: 425px;
+            width: 310px;
+            background-color: transparent; 
+        }
+        .teencheezain{
+            width: 150px;
+            background-color: rgb(0, 102, 79);
+            position: relative;
+            top: 120px;
+            left: -45px;
+        }
+        }
+
+
+        @media (min-width: 767px) and (max-width: 1023px) {
+            
+            /* Testimonial ka kaam */
+            .second{
+                position: relative;
+                bottom: 33px;
+                left: 150px;
+            }
+            .third{
+                position: relative;
+                bottom: 64px;
+                left: 250px;
+            }
+            .teencheezain{
+                width: 150px;
+                background-color: rgb(0, 102, 79);
+                position: relative;
+                top: 0px;
+                left: 350px;
+            }
+            .allstutest {
+                background-color: rgb(0, 102, 79);
+                position: relative; 
+                bottom: 440px;
+                left: 290px;
+                width: 450px;
+            }
+            .satimage{
+            background-color: rgb(0, 102, 79);
+            position: relative;
+            bottom: 140px;
+            left: -20px;
+            height: 425px;
+            width: 310px;
+            background-color: transparent; 
+        }
+        .testclass{
+            width: 300px;
+        }
+
+        /* Hero Section */
+        
+        .mysat{
+            position: absolute;
+            top: 200px;
+            left: 30px;
+            z-index: 2;
+        }
+
+        .satisfaction{
+            left: 0px;
+        }
+
+        .hero-search-bar {
+            height: 65px;
+            width: 450px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50px;
+            padding: 0px 25px;
+        }
+
+        .mychoose {
+            text-align: left;
+            font-size: 12px;
+        }
+
+        .mycourse{
+            text-align: left;
+        }
+        
+        .hero-search-input {
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            top: 20px;
+            right: 0px;
+            font-size: 15px;
+            border: none;
+            outline: none;
+            width: 300px;
+            color: rgb(0, 0, 0)
+        }
+
+        .hero-search-button {
+            position: relative;
+            bottom: 10px;
+            left: 280px;
+            background-color:rgb(173, 255, 47); /* Lime green */
+            font-size: 11px;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-weight: bold;
+        }
+
+        .fourimage{
+            background-color: rgb(0, 102,79);
+            height: 350px;
+            width: 300px;
+            position: relative;
+            bottom: 345px;
+            left: 440px;
+            z-index: -1;
+        }
+
+        .image1{
+            position: relative;
+            height: 140px;
+            width: 140px;
+            top: 10px;
+            left: 0px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 100% 0% 0% 100%;
+        }
+
+        .image2{
+            position: relative;
+            height: 140px;
+            width: 140px;
+            bottom: 130px;
+            left: 150px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 15% 15% 15% 15%;
+        }
+
+        .image3{
+            position: absolute;
+            height: 140px;
+            width: 140px;
+            bottom: 200px;
+            left: 0px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 15% 15% 15% 15%;
+        }
+
+        .image4{
+            position: absolute;
+            height: 140px;
+            width: 140px;
+            top: 200px;
+            left: 150px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 0% 100% 100% 0%;
+        }
+
+        .contact-info {
+            display: grid;
+            flex-wrap: wrap;
+            gap: 20px;
+            position: relative;
+            left: 300px;
+            bottom: 200px
+        }
+        .right-section {
+            position: relative;
+            bottom: 200px;
+            left: 270px;
+            height: 400px;
+            width: 400px;
+            flex: 1;
+            background: linear-gradient(135deg, #004d40, #00796b); /* Dark green gradient */
+            padding: 40px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .input-field {
+            background-color: rgba(255, 255, 255, 0.15); /* Slightly transparent white */
+            border: none;
+            padding: 5px 20px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            width: 100%;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #contactus{
+            background: rgb(255, 255, 255);
+            height: 850px;
+            width: 100%;
+
+        }
+        
+        }
+
+        @media (min-width: 767px) and (max-width: 900px) {
+            .navbar-main {
+            position: relative;
+            bottom: 40px;
+            background-color: rgb(255, 255, 255);
+            height: 70px;
+            width: 780;
+            border-radius: 50px; 
+            z-index: 2;
+        }
+        .satisfaction{
+            left: 0px;
+        }
+        .academy-logo {
+            position: relative;
+            top: 50px;
+            right: 50px;
+            margin: 10px;
+            height: 70px;
+            width: 70px;        
+        }
+        
+        
+
+        .mylistdiv{
+            display: inline;
+            background-color: rgb(255, 255, 255);
+            height: 10px;
+            width: 650px;
+            position: relative;
+            top: -75px;
+            left: 60px;
+        }
+        .hero-stats-card {
+            width: 765px;
+            background-color: rgba(232, 250, 252, 1);
+            position: relative;
+            top: 410px; 
+            left: -15px;
+            border-radius: 50px;
+        
+        }
+        }
+        @media (min-width: 319px) and (max-width: 427px) {
+            .header-top-bg {
+            background-color:rgb(0, 102, 79); 
+            height: 190px;
+        }
+
+        .header-top-info {
+            position: relative;
+            right: 10px;
+            background-color: #ADFF2F; 
+            height: 50px;
+            width: 280px;
+            min-width: 280px;
+            min-width: 280px;
+            border-radius: 30px 30px 0px 0px;
+            z-index: 1;
+        }
+
+        .myheader1 {
+            
+            position: relative;
+            font-size: 7px;
+            bottom: 10px;
+            left: 25px;
+        }
+        
+        .myheader2 {
+            position: relative;
+            font-size: 7px;
+            bottom: 10px;
+            left: 50px;
+        }
+        
+        .navbar-main {
+            position: relative;
+            bottom: 40px;
+            background-color: rgb(255, 255, 255);
+            height: 50px;
+            min-width: 310px;
+            max-width: 700px;
+            border-radius: 50px; 
+            z-index: 2;
+        }
+
+        .academy-logo {
+            position: relative;
+            top: 25px;
+            right: 50px;
+            margin: 10px;
+            height: 30px;
+            width: 30px;        
+        }
+        
+        .mylistdiv ul {
+    font-size: 0.375rem;
+    line-height: 0.25rem;
+
+    gap: 0.7rem; 
+}
+        .mylistdiv{
+            display: inline;
+            background-color: rgb(255, 255, 255);
+            height: 10px;
+            width: 150px;
+            position: relative;
+            bottom: 40px;
+            left: 20px;
+        }
+        
+        .policy-update {
+            background-color: #ADFF2F; 
+            padding: 15px 20px;
+            font-size:7px;
+            height: 40px;
+            width: 280px;
+            min-width: 280px;
+            max-width: 280px;
+            position: relative;
+            bottom: 65px;
+            left: 10px;
+            border-radius: 0px 0px 30px 30px;
+        }
+        
+            .hero-bg {
+                background-color:rgb(0, 102, 79); /* Dark green */
+                height: 1200px;
+
+            }
+            .hero-search-bar{
+                position: relative;
+                width: 300px;
+
+            }
+            .hero-search-input{
+                position: relative;
+                left: 0px;
+                width: 250px;
+                margin: 0px 0px;
+            }
+            .hero-search-button{
+                position: relative;
+                left: 80px;
+            }
+
+        .fourimage{
+            background-color: rgba(133, 183, 171, 1);
+            height: 350px;
+            width: 300px;
+            position: relative;
+            bottom: 25px;
+            left: 0px;
+            z-index: -1;
+        }
+
+        .image1{
+            position: relative;
+            height: 140px;
+            width: 140px;
+            top: 10px;
+            left: 0px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 100% 0% 0% 100%;
+        }
+
+        .image2{
+            position: relative;
+            height: 140px;
+            width: 140px;
+            bottom: 130px;
+            left: 150px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 15% 15% 15% 15%;
+        }
+
+        .image3{
+            position: absolute;
+            height: 140px;
+            width: 140px;
+            bottom: 200px;
+            left: 0px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 15% 15% 15% 15%;
+        }
+
+        .image4{
+            position: absolute;
+            height: 140px;
+            width: 140px;
+            top: 200px;
+            left: 150px;
+            background-color: rgb(19, 12, 12);
+            border-radius: 0% 100% 100% 0%;
+        }
+
+        .hero-stats-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            background-color: rgba(232, 250, 252, 1);
+            position: relative;
+            top: 610px; 
+            left: 17px;
+            border-radius: 50px;
+            flex-wrap: wrap;
+        }
+
+        .card.show{
+            flex-direction: column; 
+            justify-content: center; /* Center items horizontally within .card.show */
+            align-items: flex-start; /* Align items to the top within the row */
+            gap: 20px;
+        }
+        
+        {% comment %} GUARANTEED & CERTIFIED {% endcomment %}
+        .rounded-image-container {
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            width: 300px; /* Container for images */
+            height: 250px;
+        }
+        .rounded-image-container img {
+            position: absolute;
+            border-radius: 30px; /* More rounded corners */
+        }
+        .img-main {
+            width: 200px;
+            height: 120px;
+            object-fit: cover;
+            top: 0;
+            right: 13px;
+            z-index: 20;
+        }
+        .img-secondary {
+            width: 200px;
+            height: 120px;
+            object-fit: cover;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+        }
+        .certified-badge {
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 30;
+            transform: rotate(0deg); /* Rotate the badge itself */
+            {% if certificate.cerimage %}
+            background-image: url({{ certificate.cerimage.url }});
+            {% endif %}
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .arrow-line {
+            position: absolute;
+            width: 150px;
+            height: 60px;
+            border: 2px dashed #ccc;
+            border-right: none;
+            border-top: none;
+            border-bottom-left-radius: 50px;
+            bottom: 40px;
+            left: 170px;
+            transform: rotate(80deg);
+            z-index: 5;
+        }
+        .arrow-line::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-top: 2px dashed #ccc;
+            border-right: 2px dashed #ccc;
+            transform: rotate(80deg);
+            top: 50px;
+            left: 140px;
+        }
+
+        {% comment %} Testimonial {% endcomment %}
+
+        .testimonial-bg {
+            background-color: rgb(0, 102, 79); /* Dark green background */
+            width: 100%;
+            height: 700px;
+            margin: auto;
+        }
+
+        .first,
+        .second,
+        .third {
+            font-size: 9px;
+        }
+        .first {
+            position: relative;
+            left: 70px;
+
+        }
+        .second {
+            position: relative;
+            left: 180px;
+            bottom: 32px;
+
+        }
+        .teencheezain{
+            width: 150px;
+            background-color: rgb(0, 102, 79);
+            position: relative;
+            top: 280px;
+            left: -80px;
+        }
+
+        .satimage{
+            position: relative;
+            bottom: 140px;
+            background-color: transparent; 
+            margin-left: 0px;
+        }
+
+        .satisfiedimage{
+            background-color: transparent
+            height: 325px;
+            width: 210px;
+        }
+
+        .satheading{
+            width: 200px;
+            background-color: rgb(0, 102, 79);
+            position: relative;
+            top: -200px;
+            left: 20px;
+        }
+
+        .allstutest{
+            background-color: rgb(0, 102, 79);
+            position: relative; 
+            bottom: 160px;
+            left: -10px;
+            width: 300px;
+        }
+
+        .testclass{
+            padding: 2px;
+            width: 180px;
+        }
+
+        #contactus{
+            background: rgb(255, 255, 255);
+            height: 1250px;
+            width: 100%;
+
+        }
+        .left-section {
+            margin: 100px 0px 0px 0px;
+            position: relative;
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .right-section {
+            position: relative;
+            bottom: 50px;
+            left: 0px;
+            height: 500px;
+            width: 300px;
+            flex: 1;
+            background: linear-gradient(135deg, #004d40, #00796b); /* Dark green gradient */
+            padding: 40px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .apply-text {
+            color: #00796b; /* Green color */
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .apply-text svg {
+            margin-right: 8px;
+        }
+        .main-heading {
+            font-size: 40px;
+            font-weight: 700;
+            color: #333;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .sub-text {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 450px;
+        }
+        .generation-tech {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .generation-tech svg {
+            margin-right: 8px;
+            color: #00796b;
+        }
+        .contact-info {
+            position: relative;
+            top: -20px;
+            left: 0px;
+            display: grid;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .contact-item svg {
+            margin-right: 10px;
+            color: #00796b;
+        }
+        .input-group {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            background-color: rgba(255, 255, 255, 0.15); /* Slightly transparent white */
+            border: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            width: 100%;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+        .input-field::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .input-field:focus {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+        .textarea-field {
+            background-color: rgba(255, 255, 255, 0.15); /* Slightly transparent white */
+            border: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            width: 100%;
+            outline: none;
+            transition: background-color 0.3s ease;
+            min-height: 100px; /* Adjust height for comments */
+            resize: vertical; /* Allow vertical resizing */
+        }
+        .textarea-field::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .textarea-field:focus {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+        .submit-button {
+            background-color: #333; /* Dark gray */
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            max-width: 420px;
+            margin-top: 20px;
+        }
+        .submit-button:hover {
+            background-color: #555;
+        }
+
+        
+
+/* Left Column Styling */
+.faq-left-column {
+    position: relative;
+    left: -175px;
+    background-color:#338248;
+    flex: 1; /* Allow it to grow, but give it a base */
+    min-width: 200px; /* Minimum width for the right column */
+    max-width: 300px; /* Max width to control its size */
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/* Right Column Styling */
+.faq-right-column {
+    position: relative;
+    left: -175px;
+    padding-top: 20px;
+    flex: 2; /* Allow it to grow more than the left column */
+    min-width: 300px; /* Minimum width for the right column */
+    max-width: 450px; /* Max width to control its size */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section: Replicating image_01c281.png -->
+    <header class="header-top-bg py-4">
+        <div class="container flex flex-col items-center">
+            <!-- Top Info Bar -->
+            <div class="w-full flex justify-end mb-4">
+                <div class="header-top-info text-gray-800 font-medium text-sm flex items-center space-x-4">
+                    <div class="myheader1">
+                        <span>talentoacademy.info@gmail.com</span>
+                    </div>
+
+                    <div class="myheader2">
+                        <span>Sat - Sun 8:00 am - 7:00 pm</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation Bar -->
+            <nav class="w-full navbar-main justify-between px-6 py-3">
+                <!-- Logo -->
+                <div class="flex items-center">
+
+                </div>
+                <!-- Navigation Links -->
+                <div class="mylistdiv" id="mobileMenu">
+                    <img class="academy-logo" src="{% static "images/Talento_Academy_Logo.png" %}" alt="Academy logo">
+
+                    <ul class="flex-grow flex justify-center text-gray-700">
+                        <li><a href="{% url "home" %}" class="hover:text-green-600"><b>HOME</b></a></li>
+                        <li><a href="{% url "allcourses" %}" class="hover:text-green-600"><b>COURSES</b></a></li>
+                        <li><a href="{% url "allwebinars" %}" class="hover:text-green-600"><b>WEBINARS</b></a></li>
+                        <li><a href="#contactus" class="hover:text-green-600"><b>CONTACT US</b></a></li>
+                        <li><a href="{% url "alltestimonial" %}" class="hover:text-green-600"><b>TESTIMONIALS</b></a></li>
+                        <li><a href="#faq-section" class="hover:text-green-600"><b>FAQS</b></a></li>
+                        <li><a href="{% url "aboutus" %}" class="hover:text-green-600"><b>ABOUT US</b></a></li>
+                    </ul>
+                </div>
+                    
+            </nav>
+
+            <!-- Policy Update Bar -->
+            <div class="w-full flex justify-start mt-4">
+                <div class="policy-update text-gray-800 font-medium">
+                    📢<b>POLICY UPDATE</b> Senior leaders from the world's leading research.
+                </div>
+            </div>
+        </div>
+    </header>

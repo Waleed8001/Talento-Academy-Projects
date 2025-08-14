@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Talento Academy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: rgb(43, 59, 29);
+            height: 350px;
+            width: 100%;
+        }
+
+        .mydiv2 {
+            background-color: rgb(43, 59, 29);
+            height: 1000px;
+            width: 100%;
+        }
+
+
+        #emaildiv {
+            position: absolute;
+            top: 40px;
+            left: 1250px;
+            background-color: rgb(172, 255, 47);
+            height: 100px;
+            width: 850px;
+            margin: 10px;
+            border-radius: 1000px;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            flex-wrap: wrap;
+        }
+
+        #talentoemaildiv,
+        #timediv {
+            font-family: century-gothic, sans-serif;
+            font-size: 20px;
+        }
+
+        #talentoemaildiv {
+            position: absolute;
+            top: 15px;
+
+        }
+
+        #timediv {
+            margin-left: auto;
+            position: absolute;
+            top: 15px;
+            right: 30px
+        }
+
+        #div-nav {
+            position: absolute;
+            top: 100px;
+            right: 380px;
+            background-color: rgb(255, 255, 255);
+            height: 140px;
+            width: 1750px;
+            border-radius: 1000px;
+            z-index: 2;
+        }
+
+        .mynav{
+            position: absolute;
+            top: 50px;
+            right: 60px;
+        }
+
+        .mylist{
+            list-style-type: none;
+        }
+        
+        li {
+            display: inline;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        /* Remove underline from links inside list items */
+        li a {
+            text-decoration: none;
+            color: inherit; /* Optional: keeps the link the same color as the parent */
+        }
+
+        #policydiv {
+            position: absolute;
+            top: 180px;
+            left: 450px;
+            background-color: rgb(172, 255, 47);
+            height: 100px;
+            width: 810px;
+            margin: 10px;
+            border-radius: 1000px;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            padding-left: 40px;
+        }
+
+        #polidiv {
+            font-family: century-gothic, sans-serif;
+            font-size: 20px;
+            position: absolute;
+            top: 60px;
+        }
+
+        #bigdiv {
+            position: absolute;
+            top: 430px;
+            left: 400px;
+            height: auto;
+            width: 780px;
+            font-family: century-gothic, sans-serif;
+            font-size: 20px;
+        }
+
+        .satp {
+            font-family: comic sans ms, sans-serif;
+            font-size: 40px;
+            color: rgb(255, 255, 255);
+        }
+
+        .fpp {
+            font-size: 100px;
+            color: rgb(255, 255, 255);
+        }
+
+        .cp {
+            font-size: 25px;
+            color: rgb(255, 255, 255);
+        }
+
+        .div1 {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color: rgb(185, 71, 71);
+        }
+
+        .divimage1 {
+            position: absolute;
+            height: 350px;
+            width: 350px;
+            top: 370px;
+            right: 810px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 100% 0% 0% 100%;
+        }
+
+        .divimage2 {
+            position: absolute;
+            height: 350px;
+            width: 350px;
+            top: 370px;
+            right: 420px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 15% 15% 15% 15%;
+        }
+
+        .divimage3 {
+            position: absolute;
+            height: 350px;
+            width: 350px;
+            top: 750px;
+            right: 810px;
+            background-color: rgb(2, 0, 0);
+            border-radius: 15% 15% 15% 15%;
+        }
+
+        .divimage4 {
+            position: absolute;
+            height: 350px;
+            width: 350px;
+            top: 750px;
+            right: 420px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 0% 100% 100% 0%;
+        } 
+
+        .allsearch{
+            position: absolute; {% comment %} <!-- absolute upper se shoro kerta hai --> {% endcomment %}
+            height: 140px;
+            width: 1150px;
+            top: 900px;
+            left: 400px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 100px 100px 100px 100px;
+        }
+
+        .searchimage{
+            position: absolute; {% comment %} <!-- absolute upper se shoro kerta hai --> {% endcomment %}
+            top: 35px;
+            left: 90px;
+            background-color: rgb(255, 255, 255);
+            font-size: 50px;
+        }
+
+        .myinput {
+            position: absolute;
+            height: 50px;
+            width: 700px;
+            font-size: 30px;
+            top: 45px;
+            left: 130px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border: none; 
+            outline: none; 
+        }
+        
+        .myinput::placeholder {
+            color: black;
+        }
+
+        .mybutton {
+            position: absolute;
+            height: 70px;
+            width: 200px;
+            font-size: 23px;
+            top: 35px;
+            left: 900px;
+            border-radius: 100px;
+            background-color: rgb(55, 248, 45);
+            color: rgb(0, 0, 0);
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .mybutton:hover {
+            background-color: rgb(73, 7, 254);
+            color: rgb(255, 255, 255);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ✅ On click (active) effect */
+        .mybutton:active {
+            transform: scale(0.96);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .dabbadiv {
+            height: 500px;
+            width: 1600px;
+            position: absolute;
+            top: 1250px;
+            left: 450px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(234, 234, 234);
+            border-radius: 150px 150px 150px 150px;
+        }
+
+        .one {
+            margin: 10px;
+            height: 350px;
+            width: 350px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 80px 80px 80px 80px;
+        }
+
+        .barasize{
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            font-size: 100px;
+            position: absolute;
+            top: 130px;
+            left: 150px;
+        }
+
+        .chotasize{
+            font-family: 'Anton', sans-serif;
+            font-size: 30px;
+            position: absolute;
+            top: 270px;
+            left: 150px;
+        }
+
+        .aurchotasize{
+            font-family: 'Anton', sans-serif;
+            font-size: 20px;
+            position: absolute;
+            top: 300px;
+            left: 150px;
+        }
+        
+        .two {
+            margin: 10px;
+            height: 350px;
+            width: 350px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 80px 80px 80px 80px;
+        }
+        
+        .barasize2{
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            font-size: 100px;
+            position: absolute;
+            top: 130px;
+            left: 520px;
+        }
+
+        .chotasize2{
+            font-family: 'Anton', sans-serif;
+            font-size: 30px;
+            position: absolute;
+            top: 270px;
+            left: 520px;
+        }
+
+        .aurchotasize2{
+            font-family: 'Anton', sans-serif;
+            font-size: 20px;
+            position: absolute;
+            top: 300px;
+            left: 520px;
+        }
+        
+        .three {
+            margin: 10px;
+            height: 350px;
+            width: 350px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 80px 80px 80px 80px;
+        }
+        
+        .barasize3{
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            font-size: 100px;
+            position: absolute;
+            top: 130px;
+            left: 890px;
+        }
+
+        .chotasize3{
+            font-family: 'Anton', sans-serif;
+            font-size: 30px;
+            position: absolute;
+            top: 270px;
+            left: 890px;
+        }
+
+        .aurchotasize3{
+            font-family: 'Anton', sans-serif;
+            font-size: 20px;
+            position: absolute;
+            top: 300px;
+            left: 890px;
+        }
+        
+        .four {
+            margin: 10px;
+            height: 350px;
+            width: 350px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 80px 80px 80px 80px;
+        }
+
+        .barasize4{
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            font-size: 100px;
+            position: absolute;
+            top: 130px;
+            left: 1260px;
+        }
+
+        .chotasize4{
+            font-family: 'Anton', sans-serif;
+            font-size: 30px;
+            position: absolute;
+            top: 270px;
+            left: 1260px;
+        }
+
+        .aurchotasize4{
+            font-family: 'Anton', sans-serif;
+            font-size: 20px;
+            position: absolute;
+            top: 300px;
+            left: 1260px;
+        }
+        
+        .gau{
+            background-color: rgb(0, 0, 0);
+            height: 1000px;
+            width: 1800px;
+            margin: 500px 350px;
+            z-index: 1;
+        }
+        
+        .cerimage1{
+            background-color: rgb(255, 253, 253);
+            height: 500px;
+            width: 500px;
+            position: relative;
+            top: 70px;
+            left: 380px;
+            border-radius: 80px 80px 80px 80px;
+            z-index: 3;
+
+        }
+
+        .cerimage2{
+            background-color: rgb(243, 14, 14);
+            height: 500px;
+            width: 500px;
+            position: relative;
+            bottom: 170px;
+            left: 100px;
+            border-radius: 80px 80px 80px 80px;
+            z-index: 2;
+
+        }
+
+        .guacer{
+            font-family: comic sans ms, sans-serif;
+            color: rgb(243, 14, 14);
+            font-size: 50px;
+            position: relative;
+            bottom: 880px;
+            left: 900px;
+            z-index: 2;
+        }
+
+
+        /* ✅ Responsive Media Query */
+        @media (max-width: 1200px) {
+            #emaildiv, #policydiv, #bigdiv {
+                position: static;
+                width: 90%;
+                margin: 20px auto;
+            }
+
+            #div-nav {
+                width: 90%;
+                margin-top: 20px;
+            }
+
+            #mydiv {
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+                padding-top: 20px;
+            }
+
+            #bigdiv {
+                text-align: center;
+            }
+
+            .fpp {
+                font-size: 60px;
+            }
+
+            .satp {
+                font-size: 30px;
+            }
+
+            .cp {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .fpp {
+                font-size: 40px;
+            }
+
+            .satp {
+                font-size: 24px;
+            }
+
+            .cp {
+                font-size: 16px;
+            }
+
+            #emaildiv, #policydiv {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+
+            #timediv {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="mydiv">
+            {% comment %} navbar ke upper wala kaam {% endcomment %}
+            <div id="emaildiv">
+                <div id="talentoemaildiv">
+                    <p>talentoacandemy.info@gmail.com</p>
+                </div>
+                <div id="timediv">
+                    <p>Sat - Sun 8:00 am - 7:00 pm</p>
+                </div>
+            </div>
+
+            <div id="div-nav">
+                <div class="mynav">
+                    <ul class="mylist">
+                        <li><b><a href="#">Home</a></b></li>
+                        <li><b><a href="#">Workshops</a></b></li>
+                        <li><b><a href="#">Courses</a></b></li>
+                        <li><b><a href="#">Webinar</a></b></li>
+                        <li><b><a href="#">Contact Us</a></b></li>
+                        <li><b><a href="#">Testimonals</a></b></li>
+                        <li><b><a href="#">FAQs</a></b></li>
+                        <li><b><a href="#">About Us</a></b></li>
+                    </ul>
+                </div>
+            </div>
+
+            {% comment %} navbar ke neechay wala kaam {% endcomment %}
+            <div id="policydiv">
+                <div id="polidiv">
+                    <p><b>📢 POLICY UPDATE:</b> Senior leaders from the world’s leading research.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+        
+    <div class="mydiv2">
+        <div id="bigdiv">
+            <p class="satp">✨100% Satisfaction Guarantee</p><br>
+            <p class="fpp"><b>Find Your</b></p>
+            <p class="fpp"><b>Perfect Course</b></p><br>
+            <p class="cp">Choose from over 210000 online video courses with new additions Published every month courses and learn how to code</p>
+        </div>
+        
+        {% comment %} Image wala kaam {% endcomment %}
+        <div class="div1">
+            <div class="div2">
+                <div class="divimage1">
+
+                </div>
+            </div>
+            <div class="div2">
+                <div class="divimage2">
+
+                </div>
+            </div>
+            <div class="div2">
+                <div class="divimage3">
+                    
+                </div>
+            </div>
+            <div class="div2">
+                <div class="divimage4">
+
+                </div>
+            </div>
+        </div>
+    
+        <div class="div1">
+            <div class="div2">
+                <div class="divimage3">
+
+                </div>
+            </div>
+        </div>
+        <div class="div1">
+            <div class="div2">
+                <div class="divimage4">
+
+                </div>
+            </div>
+        </div>
+
+        {% comment %} Neechay search wala kaam {% endcomment %}
+        <div class="search">
+            <div class="allsearch">
+                <div class="searchimage">
+                    <p>⌕</p>
+                </div>
+                <div class="writesearch">
+                    <input class="myinput" type="search" name="" placeholder="Search Your Course">
+                </div>
+
+                <div class="searchbutton">
+                    <button class="mybutton" type="submit">Search</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dabbadiv">
+        <div class="one">
+            <div class="pehladiv">
+                <p class="barasize">10K</p>
+                <p class="chotasize"><b>Active Students</b></p>
+                <p class="aurchotasize">On Website</p>
+                
+            </div>
+        </div>
+        
+        <div class="two">
+            <div class="pehladiv">
+                <p class="barasize2">10K</p>
+                <p class="chotasize2"><b>Active Students</b></p>
+                <p class="aurchotasize2">On Website</p>
+                
+            </div>
+        </div>
+        
+        <div class="three">
+            <div class="pehladiv">
+                <p class="barasize3">10K</p>
+                <p class="chotasize3"><b>Active Students</b></p>
+                <p class="aurchotasize3">On Website</p>
+                
+            </div>
+        </div>
+        
+        <div class="four">
+            <div class="pehladiv">
+                <p class="barasize4">10K</p>
+                <p class="chotasize4"><b>Active Students</b></p>
+                <p class="aurchotasize4">On Website</p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="gau">
+        <div class="certi">
+            <div class="cerimage1">
+
+            </div>
+
+            <div class="cerimage2">
+
+            </div>
+
+            <div class="guacer">
+                <p>✨Guaranteed & Certified</p>
+            </div>
+        </div>    
+    </div>
+
+
+</body>
+</html>

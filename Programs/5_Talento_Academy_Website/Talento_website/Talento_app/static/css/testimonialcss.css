@@ -1,0 +1,111 @@
+/* Section Styling - Main container for testimonials */
+        section.testimonials-section {
+            background-color: #ffffff; /* White background for the section */
+            padding: 40px 20px;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            text-align: center;
+            max-width: 1200px; /* Max width for the entire section */
+            width: 95%; /* Responsive width */
+            margin: 20px auto; /* Centered horizontally with vertical margin */
+        }
+
+        .testhead {
+            color: #007bff; /* Blue heading */
+            margin-bottom: 40px;
+            font-size: 3em; /* Larger heading */
+            font-weight: 700;
+        }
+
+        /* Testimonial Grid */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Explicitly 3 columns, each taking equal space */
+            gap: 30px; /* Space between testimonial cards */
+            justify-content: center; /* Center grid items if they don't fill the row */
+        }
+
+        /* Individual Testimonial Card Styling */
+        .testimonial-card {
+            background-color: #f9f9f9; /* Slightly off-white for cards */
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow for cards */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .student-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Circular image */
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #007bff; /* Blue border around photo */
+        }
+
+        h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .student-rating {
+            color: #ffc107; /* Gold color for stars */
+            font-size: 1.2em;
+            margin-bottom: 10px; /* Space below rating */
+        }
+
+        .student-info {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            font-size: 1em;
+            text-align: left; /* Align testimonial text left within its card */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) { /* Adjusted breakpoint for 2 columns */
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+                margin-bottom: 30px;
+            }
+
+            section.testimonials-section {
+                padding: 30px 15px;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr; /* Stack testimonials on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .testimonial-card {
+                padding: 20px;
+            }
+        }

@@ -1,0 +1,76 @@
+{% include "Talento_app/header.html" %}
+
+<style>
+    /* Section Styling */
+        section {
+            background-color: #ffffff; /* White background for the message box */
+            padding: 40px;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            text-align: center; /* Centers text and inline content within the section */
+            max-width: 500px;
+            width: 90%; /* Responsive width */
+            margin: 100px auto; /* Centers the section horizontally on the page */
+        }
+
+        h1 {
+            color: #28a745; /* Green for success message */
+            margin-bottom: 20px;
+            font-size: 2.5em; /* Larger heading */
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        .home-button {
+            display: inline-block;
+            background-color: #007bff; /* Blue button */
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none; /* Remove underline from link */
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .home-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            section {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .home-button {
+                padding: 10px 20px;
+            }
+        }
+</style>
+<section>
+    <h1>Thank You!</h1>
+    <p>Your message has been successfully sent. We appreciate you reaching out and will get back to you as soon as possible.</p>
+    <div class="button-container">
+        <a href="{% url "home" %}" class="home-button">Go to Homepage</a>
+    </div>
+</section>
+
+{% include "Talento_app/footer.html" %}

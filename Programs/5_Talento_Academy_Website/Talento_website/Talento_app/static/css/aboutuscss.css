@@ -1,0 +1,144 @@
+/* Our Team Section */
+        .team-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .team-section h2 {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .team-section h2::before {
+            content: '✦';
+            color: #4CAF50; /* Green color for the star */
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        .team-section h1 {
+            font-size: 2.5em;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the rows of teachers */
+            gap: 30px;
+        }
+
+        .teacher-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            width: calc(50% - 30px); /* Two teachers per row with gap */
+            max-width: 450px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        .teacher-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #e0e0e0; /* Placeholder background */
+            margin-right: 20px;
+            flex-shrink: 0; /* Prevent image from shrinking */
+        }
+
+        .teacher-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .teacher-info p {
+            margin: 0;
+            color: #666;
+        }
+
+        .teacher-contact {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .teacher-contact div {
+            display: flex;
+            align-items: center;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .teacher-contact div::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #e0e0e0; /* Placeholder for icon */
+            border-radius: 50%;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            color: #fff;
+        }
+
+        .teacher-contact div:nth-child(1)::before { content: '📞'; background-color: #4CAF50; } /* Phone icon */
+        .teacher-contact div:nth-child(2)::before { content: '📚'; background-color: #4CAF50; } Book icon
+
+        /* About Us Section */
+        .about-us-section {
+            text-align: left; /* Not centered */
+            padding: 50px 0;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+        }
+
+        .about-us-section h2 {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-us-section h2::before {
+            content: '✦';
+            color: #4CAF50; /* Green color for the star */
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        .about-us-section h1 {
+            font-size: 2.5em;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about-us-section p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #555;
+            max-width: 800px; /* Limit paragraph width for readability */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .teacher-card {
+                width: 100%; /* One teacher per row on smaller screens */
+                max-width: none;
+            }
+        }

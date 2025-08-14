@@ -1,0 +1,34 @@
+{% include "Talento_app/header.html" %}
+{% load static %}
+
+<section class="py-16 bg-white">
+    <div class="container text-center">
+        <p class="text-green-600 font-medium mb-2 flex items-center justify-center">
+            <span class="text-xl mr-2">+</span> Our Recent Blogs
+        </p>
+        <h2 class="text-4xl font-bold text-gray-800 mb-12">
+            Popular Workshop & Webinars
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Blog Card 1 -->
+            {% if webinars %}
+            {% for web in webinars %}
+            <div class="blog-card">
+                <img src="{{ web.image.url }}" alt="{{ web.name }}" class="blog-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ web.name }}</h3>
+                    <p class="text-gray-600 text-sm" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                        {{ web.text }}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            No webinars
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+
+{% include "Talento_app/footer.html" %}

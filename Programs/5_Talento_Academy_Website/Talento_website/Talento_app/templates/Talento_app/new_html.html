@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Talento Academy - Best Online Education Institute</title>
+    <style>
+        /* Section 8: image_efc4bf.png - Header/Navigation */
+        .section-8 {
+            background-color: #1a3a3a; /* Dark green as in the image */
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-8-top-bar {
+            background-color: #ADFF2F; /* Bright green as in the image */
+            color: #333;
+            padding: 8px 15px;
+            border-radius: 20px 20px 0px 0px;
+            display: flex;
+            justify-content: flex-end; /* Align to the right */
+            gap: 10px;
+            font-size: 0.9em;
+            max-width: fit-content; /* Adjust width to content */
+            margin-left: auto; /* Push to the right */
+        }
+
+        .section-8-nav-container {
+            background-color: #fff;
+            border-radius: 50px; /* More rounded corners */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* For the search icon positioning */
+        }
+
+        .section-8-logo {
+            height: 50px; /* Adjust logo size */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .section-8-nav-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+
+        .section-8-nav-menu li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .section-8-nav-menu li a:hover {
+            color: #ADFF2F;
+        }
+
+        .section-8-search-icon {
+            font-size: 1.2em;
+            color: #666;
+            cursor: pointer;
+            padding: 5px; /* Add padding for clickability */
+            transition: color 0.3s ease;
+        }
+
+        .section-8-search-icon:hover {
+            color: #ADFF2F;
+        }
+
+        .section-8-policy-update {
+            background-color: #ADFF2F; /* Bright green as in the image */
+            color: #333;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-top: 15px;
+            max-width: fit-content;
+            margin-right: auto; /* Push to the left */
+        }
+
+        /* Mobile menu toggle */
+        .menu-toggle {
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .menu-toggle span {
+            height: 3px;
+            width: 25px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        /* Responsive adjustments for Section 8 */
+        @media (max-width: 768px) {
+            .section-8-top-bar {
+                justify-content: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .section-8-nav-menu {
+                display: none; /* Hide main menu */
+                flex-direction: column;
+                position: absolute;
+                top: 70px; /* Below the logo/toggle */
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                padding: 10px 0;
+                z-index: 100;
+            }
+
+            .section-8-nav-menu.active {
+                display: flex; /* Show when active */
+            }
+
+            .section-8-nav-menu ul {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .section-8-nav-menu li {
+                width: 100%;
+            }
+
+            .section-8-nav-menu li a {
+                display: block;
+                padding: 10px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .section-8-nav-menu li:last-child a {
+                border-bottom: none;
+            }
+
+            .menu-toggle {
+                display: flex; /* Show hamburger icon */
+            }
+
+            .section-8-nav-container {
+                padding-right: 15px; /* Adjust for toggle */
+            }
+
+            .section-8-search-icon {
+                position: static; /* Reset positioning */
+                margin-left: auto; /* Push to the right of toggle */
+            }
+
+            .section-8-policy-update {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        /* General Body Styles for consistency */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Section 5: image_efc78c.jpg - Find Your Perfect Course */
+        .section-5 {
+            padding: 60px 20px;
+            background-color: #f0f8ff; /* Light blueish background for top part */
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* For images to be contained */
+        }
+
+        .section-5-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+        }
+
+        .section-5-text-content {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .section-5-text-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-5-text-content p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .section-5-search-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .section-5-search-bar input[type="text"],
+        .section-5-search-bar select {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            min-width: 150px; /* Ensure input fields don't get too small */
+        }
+
+        .section-5-search-bar button {
+            padding: 12px 25px;
+            background-color: #ADFF2F; /* Bright green for search button */
+            color: #333;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .section-5-search-bar button:hover {
+            background-color: #8DCD2F;
+        }
+
+        .section-5-images {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .section-5-images img {
+            width: 100%;
+            height: 150px; /* Fixed height for consistent image size */
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-5-bottom {
+            background-color: #fff;
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .section-5-stat-card {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-5-stat-card h3 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .section-5-stat-card p {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .section-5-rating .stars {
+            color: #fbc02d; /* Yellow for stars */
+            font-size: 1.5em;
+        }
+
+        .section-5-trusted-by {
+            flex: 2;
+            min-width: 300px;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .section-5-trusted-by h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .section-5-trusted-by .logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .section-5-trusted-by .logos img {
+            height: 30px; /* Adjust logo height */
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(100%); /* Make logos grayscale initially */
+            opacity: 0.7;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+
+        .section-5-trusted-by .logos img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* Responsive adjustments for Section 5 */
+        @media (max-width: 768px) {
+            .section-5-top {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-5-text-content, .section-5-images {
+                max-width: 100%;
+            }
+
+            .section-5-text-content h2 {
+                font-size: 2em;
+            }
+
+            .section-5-search-bar {
+                flex-direction: column;
+            }
+
+            .section-5-images {
+                grid-template-columns: 1fr; /* Single column on smaller screens */
+            }
+
+            .section-5-bottom {
+                flex-direction: column;
+            }
+
+            .section-5-stat-card, .section-5-trusted-by {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .section-5-trusted-by .logos {
+                justify-content: center;
+            }
+        }
+
+        /* Section 1: image_efc7c9.png - Best Online Education Institute */
+        .section-1 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background-color: #fff;
+            gap: 40px;
+        }
+
+        .section-1-left {
+            position: relative;
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-1-left .image-container {
+            width: 100%;
+            padding-bottom: 75%; /* Aspect ratio control (4:3 for the overall container) */
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .section-1-left .image-top,
+        .section-1-left .image-bottom {
+            position: absolute;
+            width: 70%; /* Adjust size of inner images */
+            height: 70%; /* Adjust size of inner images */
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-1-left .image-top {
+            top: 0;
+            left: 0;
+            background-image: url('http://googleusercontent.com/file_content/0'); /* Assuming this is the top image */
+            z-index: 2;
+        }
+
+        .section-1-left .image-bottom {
+            bottom: 0;
+            right: 0;
+            background-image: url('http://googleusercontent.com/file_content/0'); /* Assuming this is the bottom image */
+            z-index: 1;
+        }
+
+        .section-1-left .certified-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            height: 100px;
+            background-image: url('path/to/certified-badge.png'); /* Placeholder for actual badge image */
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 3;
+        }
+
+        .section-1-right {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .section-1-right h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-1-right p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .section-1-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-1-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #555;
+            font-size: 1em;
+        }
+
+        .section-1-contact-item img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .section-1-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ADFF2F; /* Bright green as in the image */
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .section-1-button:hover {
+            background-color: #8DCD2F;
+        }
+
+        /* Responsive adjustments for Section 1 */
+        @media (max-width: 768px) {
+            .section-1 {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-1-left, .section-1-right {
+                max-width: 100%;
+            }
+
+            .section-1-right h2 {
+                font-size: 2em;
+            }
+
+            .section-1-contact-info {
+                align-items: center;
+            }
+        }
+
+        /* Section 3: image_efc807.jpg - Explore Inspiring Online Courses */
+        .section-3 {
+            padding: 60px 20px;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        .section-3 h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-3 p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .section-3-course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-3-course-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .section-3-course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-3-course-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-3-course-info {
+            padding: 20px;
+        }
+
+        .section-3-course-info h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-3-course-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        .section-3-course-meta .stars {
+            color: #fbc02d; /* Yellow for stars */
+        }
+
+        .section-3-course-meta .price {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .section-3-course-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .section-3-course-stats span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .section-3-course-stats img {
+            width: 16px;
+            height: 16px;
+            object-fit: contain; /* Ensure icons are not stretched */
+        }
+
+        .section-3-more-courses {
+            margin-top: 40px;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .section-3-more-courses a {
+            color: #ADFF2F; /* Bright green link */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .section-3-more-courses a:hover {
+            color: #8DCD2F;
+        }
+
+        /* Responsive adjustments for Section 3 */
+        @media (max-width: 768px) {
+            .section-3 h2 {
+                font-size: 2em;
+            }
+
+            .section-3-course-grid {
+                grid-template-columns: 1fr; /* Single column on smaller screens */
+            }
+        }
+
+        /* Section 6: image_efcb45.jpg - Popular Events & Webinars */
+        .section-6 {
+            padding: 60px 20px;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        .section-6 h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-6 h2 span {
+            color: #ADFF2F; /* Bright green for the star icon/text */
+        }
+
+        .section-6-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+
+        .section-6-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .section-6-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-6-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-6-card-info {
+            padding: 20px;
+        }
+
+        .section-6-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        .section-6-card-header .author {
+            font-weight: bold;
+        }
+
+        .section-6-card-header .comments {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .section-6-card-header .comments img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .section-6-card-info h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-6-card-info p {
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Responsive adjustments for Section 6 */
+        @media (max-width: 768px) {
+            .section-6 h2 {
+                font-size: 2em;
+            }
+
+            .section-6-card-grid {
+                grid-template-columns: 1fr; /* Single column on smaller screens */
+            }
+        }
+
+        /* Section 9: image_efc845.png - Satisfied Students / Testimonials */
+        .section-9 {
+            background-color: #1a3a3a; /* Dark green as in the image */
+            color: #fff;
+            padding: 60px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .section-9-left {
+    flex: 1; /* Allows it to grow and shrink */
+    min-width: 300px; /* Minimum width for the left column */
+    max-width: 400px; /* Maximum width for the left column */
+    text-align: left;
+    display: flex; /* Make left section a flex container */
+    flex-direction: column; /* Stack image and list vertically */
+    align-items: flex-start; /* Align contents to the start (left) */
+    position: relative; /* Keep relative if you intend to layer anything else later, but not for the image here */
+}
+
+.section-9-left img {
+    /* REMOVE absolute positioning */
+    position: static; /* Or simply remove the position property */
+    top: auto;
+    left: auto;
+    width: 100%; /* Image takes full width of its parent */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 500px; /* Limit max height to prevent excessive stretching */
+    object-fit: contain; /* Ensures the whole image is visible within its bounds */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; /* Space below the image */
+    /* Adjust margin-left if you want to pull it more to the center of the total section */
+    /* Example: margin-left: auto; margin-right: auto; if you want to center it when section-9-left is wider */
+}
+
+        .section-9-left ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        .section-9-left ul li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #fff;
+        }
+
+        .section-9-left ul li img {
+            width: 24px;
+            height: 24px;
+            filter: invert(100%); /* To make icons white */
+            box-shadow: none; /* Override image shadow */
+        }
+
+        .section-9-right {
+            flex: 2;
+            min-width: 300px;
+            max-width: 700px;
+            text-align: left;
+        }
+
+        .section-9-right h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Testimonial Carousel Styles */
+        .allstutest {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px; /* Adjust spacing */
+        }
+
+        .scroll-button {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            z-index: 10;
+            user-select: none;
+            transition: background-color 0.3s ease;
+            margin: 0 15px; /* Spacing for buttons */
+        }
+
+        .scroll-button:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        #testimonial-scroll-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px; /* Space for scrollbar */
+    flex-grow: 1;
+    margin: 0 auto;
+    max-width: calc(100% - 130px); /* Adjusts width considering buttons and margins */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+#testimonial-scroll-container::-webkit-scrollbar {
+    display: none; /* Webkit browsers */
+}
+
+
+        .scrollable-testimonials {
+            display: flex;
+            gap: 30px;
+            justify-content: flex-start;
+            margin: 0 auto;
+        }
+
+       .testclass {
+    flex-shrink: 0;
+    background-color: #2b4b4b;
+    padding: 30px;
+    border-radius: 10px;
+    height: 190px; /* Increased height - you might need to fine-tune this value */
+    /* Changed from min-width to a fixed width */
+    width: 300px; /* Set a fixed width for the testimonial card */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    scroll-snap-align: start;
+    position: relative;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    /* Adding word-wrap for older browsers, overflow-wrap is the modern standard */
+    word-wrap: break-word; /* Ensures long words break to the next line */
+    overflow-wrap: break-word; /* Modern standard for word wrapping */
+}
+
+        .testclass .avatar {
+            width: 60px;
+            height: 60px;
+            background-color: #ADFF2F; /* Bright green for avatar background */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #1a3a3a;
+            position: absolute;
+            top: 30px; /* Position half outside the card */
+            left: 20px;
+            border: 3px solid #1a3a3a;
+        }
+
+        .testclass .user-info {
+            margin-left: 80px; /* Space for avatar */
+            margin-top: -20px; /* Adjust top margin after avatar positioning */
+            text-align: left;
+        }
+
+        .testclass .user-info .name {
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: sans-serif;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 5px;
+        }
+
+        .testclass .user-info .course {
+            font-size: 0.9em;
+            opacity: 0.8;
+            font-family: sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .testclass .user-info .stars {
+            color: #ffc107; /* Yellow for stars */
+            font-size: 1.2em;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .testclass .testimonial-text {
+    font-size: 0.9em;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    /* Ensure text within this specific div wraps within its parent's width */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+        .notest {
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .notest p {
+            color: #ccc;
+        }
+
+        /* Responsive adjustments for Section 9 */
+        @media (max-width: 768px) {
+    .section-9 {
+        flex-direction: column; /* Stack columns vertically on small screens */
+        text-align: center;
+    }
+
+    .section-9-left, .section-9-right {
+        max-width: 100%; /* Allow full width for both sections */
+        min-width: unset; /* Remove min-width to allow more flexibility */
+    }
+
+    .section-9-left {
+        align-items: center; /* Center content in the left column on mobile */
+    }
+
+    .section-9-left img {
+        margin-bottom: 20px; /* Adjust margin for mobile */
+        width: 80%; /* Make image smaller on mobile */
+        max-width: 350px; /* Set a max-width for the image */
+        height: auto;
+    }
+
+    .section-9-left ul {
+        align-items: flex-start; /* Align list items to the left (consistent with desktop) */
+        padding-left: 0; /* Ensure no extra padding pushes list to right */
+    }
+
+    .section-9-left ul li {
+        justify-content: center; /* Center icon and text */
+        width: 100%; /* Ensure list items take full width to center effectively */
+    }
+
+
+    .section-9-right h2 {
+        font-size: 1.8em;
+    }
+
+    .allstutest {
+        flex-direction: column; /* Stack scroll buttons and container on mobile */
+    }
+
+    #testimonial-scroll-container {
+        max-width: 100%;
+    }
+
+    .scroll-button {
+        margin: 15px 0;
+    }
+
+    .testclass {
+        width: 90%;
+        margin: 0 auto;
+        height: auto; /* Allow height to adjust on mobile */
+        padding: 15px; /* Slightly reduced padding for mobile */
+    }
+
+    .testclass .user-info-container {
+        justify-content: flex-start;
+    }
+
+    .testclass .user-info {
+        text-align: left;
+        margin-left: 0;
+    }
+}
+
+        /* Section 4: image_efc882.png - Create Free Account And Get Register */
+        .section-4 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            background-color: #f8f8f8;
+            gap: 50px;
+        }
+
+        .section-4-left {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .section-4-left h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-4-left p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .section-4-left .generation-tech {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .section-4-left .generation-tech img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .section-4-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .section-4-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #555;
+            font-size: 1em;
+        }
+
+        .section-4-contact-item img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .section-4-right {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background-color: #1a3a3a; /* Dark green as in the image */
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-4-right .form-group {
+            margin-bottom: 20px;
+        }
+
+        .section-4-right input[type="text"],
+        .section-4-right input[type="email"],
+        .section-4-right input[type="tel"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2b4b4b; /* Slightly lighter green for input fields */
+            color: #fff;
+            font-size: 1em;
+            box-sizing: border-box; /* Include padding in element's total width and height */
+        }
+
+        .section-4-right input::placeholder {
+            color: #bbb;
+        }
+
+        .section-4-right .name-fields {
+            display: flex;
+            gap: 20px;
+        }
+
+        .section-4-right .name-fields input {
+            flex: 1;
+        }
+
+        .section-4-right button[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: #ADFF2F; /* Bright green for submit button */
+            color: #1a3a3a;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .section-4-right button[type="submit"]:hover {
+            background-color: #8DCD2F;
+        }
+
+        /* Responsive adjustments for Section 4 */
+        @media (max-width: 768px) {
+            .section-4 {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-4-left, .section-4-right {
+                max-width: 100%;
+            }
+
+            .section-4-left h2 {
+                font-size: 2em;
+            }
+
+            .section-4-contact-info {
+                align-items: center;
+            }
+
+            .section-4-right .name-fields {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* Section 7: image_efcb86.png - Frequently Asked Questions */
+        .section-7 {
+            background-color: #1a3a3a; /* Dark green as in the image */
+            color: #fff;
+            padding: 60px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
+        }
+
+        .section-7-left {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .section-7-left h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .section-7-left p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .section-7-faq-item {
+            background-color: #2b4b4b; /* Slightly lighter green for FAQ items */
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border: 1px solid #3c5c5c;
+        }
+
+        .section-7-faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .section-7-faq-question:hover {
+            background-color: #3c5c5c;
+        }
+
+        .section-7-faq-question .arrow {
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .section-7-faq-question.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .section-7-faq-answer {
+            padding: 0 20px 15px;
+            font-size: 0.95em;
+            color: #ccc;
+            line-height: 1.5;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+
+        .section-7-faq-answer.open {
+            max-height: 200px; /* A sufficiently large value for max-height */
+            padding-top: 10px;
+        }
+
+        .section-7-right {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+        }
+
+        /* Responsive adjustments for Section 7 */
+        @media (max-width: 768px) {
+            .section-7 {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .section-7-left, .section-7-right {
+                max-width: 100%;
+            }
+
+            .section-7-left h2 {
+                font-size: 2em;
+            }
+
+            .section-7-faq-question {
+                text-align: left;
+            }
+        }
+
+        /* Section 2: image_efcbc0.png - Footer */
+        .section-2 {
+            background-color: #1a3a3a; /* Dark green as in the image */
+            color: #fff;
+            padding: 50px 20px 20px;
+        }
+
+        .section-2-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+
+        .section-2-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .section-2-column h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #ADFF2F; /* Bright green for headings */
+        }
+
+        .section-2-column p {
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .section-2-social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .section-2-social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #ADFF2F; /* Bright green for social icons */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #1a3a3a;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .section-2-social-icons a:hover {
+            background-color: #8DCD2F;
+        }
+
+        .section-2-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .section-2-contact-item img {
+            width: 20px;
+            height: 20px;
+            filter: invert(100%); /* To make icons white if they are black */
+        }
+
+        .section-2-quick-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Two columns for links */
+            gap: 10px;
+        }
+
+        .section-2-quick-links li {
+            margin-bottom: 5px;
+        }
+
+        .section-2-quick-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s ease;
+        }
+
+        .section-2-quick-links a:hover {
+            color: #ADFF2F;
+        }
+
+        .section-2-copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8em;
+            color: #ccc;
+        }
+
+        /* Responsive adjustments for Section 2 */
+        @media (max-width: 768px) {
+            .section-2-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .section-2-column {
+                min-width: unset;
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .section-2-social-icons {
+                justify-content: center;
+            }
+
+            .section-2-quick-links ul {
+                grid-template-columns: 1fr; /* Single column on smaller screens */
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="section-8">
+        <div class="section-8-top-bar">
+            <span>talentoacademy.info@gmail.com</span>
+            <span>Sat - Sun: 8:00 am - 7:00 pm</span>
+        </div>
+        <div class="section-8-nav-container">
+            <img src="http://googleusercontent.com/file_content/7" alt="Talento Academy Logo" class="section-8-logo">
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="section-8-nav-menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">WORKSHOPS</a></li>
+                    <li><a href="#">COURSES</a></li>
+                    <li><a href="#">WEBINARS</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">TESTIMONIALS</a></li>
+                    <li><a href="#">FAQS</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                </ul>
+            </nav>
+            <div class="section-8-search-icon">
+                &#128269; </div>
+        </div>
+        <div class="section-8-policy-update">
+            <span>*POLICY UPDATE</span> Senior leaders from me world's leading research
+        </div>
+    </section>
+
+    <section class="section-5">
+        <div class="section-5-top">
+            <div class="section-5-text-content">
+                <h2>100% Satisfaction Guarantee</h2>
+                <h2>Find Your Perfect Course</h2>
+                <p>Choose from over 210,000 online video courses with new additions Published every month courses and learn how to code</p>
+                <div class="section-5-search-bar">
+                    <input type="text" placeholder="Search your Course">
+                    <select>
+                        <option>All Categories</option>
+                        </select>
+                    <input type="text" placeholder="Workshops">
+                    <button>SEARCH</button>
+                </div>
+            </div>
+            <div class="section-5-images">
+                <img src="http://googleusercontent.com/file_content/4" alt="Student 1">
+                <img src="http://googleusercontent.com/file_content/4" alt="Student 2">
+                <img src="http://googleusercontent.com/file_content/4" alt="Student 3">
+                <img src="http://googleusercontent.com/file_content/4" alt="Student 4">
+            </div>
+        </div>
+        <div class="section-5-bottom">
+            <div class="section-5-stat-card">
+                <h3>10K</h3>
+                <p>Active Students</p>
+                <p>On Websites</p>
+            </div>
+            <div class="section-5-stat-card section-5-rating">
+                <h3>4.6</h3>
+                <p class="stars">★★★★★</p>
+                <p>19325 Rating</p>
+                <p>User Community</p>
+            </div>
+            <div class="section-5-trusted-by">
+                <h3>Trusted By 25.000 Happy Students Are Joining With Us For Achieve Their Goal.</h3>
+                <p>Also Featured In:</p>
+                <div class="logos">
+                    <img src="https://via.placeholder.com/80x30/000000/FFFFFF?text=slack" alt="Slack Logo"> <img src="https://via.placeholder.com/80x30/000000/FFFFFF?text=Microsoft" alt="Microsoft Logo"> <img src="https://via.placeholder.com/80x30/000000/FFFFFF?text=facebook" alt="Facebook Logo"> </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-1">
+        <div class="section-1-left">
+            <div class="image-container">
+                <div class="image-top" style="background-image: url('http://googleusercontent.com/file_content/0');"></div>
+                <div class="image-bottom" style="background-image: url('http://googleusercontent.com/file_content/0');"></div>
+                <div class="certified-badge" style="background-image: url('http://googleusercontent.com/file_content/0');"></div> </div>
+        </div>
+        <div class="section-1-right">
+            <h2>Guaranteed & Certified</h2>
+            <h2>The Best Online Education Institute</h2>
+            <p>Choose from over 210,000 online video courses with new additions Published every month</p>
+            <div class="section-1-contact-info">
+                <div class="section-1-contact-item">
+                    <img src="https://via.placeholder.com/24" alt="Phone Icon"> Call us anytime +92 331 1395034
+                </div>
+                <div class="section-1-contact-item">
+                    <img src="https://via.placeholder.com/24" alt="Email Icon"> Email Us Anytime talentoacademy.info@gmail.com
+                </div>
+            </div>
+            <a href="#" class="section-1-button">SHOW & MORE →</a>
+        </div>
+    </section>
+
+    <section class="section-3">
+        <h2>A Broad Selection Of Courses</h2>
+        <h2>Explore Inspiring Online Courses</h2>
+        <div class="section-3-course-grid">
+            <div class="section-3-course-card">
+                <img src="http://googleusercontent.com/file_content/2" alt="Web Development And Design">
+                <div class="section-3-course-info">
+                    <h3>Web Development And Design Copy</h3>
+                    <div class="section-3-course-meta">
+                        <span class="stars">★★★★★</span>
+                        <span class="price">$49</span>
+                    </div>
+                    <div class="section-3-course-stats">
+                        <span><img src="https://via.placeholder.com/16" alt="Lessons Icon">0 Lessons</span> <span><img src="https://via.placeholder.com/16" alt="Students Icon">0 Students</span> </div>
+                </div>
+            </div>
+            <div class="section-3-course-card">
+                <img src="http://googleusercontent.com/file_content/2" alt="Cloud Computing Essentials">
+                <div class="section-3-course-info">
+                    <h3>Cloud Computing Essentials</h3>
+                    <div class="section-3-course-meta">
+                        <span class="stars">★★★★★</span>
+                        <span class="price">$49</span>
+                    </div>
+                    <div class="section-3-course-stats">
+                        <span><img src="https://via.placeholder.com/16" alt="Lessons Icon">0 Lessons</span>
+                        <span><img src="https://via.placeholder.com/16" alt="Students Icon">0 Students</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-3-course-card">
+                <img src="http://googleusercontent.com/file_content/2" alt="Artificial Intelligence And Machine Learning">
+                <div class="section-3-course-info">
+                    <h3>Artificial Intelligence And Machine Learning</h3>
+                    <div class="section-3-course-meta">
+                        <span class="stars">★★★★★</span>
+                        <span class="price">$49</span>
+                    </div>
+                    <div class="section-3-course-stats">
+                        <span><img src="https://via.placeholder.com/16" alt="Lessons Icon">0 Lessons</span>
+                        <span><img src="https://via.placeholder.com/16" alt="Students Icon">0 Students</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-3-course-card">
+                <img src="http://googleusercontent.com/file_content/2" alt="Data Science And Analytics">
+                <div class="section-3-course-info">
+                    <h3>Data Science And Analytics</h3>
+                    <div class="section-3-course-meta">
+                        <span class="stars">★★★★★</span>
+                        <span class="price">$49</span>
+                    </div>
+                    <div class="section-3-course-stats">
+                        <span><img src="https://via.placeholder.com/16" alt="Lessons Icon">0 Lessons</span>
+                        <span><img src="https://via.placeholder.com/16" alt="Students Icon">0 Students</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-3-course-card">
+                <img src="http://googleusercontent.com/file_content/2" alt="Introduction To Information Technology">
+                <div class="section-3-course-info">
+                    <h3>Introduction To Information Technology</h3>
+                    <div class="section-3-course-meta">
+                        <span class="stars">★★★★★</span>
+                        <span class="price">$49</span>
+                    </div>
+                    <div class="section-3-course-stats">
+                        <span><img src="https://via.placeholder.com/16" alt="Lessons Icon">0 Lessons</span>
+                        <span><img src="https://via.placeholder.com/16" alt="Students Icon">0 Students</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-3-course-card">
+                <img src="http://googleusercontent.com/file_content/2" alt="Fundamentals Of Cybersecurity">
+                <div class="section-3-course-info">
+                    <h3>Fundamentals Of Cybersecurity</h3>
+                    <div class="section-3-course-meta">
+                        <span class="stars">★★★★★</span>
+                        <span class="price">$49</span>
+                    </div>
+                    <div class="section-3-course-stats">
+                        <span><img src="https://via.placeholder.com/16" alt="Lessons Icon">0 Lessons</span>
+                        <span><img src="https://via.placeholder.com/16" alt="Students Icon">0 Students</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-3-more-courses">
+            We Help You Find The Perfect Tutor. It's Completely Free. <a href="#">Explore All Courses →</a>
+        </div>
+    </section>
+
+    <section class="section-6">
+        <h2><span>*</span> Our Recent Blogs</h2>
+        <h2>Popular Events & Webinars</h2>
+        <div class="section-6-card-grid">
+            <div class="section-6-card">
+                <img src="http://googleusercontent.com/file_content/5" alt="Marketing Campaign to Foreign Students">
+                <div class="section-6-card-info">
+                    <div class="section-6-card-header">
+                        <span class="author">Talento Academy</span>
+                        <span class="comments"><img src="https://via.placeholder.com/16" alt="Comment Icon"> 1</span> </div>
+                    <h3>Marketing Campaign to Foreign Students</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur. Morbi nibh porttitor in</p>
+                </div>
+            </div>
+            <div class="section-6-card">
+                <img src="http://googleusercontent.com/file_content/5" alt="2 Days Workshop for Data Analysis">
+                <div class="section-6-card-info">
+                    <div class="section-6-card-header">
+                        <span class="author">Talento Academy</span>
+                        <span class="comments"><img src="https://via.placeholder.com/16" alt="Comment Icon"> 0</span>
+                    </div>
+                    <h3>2 Days Workshop for Data Analysis</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur. Morbi nibh porttitor in</p>
+                </div>
+            </div>
+            <div class="section-6-card">
+                <img src="http://googleusercontent.com/file_content/5" alt="3 Days Workshop for Prompt Engineering">
+                <div class="section-6-card-info">
+                    <div class="section-6-card-header">
+                        <span class="author">Talento Academy</span>
+                        <span class="comments"><img src="https://via.placeholder.com/16" alt="Comment Icon"> 3</span>
+                    </div>
+                    <h3>3 Days Workshop for Prompt Engineering</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur. Morbi nibh porttitor in</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-9">
+        <div class="section-9-left">
+            <img src="{% static 'images/satisfied-pic4.jpg' %}" alt="Happy Student">
+            <ul>
+                <li>+ Executive Education</li>
+                <li>+ Certification</li>
+                <li>+ Hand's On Experience</li>
+            </ul>
+        </div>
+        <div class="section-9-right">
+            <h2>✨Satisfied Students</h2>
+            {% comment %}
+            Simulate testimonial data. In a real Django setup, 'testimonial' would be passed from the view context.
+            For demonstration, let's create a dummy list.
+            {% endcomment %}
+            {% if True %} {# Replace 'True' with 'testimonial' in a Django context #}
+            <div class="allstutest">
+                <button id="scroll-left-btn" class="scroll-button">&#9664;</button>
+                <div id="testimonial-scroll-container">
+                    <div class="scrollable-testimonials">
+                        {# Loop through testimonials here #}
+                        {% comment %}
+                        Simulating the Django loop. In your actual code, remove this section and uncomment the original {% for test in testimonial %} loop.
+                        {% endcomment %}
+                        {% for i in "12345"|make_list %} {# Dummy loop for demonstration #}
+                        <div class="testclass">
+                            <div class="avatar">ABC</div>
+                            <div class="user-info">
+                                <div class="name">Abc name {{i}}</div>
+                                <div class="course">Course name {{i}}</div>
+                                <div class="stars">
+                                    {# Dynamically render stars based on rating #}
+                                    {% for j in "12345"|make_list %} {# Dummy stars #}
+                                    <span>&#9733;</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="testimonial-text">
+                                Lorem ipsum dolor sit amet consectetur. Morbi nibh porttitor in Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            </div>
+                        </div>
+                        {% endfor %}
+                        {# End of simulated loop #}
+
+                        {% comment %}
+                        Uncomment this block and remove the simulated loop above when using with Django
+                        {% for test in testimonial %}
+                        <div class="testclass">
+                            <div class="avatar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 14.1c-2.82 0-5.61-1.31-7.07-3.48l-.01-.01c1.3-1.6 3.16-2.55 5.08-2.55h.01c1.92 0 3.78.95 5.08 2.55l-.01.01c-1.46 2.17-4.25 3.48-7.08 3.48z"/>
+                                </svg>
+                            </div>
+                            <div class="user-info">
+                                <div class="name">{{ test.name }}</div>
+                                <div class="course">{{ test.course }}</div>
+                                <div class="stars">
+                                    {% for i in test.rating|times %}
+                                    <span>&#9733;</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="testimonial-text">{{ test.testimon }}</div>
+                        </div>
+                        {% endfor %}
+                        {% endcomment %}
+                    </div>
+                </div>
+                <button id="scroll-right-btn" class="scroll-button">&#9654;</button>
+            </div>
+            {% else %}
+            <div class="notest">
+                <p>No testimonial</p>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <section class="section-4">
+        <div class="section-4-left">
+            <h2>Apply For Registration</h2>
+            <h2>Create Free Account And Get Register</h2>
+            <p>Choose from over 210,000 online video courses with new Additions Published every month</p>
+            <div class="generation-tech">
+                <img src="https://via.placeholder.com/24" alt="Checkmark Icon"> Generation Technology
+            </div>
+            <div class="section-4-contact-info">
+                <div class="section-4-contact-item">
+                    <img src="https://via.placeholder.com/24" alt="Phone Icon"> Call us anytime +92 331 1395034
+                </div>
+                <div class="section-4-contact-item">
+                    <img src="https://via.placeholder.com/24" alt="Email Icon"> Email Us Anytime talentoacademy.info@gmail.com
+                </div>
+            </div>
+        </div>
+        <div class="section-4-right">
+            <form>
+                <div class="form-group name-fields">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Course Type">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Qualification">
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone No">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="section-7">
+        <div class="section-7-left">
+            <h2>Frequently Asked Questions</h2>
+            <h2>Have Any Question? Find Answer Here</h2>
+            <p>We don't just work with concrete and steel. We work with People we are Approachable. with even or highest work</p>
+            <div class="section-7-faq-item">
+                <div class="section-7-faq-question">
+                    How Much Should I Charge For An Online Course?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="section-7-faq-answer">
+                    <p>We don't just work with concrete and steel. We work with People we are Approachable. with even</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-7-right">
+            <div class="section-7-faq-item">
+                <div class="section-7-faq-question">
+                    How Do You Determine A Course Price?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="section-7-faq-answer">
+                    <p>We don't just work with concrete and steel. We work with People we are Approachable. with even.</p>
+                </div>
+            </div>
+            <div class="section-7-faq-item">
+                <div class="section-7-faq-question">
+                    How Much People Do Sell Courses For?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="section-7-faq-answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="section-7-faq-item">
+                <div class="section-7-faq-question">
+                    How Much Should I Charge For An Online Course?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="section-7-faq-answer">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-2">
+        <div class="section-2-content">
+            <div class="section-2-column">
+                <h3>Information</h3>
+                <p>We Don't Just Work With Concrete And We Work With People We Are Approachable. With Even Our Highest Work</p>
+                <div class="section-2-social-icons">
+                    <a href="#" aria-label="Facebook"><img src="https://via.placeholder.com/20/1a3a3a/ADFF2F?text=f" alt="Facebook"></a> <a href="#" aria-label="Instagram"><img src="https://via.placeholder.com/20/1a3a3a/ADFF2F?text=i" alt="Instagram"></a> <a href="#" aria-label="YouTube"><img src="https://via.placeholder.com/20/1a3a3a/ADFF2F?text=y" alt="YouTube"></a> </div>
+            </div>
+            <div class="section-2-column">
+                <h3>Contact Info</h3>
+                <div class="section-2-contact-item">
+                    <img src="https://via.placeholder.com/20" alt="Phone Icon"> +92 331 1395034
+                </div>
+                <div class="section-2-contact-item">
+                    <img src="https://via.placeholder.com/20" alt="Email Icon"> talentoacademy.info@gmail.com
+                </div>
+            </div>
+            <div class="section-2-column section-2-quick-links">
+                <h3>Quick Links.</h3>
+                <ul>
+                    <li><a href="#"><img src="https://via.placeholder.com/15" alt="Dot"> Contact Us</a></li> <li><a href="#"><img src="https://via.placeholder.com/15" alt="Dot"> Gallery</a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/15" alt="Dot"> News & Articles</a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/15" alt="Dot"> FAQ's</a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/15" alt="Dot"> Coming Soon</a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/15" alt="Dot"> Sign In/ Registration</a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/15" alt="Dot"> About</a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/15" alt="Dot"> Course</a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/15" alt="Dot"> Instructor</a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/15" alt="Dot"> Events</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-2-copyright">
+            © 2025 Talento Academy | All Rights Reserved
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqQuestions = document.querySelectorAll('.section-7-faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    question.classList.toggle('active');
+                    answer.classList.toggle('open');
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.section-8-nav-menu');
+
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollContainer = document.getElementById('testimonial-scroll-container');
+            const scrollLeftBtn = document.getElementById('scroll-left-btn');
+            const scrollRightBtn = document.getElementById('scroll-right-btn');
+
+            if (scrollContainer && scrollLeftBtn && scrollRightBtn) {
+                const scrollAmount = 300; // Adjust scroll amount as needed
+
+                scrollLeftBtn.addEventListener('click', () => {
+                    scrollContainer.scrollBy({
+                        left: -scrollAmount,
+                        behavior: 'smooth'
+                    });
+                });
+
+                scrollRightBtn.addEventListener('click', () => {
+                    scrollContainer.scrollBy({
+                        left: scrollAmount,
+                        behavior: 'smooth'
+                    });
+                });
+
+                // Optional: Hide/show buttons if not scrollable
+                const checkScrollability = () => {
+                    if (scrollContainer.scrollWidth > scrollContainer.clientWidth) {
+                        scrollLeftBtn.style.display = 'flex';
+                        scrollRightBtn.style.display = 'flex';
+                    } else {
+                        scrollLeftBtn.style.display = 'none';
+                        scrollRightBtn.style.display = 'none';
+                    }
+                };
+
+                // Check on load and resize
+                checkScrollability();
+                window.addEventListener('resize', checkScrollability);
+
+                // For the placeholder content, define make_list and times if not in Django
+                {% comment %}
+                This is a placeholder for Django's 'make_list' and 'times' filters.
+                In a real Django project, you would remove this JavaScript and rely on Django's template tags.
+                {% endcomment %}
+                if (typeof String.prototype.make_list === 'undefined') {
+                    String.prototype.make_list = function() {
+                        return Array.from(this);
+                    };
+                }
+                if (typeof Number.prototype.times === 'undefined') {
+                    Number.prototype.times = function() {
+                        return Array.from({ length: this }, (_, i) => i);
+                    };
+                }
+            }
+        });
+    </script>
+</body>
+</html>

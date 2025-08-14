@@ -1,0 +1,160 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  background: #004d40;
+  padding: 15px 0;
+}
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+.nav-links a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+.btn {
+  background: #ffeb3b;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: #222;
+  text-decoration: none;
+}
+.primary {
+  background: #00796b;
+  color: white;
+}
+
+/* Hero */
+.hero {
+  background: #e0f2f1;
+  padding: 60px 0;
+}
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.hero-text {
+  flex: 1;
+}
+.hero-image {
+  flex: 1;
+}
+.hero-image img {
+  width: 100%;
+}
+.hero-stats {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* Categories */
+.categories, .courses, .events, .instructors {
+  padding: 60px 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+.category-grid, .course-grid, .event-grid, .instructor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.category-box, .course-card, .event-card, .instructor-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Highlight */
+.highlight {
+  background: #004d40;
+  color: white;
+  padding: 60px 20px;
+}
+.highlight-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.highlight-content img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+/* About */
+.about {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Signup */
+.signup {
+  background: #00796b;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+.signup form {
+  margin-top: 20px;
+}
+.signup input {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+}
+.signup button {
+  padding: 10px 20px;
+  margin-left: 10px;
+}
+
+/* Footer */
+.footer {
+  background: #00332e;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+.footer-links a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .hero-content,
+  .highlight-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-links {
+    display: none;
+  }
+}

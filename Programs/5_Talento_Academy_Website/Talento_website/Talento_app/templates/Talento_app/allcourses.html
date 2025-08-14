@@ -1,0 +1,39 @@
+{% include "Talento_app/header.html" %}
+{% load static %}
+
+<section class="py-16 bg-white">
+    <div class="container text-center">
+        <p class="text-green-600 font-medium mb-2 flex items-center justify-center">
+            <span class="text-xl mr-2">+</span> A Broad Selection Of Courses
+        </p>
+        <h2 class="text-4xl font-bold text-gray-800 mb-12">
+            Explore Inspiring Online Courses
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Course Card 1 -->
+            {% if course %}
+                {% for course in course %}
+                <div class="course-card">
+                    <img src="{{ course.image.url }}" alt="{{ course.title }}" class="course-image">
+                    <div class="p-6">
+                        <a href="{% url "selectedcourse" course.id %}"><h3 class="text-xl font-semibold text-gray-800 mb-2">{{ course.title }}</h3></a>
+                        <div class="flex items-center text-gray-500 text-sm">
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zm-6 9A6 6 0 006 13a6 6 0 00-6 6v1a1 1 0 001 1h18a1 1 0 001-1v-1a6 6 0 00-6-6 6 6 0 00-1 0z"></path></svg>
+                                <p>{{ course.students }} Students Enrolled</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+            No Courses
+            {% endif %}
+        </div>
+        <p class="text-green-600 font-medium mt-12">
+        </p>
+    </div>
+</section>
+
+
+{% include "Talento_app/footer.html" %}
