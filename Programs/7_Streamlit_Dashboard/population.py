@@ -1,8 +1,6 @@
 import streamlit as st
-import matplotlib.pyplot as plt
 import plotly.express as px
 import streamlit as st
-import plotly.graph_objects as go
 import nbformat
 
 
@@ -216,4 +214,5 @@ with col2:
     # st.pyplot(fig)
     # ax.pie(values, labels=labels, autopct='%1.1f%%', startangle=140, colors=["#99ff99","#ffcc99"])
     # ax.set_title("Youth Distribution in Middle and Lower Middle Class")
+
     # st.pyplot(fig)
