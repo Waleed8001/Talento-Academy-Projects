@@ -1,5 +1,4 @@
 import streamlit as st
-import matplotlib.pyplot as plt
 
 st.title("📊 Pakistan Education & Population Analysis Dashboard")
 
@@ -11,4 +10,5 @@ pages = {
 }
 
 pg = st.navigation(pages)
+
 pg.run()
